@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StationByte LLC - Innovative SaaS Solutions</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij4KICAgIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE2IiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIsIDEyKSI+CiAgICAgICAgPHRleHQgeD0iMjAiIHk9IjMwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+U0I8L3RleHQ+CiAgICAgICAgPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW9wYWNpdHk9IjAuMyIvPgogICAgPC9nPgogICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAiIHkxPSIwIiB4Mj0iNjQiIHkyPSI2NCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNDM2MWVlIi8+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzcyMDliNyIvPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+Cjwvc3ZnPg==" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiB2aWV3Qm94PSIwIDAgNjQgNjQiPgogICAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMiwgMTIpIj4KICAgICAgICA8dGV4dCB4PSIyMCIgeT0iMzAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIj5TQjwvdGV4dD4KICAgICAgICA8Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2Utb3BhY2l0eT0iMC4zIi8+CiAgICA8L2c+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCIgeTE9IjAiIHgyPSI2NCIgeTI9IjY0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0MzYxZWUiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNzIwOWI3Ii8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KPC9zdmc+">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDY0IDY0Ij4KICAgIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE2IiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIsIDEyKSI+CiAgICAgICAgPHRleHQgeD0iMjAiIHk9IjMwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+U0I8L3RleHQ+CiAgICAgICAgPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW9wYWNpdHk9IjAuMyIvPgogICAgPC9nPgogICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAiIHkxPSIwIiB4Mj0iNjQiIHkyPSI2NCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNDM2MWVlIi8+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzcyMDliNyIvPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+Cjwvc3ZnPg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDY0IDY0Ij4KICAgIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE2IiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIsIDEyKSI+CiAgICAgICAgPHRleHQgeD0iMjAiIHk9IjMwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+U0I8L3RleHQ+CiAgICAgICAgPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW9wYWNpdHk9IjAuMyIvPgogICAgPC9nPgogICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAiIHkxPSIwIiB4Mj0iNjQiIHkyPSI2NCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNDM2MWVlIi8+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzcyMDliNyIvPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+Cjwvc3ZnPg==">
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiU3RhdGlvbkJ5dGUiLCJzaG9ydF9uYW1lIjoiU0IiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhkcFpIUm9QU0kyTkNJZ2FHVnBaMmgwUFNJMk5DSWdkbWxsZDBKdmVEMGlNQ0F3SURZMElEWTBJajRLSUNBOGNtVmpkQ0IzYVdSMGFEMGlOalFpSUdobGFXZG9kRDBpTmpRaUlISjRQU0l4TmlJZ1ptbHNiRDBpZFhKc0tDTm5jbUZrYVdWdWRDa2lMejRLSUNBOFp5QjBjbUZ1YzJadmNtMDlJblJ5WVc1emJHRjBaU2d4TWl3Z01USXBJajRLSUNBZ0lEeDBaWGgwSUhnOUlqSXdJaUI1UFNJek1DSWdabTl1ZEMxbVlXMXBiSGs5SWtGeWFXRnNMQ0J6WVc1ekxYTmxjbWxtSWlCbWIyNTBMWGRsYVdkb2REMGlZbTlzWkNJZ1ptOXVkQzF6YVhwbFBTSXlOQ0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJZ1ptbHNiRDBpZDJocGRHVWlQbE5DUEM5MFpYaDBQZ29nSUNBZ1BHTnBjbU5zWlNCamVEMGlNakFpSUdONVBTSXlNQ0lnY2owaU1qQWlJR1pwYkd3OUltNXZibVVpSUhOMGNtOXJaVDBpZDJocGRHVWlJSE4wY205clpTMTNhV1IwYUQwaU1pSWdjM1J5YjJ0bExXOXdZV05wZEhrOUlqQXVNeUlnTHo0S0lDQThMMmMrQ2lBZ1BHUmxabk0rQ2lBZ0lDQThiR2x1WldGeVIzSmhaR2xsYm5RZ2FXUTlJbWR5WVdScFpXNTBJaUI0TVQwaU1DSWdlVEU5SWpBaUlIZ3lQU0kyTkNJZ2VUSTlJalkwSWlCbmNtRmthV1Z1ZEZWdWFYUnpQU0oxYzJWeVUzQmhZMlZQYmxWelpTSStDaUFnSUNBZ0lEeHpkRzl3SUc5bVpuTmxkRDBpTUNVaUlITjBiM0F0WTI5c2IzSTlJaU0wTXpZeFpXVWlMejRLSUNBZ0lDQWdQSE4wYjNBZ2IyWm1jMlYwUFNJeE1EQWxJaUJ6ZEc5d0xXTnZiRzl5UFNJak56SXdPV0kzSWk4K0NpQWdJQ0E4TDJ4cGJtVmhjazF2Wkc5dVBnb2dJRHd2WkdWbWN6NEtQQzl6ZG1jKyIsInNpemVzIjoiNjR4NjQiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCJ9XSwidGhlbWVfY29sb3IiOiIjNDM2MWVlIiwiYmFja2dyb3VuZF9jb2xvciI6IiNmZmZmZmYiLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSJ9">
+    <meta name="theme-color" content="#4361ee">
+    <meta name="msapplication-TileColor" content="#4361ee">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #7209b7;
+            --accent: #4cc9f0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --gray-light: #e9ecef;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+            z-index: 1001; /* Keep logo above mobile menu */
+        }
+
+        .logo:hover {
+            transform: translateY(-3px);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hide the CTA button inside nav on desktop */
+        nav .cta-button {
+            display: none;
+        }
+
+        /* Mobile menu styles */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1001; /* Above the mobile menu */
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--primary);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(67, 97, 238, 0.4);
+        }
+
+        .scroll-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 0.2s ease;
+        }
+
+        /* Hero section */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(rgba(76, 201, 240, 0.1), rgba(76, 201, 240, 0));
+            animation: pulse 15s infinite;
+        }
+        
+        .hero-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .hero-shapes .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(67, 97, 238, 0.1), rgba(114, 9, 183, 0.1));
+            animation: float-shape 12s ease-in-out infinite alternate;
+        }
+        
+        .hero-shapes .shape-1 {
+            top: 10%;
+            left: 5%;
+            width: 100px;
+            height: 100px;
+            animation-delay: -2s;
+        }
+        
+        .hero-shapes .shape-2 {
+            top: 60%;
+            left: 15%;
+            width: 70px;
+            height: 70px;
+            animation-delay: -5s;
+        }
+        
+        .hero-shapes .shape-3 {
+            top: 25%;
+            right: 10%;
+            width: 120px;
+            height: 120px;
+            animation-delay: -7s;
+        }
+        
+        .hero-shapes .shape-4 {
+            bottom: 20%;
+            right: 8%;
+            width: 80px;
+            height: 80px;
+            animation-delay: -3s;
+        }
+        
+        @keyframes float-shape {
+            0% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translate(20px, -15px) rotate(10deg) scale(1.1);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translate(-10px, 10px) rotate(-5deg) scale(0.9);
+                opacity: 0.4;
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.5); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .hero-image {
+            max-width: 80%;
+            margin-top: 3rem;
+            border-radius: 10px;
+            filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.15));
+            transition: all 0.5s ease;
+            transform: translateY(0);
+            animation: float 6s ease-in-out infinite;
+            mix-blend-mode: multiply;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .product-card {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(67, 97, 238, 0.15);
+        }
+
+        .product-image {
+            width: 50%;
+            padding: 30px;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+            mix-blend-mode: multiply;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            width: 50%;
+            padding: 40px;
+        }
+
+        .product-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .product-info p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .product-feature {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .product-feature:hover {
+            background: rgba(67, 97, 238, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background-color: var(--gray-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 30px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .feature-text {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+                 .testimonial-slider {
+             position: relative;
+             overflow: hidden;
+             padding: 20px 0;
+             max-width: 1150px;
+             margin: 0 auto;
+         }
+
+         .testimonial-track {
+             display: flex;
+             width: max-content;
+             transition: transform 0.5s ease;
+         }
+
+         .testimonial-card {
+             flex: 0 0 350px;
+             padding: 30px;
+             background-color: white;
+             border-radius: 10px;
+             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+             transition: all 0.3s ease;
+             margin: 0 15px;
+         }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(67, 97, 238, 0.15);
+        }
+
+        .testimonial-content {
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .author-info {
+            text-align: left;
+        }
+
+        .author-name {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .author-role {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+                 .testimonial-nav {
+             margin-top: 30px;
+             text-align: center;
+             display: flex;
+             justify-content: center;
+             gap: 10px;
+         }
+
+         .testimonial-dot {
+             width: 12px;
+             height: 12px;
+             border-radius: 50%;
+             background-color: var(--gray-light);
+             cursor: pointer;
+             transition: all 0.3s ease;
+             border: 2px solid transparent;
+         }
+
+         .testimonial-dot:hover {
+             transform: scale(1.2);
+         }
+
+         .testimonial-dot.active {
+             background-color: var(--primary);
+             border-color: var(--primary-dark);
+         }
+         
+         .testimonial-controls {
+             margin-top: 20px;
+             display: flex;
+             justify-content: center;
+             gap: 15px;
+         }
+         
+         .testimonial-control {
+             width: 40px;
+             height: 40px;
+             border-radius: 50%;
+             background: white;
+             border: none;
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+             cursor: pointer;
+             transition: all 0.3s ease;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 1.2rem;
+         }
+         
+         .testimonial-control:hover {
+             background-color: var(--primary);
+             color: white;
+             transform: translateY(-3px);
+         }
+
+        
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            width: 90%;
+            height: 90%;
+            top: 5%;
+            left: 5%;
+            animation: morphing 15s linear infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .shape:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.05),
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0.08) 10px,
+                rgba(255, 255, 255, 0.08) 20px
+            );
+            animation: rotate-bg 40s linear infinite;
+        }
+        
+        @keyframes rotate-bg {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .shape-content {
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 2;
+            transform: translateY(0);
+            animation: float-content 6s ease-in-out infinite;
+        }
+        
+        .shape-icon {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            letter-spacing: -1px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transform: perspective(500px) rotateX(10deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .shape-text {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+        
+        .shape-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+            max-width: 250px;
+        }
+        
+        .shape-badge {
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .shape-badge:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        @keyframes float-content {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        @keyframes morphing {
+            0% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+            25% {
+                border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+            }
+            50% {
+                border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+            }
+            75% {
+                border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+            }
+            100% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .company-stats {
+            display: flex;
+            justify-content: space-between;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--gray-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-info {
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-item-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .contact-item-text {
+            flex: 1;
+        }
+
+        .contact-item-text h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .contact-item-text p, .contact-item-text a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item-text a:hover {
+            color: var(--primary);
+        }
+
+        .contact-note {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        
+        .contact-message {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(67, 97, 238, 0.05);
+            border-left: 3px solid var(--primary);
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .contact-message p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .contact-message p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-form {
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            padding: 12px 25px;
+            font-size: 1rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo a {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-logo a span {
+            color: var(--accent);
+        }
+
+        .footer-description {
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-newsletter p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .newsletter-form {
+            display: flex;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 0.9rem;
+        }
+
+        .newsletter-btn {
+            padding: 0 15px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .footer-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-contact-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 991px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image, .about-text {
+                flex: none;
+                width: 100%;
+            }
+            
+            .about-image-wrapper {
+                max-width: 500px;
+                margin: 0 auto 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                height: 70px;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: white;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+            
+            nav .cta-button {
+                display: inline-block;
+                margin-top: 1rem;
+            }
+            
+            .header-cta {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .product-card {
+                flex-direction: column;
+            }
+            
+            .product-image, .product-info {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding-top: 120px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            /* Mobile styles for email section */
+            .email-highlight {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .email-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .contact-email {
+                font-size: 1rem;
+                word-break: break-all;
+            }
+
+            .icon-mail-large:before {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Icons (using inline SVG or Unicode symbols) */
+        .icon-clock:before { content: "⏰"; }
+        .icon-cloud:before { content: "☁️"; }
+        .icon-shield:before { content: "🛡️"; }
+        .icon-rocket:before { content: "🚀"; }
+        .icon-map:before { content: "📍"; }
+        .icon-phone:before { content: "📞"; }
+        .icon-mail:before { content: "✉️"; }
+        .icon-mail-large:before { content: "📧"; font-size: 3rem; }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loader-circle {
+            stroke: var(--primary);
+            stroke-dasharray: 150;
+            stroke-dashoffset: 150;
+            transform-origin: center;
+            animation: loader 2s linear infinite;
+        }
+        
+        @keyframes loader {
+            0% {
+                stroke-dashoffset: 150;
+                transform: rotate(0deg);
+            }
+            50% {
+                stroke-dashoffset: 0;
+            }
+            100% {
+                stroke-dashoffset: 150;
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Scroll reveal animations */
+        .reveal {
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+        
+        .reveal:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+        
+        .reveal:nth-child(4) {
+            transition-delay: 0.3s;
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .email-highlight {
+            display: flex;
+            align-items: center;
+            background-color: rgba(67, 97, 238, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .email-highlight:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(67, 97, 238, 0.1);
+        }
+        
+        .email-icon {
+            margin-right: 20px;
+            color: var(--primary);
+        }
+        
+        .email-content h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        
+        .contact-email {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-email:hover {
+            color: var(--secondary);
+        }
+        
+        .email-content p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .contact-steps {
+            margin-bottom: 30px;
+        }
+        
+        .contact-steps h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .contact-checklist {
+            list-style: none;
+        }
+        
+        .contact-checklist li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            color: var(--gray);
+        }
+        
+        .contact-checklist li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Custom cursor */
+        .custom-cursor {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(67, 97, 238, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+            backdrop-filter: blur(1px);
+        }
+        
+        .cursor-dot {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+        
+        .custom-cursor.expand {
+            width: 60px;
+            height: 60px;
+            border-color: rgba(67, 97, 238, 0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .custom-cursor, .cursor-dot {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mainNav = document.getElementById('mainNav');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                    document.body.classList.toggle('menu-open');
+                });
+                
+                // Close mobile menu when clicking on links
+                const navLinks = mainNav.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        mainNav.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                    });
+                });
+            }
+            
+            // Preloader
+            setTimeout(function() {
+                document.querySelector('.preloader').style.opacity = '0';
+                setTimeout(function() {
+                    document.querySelector('.preloader').style.display = 'none';
+                }, 500);
+            }, 500);
+            
+            // Scroll reveal animation
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            function checkReveal() {
+                for (let i = 0; i < revealElements.length; i++) {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = revealElements[i].getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < windowHeight - elementVisible) {
+                        revealElements[i].classList.add('active');
+                    }
+                }
+            }
+            
+            window.addEventListener('scroll', checkReveal);
+            checkReveal();
+            
+            // Custom cursor
+            const cursor = document.createElement('div');
+            cursor.classList.add('custom-cursor');
+            document.body.appendChild(cursor);
+            
+            const cursorDot = document.createElement('div');
+            cursorDot.classList.add('cursor-dot');
+            document.body.appendChild(cursorDot);
+            
+            document.addEventListener('mousemove', function(e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            });
+            
+            // Add hover effect to links and buttons
+            const hoverables = document.querySelectorAll('a, button, .feature-card, .testimonial-card, .shape-badge');
+            
+            hoverables.forEach(function(hoverable) {
+                hoverable.addEventListener('mouseenter', function() {
+                    cursor.classList.add('expand');
+                });
+                
+                hoverable.addEventListener('mouseleave', function() {
+                    cursor.classList.remove('expand');
+                });
+            });
+            
+            // Scroll progress indicator
+            window.addEventListener('scroll', function() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.querySelector('.scroll-progress').style.width = scrolled + '%';
+            });
+            
+            // Testimonial slider controls
+            const track = document.querySelector('.testimonial-track');
+            const prevBtn = document.getElementById('prevBtn');
+            const pauseBtn = document.getElementById('pauseBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dots = document.querySelectorAll('.testimonial-dot');
+            
+            let sliderPosition = 0;
+            let isPaused = false;
+            
+            // Remove the automatic animation by setting animation to none
+            track.style.animation = 'none';
+            
+            // Function to update slider position
+            function updateSlider() {
+                const cardWidth = 350; // Card width
+                const cardMargin = 30; // Card margin (15px on each side)
+                const offset = -(sliderPosition * (cardWidth + cardMargin));
+                
+                // Apply the transform
+                track.style.transform = `translateX(${offset}px)`;
+                track.style.transition = 'transform 0.5s ease';
+                
+                // Update active dot
+                dots.forEach((dot, index) => {
+                    if (index === sliderPosition) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Event listener for next button
+            nextBtn.addEventListener('click', function() {
+                // We have 6 testimonials (0-5)
+                sliderPosition = (sliderPosition + 1) % 6;
+                updateSlider();
+            });
+            
+            // Event listener for prev button
+            prevBtn.addEventListener('click', function() {
+                // We have 6 testimonials (0-5)
+                sliderPosition = (sliderPosition - 1 + 6) % 6;
+                updateSlider();
+            });
+            
+            // Event listeners for dots
+            dots.forEach(function(dot, index) {
+                dot.addEventListener('click', function() {
+                    sliderPosition = index;
+                    updateSlider();
+                });
+            });
+            
+            // Auto-advance functionality
+            let autoAdvance;
+            
+            function startAutoAdvance() {
+                autoAdvance = setInterval(function() {
+                    if (!isPaused) {
+                        sliderPosition = (sliderPosition + 1) % 6;
+                        updateSlider();
+                    }
+                }, 3000);
+            }
+            
+            function stopAutoAdvance() {
+                clearInterval(autoAdvance);
+            }
+            
+            // Event listener for pause button
+            pauseBtn.addEventListener('click', function() {
+                isPaused = !isPaused;
+                pauseBtn.innerHTML = isPaused ? '&#9658;' : '&#10073;&#10073;';
+            });
+            
+            // Initialize slider
+            updateSlider();
+            startAutoAdvance();
+        });
+    </script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r="20" fill="none" stroke-width="5" stroke-linecap="round" class="loader-circle"></circle>
+            </svg>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">Station<span>Byte</span></a>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Get Started</a>
+                </nav>
+                <a href="#contact" class="cta-button header-cta">Get Started</a>
+            </div>
+        </div>
+        <div class="scroll-progress"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Innovative SaaS Solutions for Modern Businesses</h1>
+                <p>StationByte creates powerful, user-friendly software that helps businesses streamline operations and boost productivity.</p>
+                <a href="#products" class="cta-button">Explore Our Products</a>
+                <img src="https://stationbyte.com/images/eazyclock.png" alt="EazyClock Application" class="hero-image">
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-card reveal">
+                <div class="product-image">
+                    <img src="https://stationbyte.com/images/eazyclock.png" alt="EazyClock">
+                </div>
+                <div class="product-info">
+                    <h3>EazyClock</h3>
+                    <p>A powerful and intuitive time tracking solution designed to help businesses of all sizes manage employee time, streamline payroll processing, and improve productivity.</p>
+                    <p>With EazyClock, you can easily track working hours, manage shifts, generate reports, and integrate with your existing tools.</p>
+                    <div class="product-features">
+                        <span class="product-feature">Time Tracking</span>
+                        <span class="product-feature">Payroll Integration</span>
+                        <span class="product-feature">Reporting</span>
+                        <span class="product-feature">Team Management</span>
+                    </div>
+                    <a href="https://eazyclock.com" target="_blank" class="cta-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-cloud"></div>
+                    <h3 class="feature-title">Cloud-Based</h3>
+                    <p class="feature-text">Access your data anytime, anywhere with our secure cloud-based solutions. No installations required.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-shield"></div>
+                    <h3 class="feature-title">Secure & Reliable</h3>
+                    <p class="feature-text">Your data is protected with enterprise-grade security measures and regular backups.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-rocket"></div>
+                    <h3 class="feature-title">Scalable Solutions</h3>
+                    <p class="feature-text">Our products grow with your business, from startups to enterprise-level organizations.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-clock"></div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p class="feature-text">Our dedicated support team is always ready to help you with any questions or issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <!-- Original testimonials -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"EazyClock has completely transformed how we track employee hours. The interface is intuitive and the reporting features save us hours each week."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background-color: #4361ee">JD</div>
+                                <div class="author-info">
+                                    <div class="author-name">Jane Doe</div>
+                                    <div class="author-role">HR Manager, Tech Solutions Inc.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"The customer support at StationByte is exceptional. They responded quickly to our questions and helped us set up our system perfectly."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background-color: #7209b7">MS</div>
+                                <div class="author-info">
+                                    <div class="author-name">Michael Smith</div>
+                                    <div class="author-role">CEO, Digital Enterprises</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"Since implementing EazyClock, our payroll processing time has decreased by 70%. The ROI has been incredible for our medium-sized business."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background-color: #4cc9f0">AT</div>
+                                <div class="author-info">
+                                    <div class="author-name">Amanda Taylor</div>
+                                    <div class="author-role">Finance Director, Global Retail</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional testimonials -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"The flexibility of EazyClock's reporting tools allows us to get exactly the data we need, when we need it. It's been transformative for our remote team."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background-color: #560bad">RL</div>
+                                <div class="author-info">
+                                    <div class="author-name">Robert Lee</div>
+                                    <div class="author-role">Operations Director, TechFlow</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"We evaluated several time tracking solutions before choosing EazyClock. The ease of implementation and user-friendly interface made it the clear winner."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background-color: #3a0ca3">SJ</div>
+                                <div class="author-info">
+                                    <div class="author-name">Sarah Johnson</div>
+                                    <div class="author-role">IT Manager, Innovate Solutions</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"As our company expanded internationally, we needed a time tracking solution that could handle multiple time zones. EazyClock does this perfectly."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background-color: #f72585">DK</div>
+                                <div class="author-info">
+                                    <div class="author-name">David Kim</div>
+                                    <div class="author-role">Global HR Director, Worldwide Inc.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate of first testimonials for infinite loop effect -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"EazyClock has completely transformed how we track employee hours. The interface is intuitive and the reporting features save us hours each week."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background-color: #4361ee">JD</div>
+                                <div class="author-info">
+                                    <div class="author-name">Jane Doe</div>
+                                    <div class="author-role">HR Manager, Tech Solutions Inc.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"The customer support at StationByte is exceptional. They responded quickly to our questions and helped us set up our system perfectly."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background-color: #7209b7">MS</div>
+                                <div class="author-info">
+                                    <div class="author-name">Michael Smith</div>
+                                    <div class="author-role">CEO, Digital Enterprises</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"Since implementing EazyClock, our payroll processing time has decreased by 70%. The ROI has been incredible for our medium-sized business."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background-color: #4cc9f0">AT</div>
+                                <div class="author-info">
+                                    <div class="author-name">Amanda Taylor</div>
+                                    <div class="author-role">Finance Director, Global Retail</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <span class="testimonial-dot active"></span>
+                    <span class="testimonial-dot"></span>
+                    <span class="testimonial-dot"></span>
+                    <span class="testimonial-dot"></span>
+                    <span class="testimonial-dot"></span>
+                    <span class="testimonial-dot"></span>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-control" id="prevBtn">&#10094;</button>
+                    <button class="testimonial-control" id="pauseBtn">&#10073;&#10073;</button>
+                    <button class="testimonial-control" id="nextBtn">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About StationByte</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-wrapper">
+                        <div class="shape">
+                            <div class="shape-content">
+                                <div class="shape-icon">StationByte</div>
+                                <div class="shape-badges">
+                                    <span class="shape-badge">Innovation</span>
+                                    <span class="shape-badge">Quality</span>
+                                    <span class="shape-badge">Trust</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="reveal">Transforming Businesses Through Technology</h2>
+                    <p class="reveal">StationByte LLC is a forward-thinking SaaS company dedicated to creating innovative solutions that help businesses streamline their operations and boost productivity.</p>
+                    <p class="reveal">Founded by a team of passionate developers and business experts, our mission is to provide user-friendly software that solves real-world problems for organizations of all sizes.</p>
+                    <p class="reveal">We believe in creating products that are not only powerful and feature-rich but also intuitive and enjoyable to use. Our commitment to quality, security, and customer satisfaction drives everything we do.</p>
+                    <div class="company-stats reveal">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button reveal">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <div class="contact-item-icon icon-mail"></div>
+                        <div class="contact-item-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:contact@stationbyte.com">contact@stationbyte.com</a></p>
+                            <p class="contact-note">Email is our preferred method of communication</p>
+                        </div>
+                    </div>
+                    <div class="contact-message">
+                        <p>We value your feedback and inquiries. Our team is dedicated to providing timely responses to all emails within 24-48 hours.</p>
+                        <p>For product support, feature requests, or partnership opportunities, please include relevant details in your email to help us serve you better.</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Email Us Directly</h3>
+                    <div class="email-highlight">
+                        <div class="email-icon">
+                            <span class="icon-mail-large"></span>
+                        </div>
+                        <div class="email-content">
+                            <h4>Our Email Address</h4>
+                            <a href="mailto:contact@stationbyte.com" class="contact-email">contact@stationbyte.com</a>
+                            <p>The quickest way to reach our team</p>
+                        </div>
+                    </div>
+                    <div class="contact-steps">
+                        <h4>When contacting us, please include:</h4>
+                        <ul class="contact-checklist">
+                            <li>Your name and company (if applicable)</li>
+                            <li>The product or service you're interested in</li>
+                            <li>Details of your inquiry or feedback</li>
+                            <li>Best time to respond (if needed)</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:contact@stationbyte.com" class="cta-button submit-btn">Send Email Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#">Station<span>Byte</span></a>
+                    <p class="footer-description">Innovative SaaS solutions designed to help businesses streamline operations and boost productivity.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="https://eazyclock.com" target="_blank">EazyClock</a></li>
+                        <li><a href="#">Coming Soon</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Contact Us</h4>
+                    <p>Have questions or suggestions? We'd love to hear from you!</p>
+                    <a href="mailto:contact@stationbyte.com" class="footer-contact-btn">
+                        <span class="icon-mail"></span> contact@stationbyte.com
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StationByte LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
