@@ -39,10 +39,10 @@ COPY --from=build /app/.next ./.next
 COPY --from=build /app/public ./public
 
 # Set environment variables
-ENV PORT=6200
+ENV PORT=6300
 
 # Expose the correct port
-EXPOSE 6200
+EXPOSE 6300
 
 # Start the application
 CMD ["npm", "start"]
