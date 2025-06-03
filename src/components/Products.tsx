@@ -14,7 +14,7 @@ const Products = () => {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="w-full lg:w-1/2 p-8">
               <Image 
-                src="https://stationbyte.com/images/eazyclock.png" 
+                src="/eazyclock-logo.png" 
                 alt="EazyClock"
                 width={600}
                 height={400}
