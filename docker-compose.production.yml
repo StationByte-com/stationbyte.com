@@ -1,0 +1,14 @@
+services:
+  stationbyte_frontend_production:
+    environment:
+      - AUTH_URL_INTERNAL=${AUTH_URL_INTERNAL}
+      - AUTH_SECRET=${AUTH_SECRET}
+      - PORT=6200
+    user: node
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    container_name: stationbyte_frontend_production
+    ports:
+      - "6200:6200"
+    restart: always

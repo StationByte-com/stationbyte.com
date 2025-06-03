@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 300 80">
+  <!-- SB Logo part (keeping original design intact) -->
+  <g transform="translate(8, 8)">
+    <rect width="64" height="64" rx="16" fill="url(#gradient)"/>
+    <g transform="translate(12, 12)">
+      <text x="20" y="30" font-family="Arial, sans-serif" font-weight="bold" font-size="24" text-anchor="middle" fill="white">SB</text>
+      <circle cx="20" cy="20" r="20" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.3"/>
+    </g>
+  </g>
+  
+  <!-- StationByte Text -->
+  <text x="90" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#4361ee">Station</text>
+  <text x="90" y="60" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#7209b7">Byte</text>
+  
+  <!-- Gradient definition (same as original) -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4361ee"/>
+      <stop offset="100%" stop-color="#7209b7"/>
+    </linearGradient>
+  </defs>
+</svg> 

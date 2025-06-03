@@ -1,0 +1,61 @@
+name: MANUAL UPDATE PRODUCTION - stationbyte frontend production
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: [self-hosted]
+
+    steps:
+      - name: grant permissions to runners
+        run: |
+          sudo chmod -R 777 /home/stationbyte
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+          clean: false
+
+      - name: Remove any trash
+        run: |
+          docker system prune -a --volumes --force
+
+      - name: Check if container exists
+        id: check_container
+        run: |
+          if docker ps -a --format '{{.Names}}' | grep -q '^stationbyte_frontend_production$'; then
+            echo "Container exists"
+            docker-compose -f docker-compose.production.yml down --volumes --remove-orphans            
+          else
+            echo "Container does not exist"         
+          fi
+
+      - name: Start container
+        run: |
+          docker-compose -f docker-compose.production.yml -p stationbyte_frontend_production up --build -d
+          docker system prune -a --volumes --force
+
+      - name: Check if container nginx exists
+        run: |
+          if docker ps -a --format '{{.Names}}' | grep -q '^nginx$'; then
+            echo "Container exists"
+            docker restart nginx
+          else
+            echo "Container does not exist"
+          fi
+
+      - name: Check if container traefik exists
+        run: |
+          if docker ps -a --format '{{.Names}}' | grep -q '^traefik$'; then
+            echo "Container exists"
+            docker restart traefik
+          else
+            echo "Container does not exist"
+          fi
+
+      - name: Clean up
+        run: |
+          docker-compose -f docker-compose.production.yml down --volumes --remove-orphans
+          docker system prune -a --volumes -f
