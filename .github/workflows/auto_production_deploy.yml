@@ -1,10 +1,13 @@
-name: MANUAL UPDATE PRODUCTION - stationbyte frontend production
+name: AUTO DEPLOY PRODUCTION - stationbyte frontend production
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Keep manual trigger as backup
   
 jobs:
-  build:
+  deploy:
     runs-on: [self-hosted]
 
     steps:
@@ -64,4 +67,5 @@ jobs:
         run: |
           echo "🚀 Production deployment completed successfully!"
           echo "Deployed branch: ${{ github.ref }}"
+          echo "Deployed commit: ${{ github.sha }}"
           echo "Deployed by: ${{ github.actor }}"
