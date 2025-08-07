@@ -8,45 +8,45 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      quote: "EazyClock has completely transformed how we track employee hours. The interface is intuitive and the reporting features save us hours each week.",
-      name: "Jane Doe",
-      role: "HR Manager, Tech Solutions Inc.",
-      initials: "JD",
+      quote: "StationByte delivered our e-commerce platform ahead of schedule and exceeded all our expectations. Their attention to detail and technical expertise is outstanding.",
+      name: "Sarah Mitchell",
+      role: "CEO, RetailFlow Co.",
+      initials: "SM",
       color: "#4361ee"
     },
     {
-      quote: "The customer support at StationByte is exceptional. They responded quickly to our questions and helped us set up our system perfectly.",
-      name: "Michael Smith",
-      role: "CEO, Digital Enterprises",
-      initials: "MS",
+      quote: "The mobile app StationByte developed for us has received incredible user feedback. Their full-stack development capabilities are truly impressive.",
+      name: "Michael Chen",
+      role: "CTO, FitnessTech",
+      initials: "MC",
       color: "#7209b7"
     },
     {
-      quote: "Since implementing EazyClock, our payroll processing time has decreased by 70%. The ROI has been incredible for our medium-sized business.",
-      name: "Amanda Taylor",
-      role: "Finance Director, Global Retail",
-      initials: "AT",
+      quote: "Working with StationByte on our AI analytics dashboard was seamless. They translated our complex requirements into an intuitive, powerful solution.",
+      name: "Dr. Amanda Rodriguez",
+      role: "Data Science Director, HealthMetrics",
+      initials: "AR",
       color: "#4cc9f0"
     },
     {
-      quote: "The flexibility of EazyClock's reporting tools allows us to get exactly the data we need, when we need it. It's been transformative for our remote team.",
-      name: "Robert Lee",
-      role: "Operations Director, TechFlow",
-      initials: "RL",
+      quote: "From concept to deployment, StationByte handled everything professionally. Their expertise in web development and cloud infrastructure saved us months of work.",
+      name: "James Thompson",
+      role: "Product Manager, CloudSync",
+      initials: "JT",
       color: "#560bad"
     },
     {
-      quote: "We evaluated several time tracking solutions before choosing EazyClock. The ease of implementation and user-friendly interface made it the clear winner.",
-      name: "Sarah Johnson",
-      role: "IT Manager, Innovate Solutions",
-      initials: "SJ",
+      quote: "The custom CRM system StationByte built for us has revolutionized our sales process. Their understanding of business needs sets them apart.",
+      name: "Lisa Park",
+      role: "Sales Director, Enterprise Solutions",
+      initials: "LP",
       color: "#3a0ca3"
     },
     {
-      quote: "As our company expanded internationally, we needed a time tracking solution that could handle multiple time zones. EazyClock does this perfectly.",
-      name: "David Kim",
-      role: "Global HR Director, Worldwide Inc.",
-      initials: "DK",
+      quote: "StationByte's ongoing support and maintenance has been exceptional. They're not just developers, they're true technology partners.",
+      name: "Robert Davis",
+      role: "IT Director, Manufacturing Plus",
+      initials: "RD",
       color: "#f72585"
     }
   ];
@@ -79,10 +79,15 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-24 bg-white">
       <div className="container mx-auto px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12 relative pb-4">
-          What Our Clients Say
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]" />
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 relative pb-4">
+            Client Success Stories
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]" />
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Discover how we've helped businesses transform their ideas into successful digital solutions.
+          </p>
+        </div>
         
         <div className="relative overflow-hidden py-5 max-w-5xl mx-auto">
           <div 

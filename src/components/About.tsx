@@ -2,9 +2,10 @@ import Link from 'next/link';
 
 const About = () => {
   const stats = [
-    { number: '500+', label: 'Happy Customers' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '24/7', label: 'Support' }
+    { number: '50+', label: 'Projects Delivered' },
+    { number: '100%', label: 'Client Satisfaction' },
+    { number: '6+', label: 'Years Experience' },
+    { number: '10+', label: 'Technologies Mastered' }
   ];
 
   return (
@@ -63,29 +64,29 @@ const About = () => {
           {/* Text Content */}
           <div className="flex-1">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Transforming Businesses Through Technology
+              Your Complete Software Development Partner
             </h3>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              StationByte LLC is a forward-thinking SaaS company dedicated to creating innovative solutions that help businesses streamline their operations and boost productivity.
+              StationByte is a comprehensive development studio specializing in custom software solutions. From web and mobile applications to AI-powered systems and enterprise software, we transform your ideas into digital reality.
             </p>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Founded by a team of passionate developers and business experts, our mission is to provide user-friendly software that solves real-world problems for organizations of all sizes.
+              Our expert team combines deep technical knowledge with business acumen to deliver solutions that not only meet your requirements but exceed your expectations. We handle everything from initial concept and design to development, deployment, and ongoing maintenance.
             </p>
             
             <p className="text-gray-600 mb-8 leading-relaxed">
-              We believe in creating products that are not only powerful and feature-rich but also intuitive and enjoyable to use. Our commitment to quality, security, and customer satisfaction drives everything we do.
+              Whether you need a simple website, complex enterprise software, mobile apps for iOS and Android, or cutting-edge AI solutions, we have the expertise and passion to bring your vision to life. Your success is our success.
             </p>
             
             {/* Company Stats */}
-            <div className="flex flex-wrap justify-between gap-5 mb-8">
+            <div className="grid grid-cols-2 gap-5 mb-8">
               {stats.map((stat, index) => (
                 <div 
                   key={index}
-                  className="flex flex-col items-center text-center flex-1 min-w-[120px] p-5 rounded-lg bg-white shadow-[0_5px_15px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_25px_rgba(67,97,238,0.1)]"
+                  className="flex flex-col items-center text-center p-5 rounded-lg bg-gradient-to-br from-gray-50 to-blue-50 shadow-[0_5px_15px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_25px_rgba(67,97,238,0.1)]"
                 >
-                  <span className="text-3xl md:text-4xl font-bold text-gradient mb-2">
+                  <span className="text-2xl md:text-3xl font-bold text-gradient mb-2">
                     {stat.number}
                   </span>
                   <span className="text-gray-600 text-sm font-medium">

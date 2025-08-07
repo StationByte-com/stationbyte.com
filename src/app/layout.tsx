@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "StationByte LLC - Innovative SaaS Solutions",
+  title: "StationByte - Innovative Software Solutions",
   description: "StationByte creates powerful, user-friendly software that helps businesses streamline operations and boost productivity.",
   keywords: "SaaS, software, business solutions, time tracking, EazyClock, productivity",
   authors: [{ name: "StationByte LLC" }],

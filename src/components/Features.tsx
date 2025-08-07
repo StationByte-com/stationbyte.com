@@ -1,36 +1,51 @@
 const Features = () => {
   const features = [
     {
-      icon: '☁️',
-      title: 'Cloud-Based',
-      description: 'Access your data anytime, anywhere with our secure cloud-based solutions. No installations required.',
+      icon: '⚡',
+      title: 'Rapid Development',
+      description: 'Agile development methodology with quick iterations and fast time-to-market for your projects.',
     },
     {
-      icon: '🛡️',
-      title: 'Secure & Reliable',
-      description: 'Your data is protected with enterprise-grade security measures and regular backups.',
+      icon: '🎯',
+      title: 'Custom Solutions',
+      description: 'Tailored software solutions designed specifically for your business needs and requirements.',
     },
     {
-      icon: '🚀',
-      title: 'Scalable Solutions',
-      description: 'Our products grow with your business, from startups to enterprise-level organizations.',
+      icon: '🛠️',
+      title: 'Full-Stack Expertise',
+      description: 'End-to-end development capabilities from frontend design to backend infrastructure.',
     },
     {
-      icon: '⏰',
-      title: '24/7 Support',
-      description: 'Our dedicated support team is always ready to help you with any questions or issues.',
+      icon: '📱',
+      title: 'Cross-Platform',
+      description: 'Applications that work seamlessly across web, mobile, and desktop platforms.',
+    },
+    {
+      icon: '🤖',
+      title: 'AI Integration',
+      description: 'Cutting-edge AI and machine learning capabilities to enhance your business operations.',
+    },
+    {
+      icon: '🔧',
+      title: 'Ongoing Maintenance',
+      description: 'Continuous support, updates, and maintenance to keep your software running smoothly.',
     },
   ];
 
   return (
     <section id="features" className="py-24 bg-gray-50">
       <div className="container mx-auto px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12 relative pb-4">
-          Why Choose Us
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]" />
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 relative pb-4">
+            Why Choose StationByte
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]" />
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our development studio combines technical excellence with business understanding to deliver solutions that drive results.
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div 
               key={index}

@@ -5,11 +5,11 @@ const Portfolio = () => {
   const projects = [
     {
       title: "EazyClock",
-      category: "SaaS Platform",
-      description: "A comprehensive time tracking and employee management solution that streamlines payroll processing and improves workplace productivity.",
+      category: "Scheduling Platform",
+      description: "A next-generation intelligent scheduling platform that streamlines appointment management for businesses. Features smart scheduling, client management, and comprehensive analytics dashboard.",
       image: "/eazyclock-logo.png",
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
-      features: ["Time Tracking", "Payroll Integration", "Reporting", "Team Management"],
+      technologies: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
+      features: ["Smart Scheduling", "Client Management", "Analytics Dashboard", "Automated Reminders"],
       link: "https://eazyclock.com",
       status: "Live Product"
     },
@@ -17,7 +17,7 @@ const Portfolio = () => {
       title: "Custom E-commerce Platform",
       category: "Web Application",
       description: "Full-stack e-commerce solution with advanced inventory management, payment processing, and analytics dashboard for retail businesses.",
-      image: "/dashboard.jpg",
+      image: "/ecommerce.png",
       technologies: ["Next.js", "Stripe", "MongoDB", "Redis"],
       features: ["Inventory Management", "Payment Processing", "Analytics", "Mobile Responsive"],
       link: "#contact",
@@ -27,7 +27,7 @@ const Portfolio = () => {
       title: "AI-Powered Analytics Dashboard",
       category: "Data Analytics",
       description: "Machine learning-powered business intelligence platform that provides predictive analytics and automated reporting for enterprise clients.",
-      image: "/dashboard.jpg",
+      image: "/ai.jpg",
       technologies: ["Python", "TensorFlow", "React", "D3.js"],
       features: ["Predictive Analytics", "Real-time Data", "Custom Reports", "AI Insights"],
       link: "#contact",

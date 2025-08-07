@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -8,10 +9,10 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link href="#" className="text-2xl md:text-3xl font-bold text-white mb-5 inline-block">
-              Station<span className="text-[var(--accent)]">Byte</span>
+              <Image src="/logo-full.svg" alt="StationByte Logo" width={100} height={100}  className='w-full'/>
             </Link>
             <p className="text-white/70 leading-relaxed mt-5">
-              Innovative SaaS solutions designed to help businesses streamline operations and boost productivity.
+              A modern development studio creating custom software solutions for businesses of all sizes.
             </p>
           </div>
           
@@ -32,10 +33,18 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  href="#products" 
+                  href="#services" 
                   className="text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 block"
                 >
-                  Products
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="#portfolio" 
+                  className="text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 block"
+                >
+                  Portfolio
                 </Link>
               </li>
               <li>
@@ -65,25 +74,44 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Products */}
+          {/* Services */}
           <div>
             <h4 className="text-lg md:text-xl font-semibold mb-5 text-white relative pb-3">
-              Products
+              Our Services
               <div className="absolute left-0 bottom-0 w-10 h-0.5 bg-[var(--primary)]" />
             </h4>
             <ul className="space-y-3">
               <li>
                 <Link 
-                  href="https://eazyclock.com" 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#services" 
                   className="text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 block"
                 >
-                  EazyClock
+                  Web Development
                 </Link>
               </li>
               <li>
-                <span className="text-white/70 block">Coming Soon</span>
+                <Link 
+                  href="#services" 
+                  className="text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 block"
+                >
+                  Mobile Apps
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="#services" 
+                  className="text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 block"
+                >
+                  AI Solutions
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="#services" 
+                  className="text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 block"
+                >
+                  UI/UX Design
+                </Link>
               </li>
             </ul>
           </div>
