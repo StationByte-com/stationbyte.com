@@ -44,7 +44,7 @@ const Portfolio = () => {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]" />
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Explore our latest projects and see how we've helped businesses transform their ideas into successful digital solutions.
+            Explore our latest projects and see how we&apos;ve helped businesses transform their ideas into successful digital solutions.
           </p>
         </div>
         
@@ -138,7 +138,7 @@ const Portfolio = () => {
               Ready to See Your Project Here?
             </h3>
             <p className="text-gray-600 mb-8 text-lg max-w-2xl mx-auto">
-              Join our portfolio of successful projects. Let's work together to create something amazing for your business.
+              Join our portfolio of successful projects. Let&apos;s work together to create something amazing for your business.
             </p>
             <Link 
               href="#contact" 

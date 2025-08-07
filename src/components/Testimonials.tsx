@@ -85,7 +85,7 @@ const Testimonials = () => {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]" />
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Discover how we've helped businesses transform their ideas into successful digital solutions.
+            Discover how we&apos;ve helped businesses transform their ideas into successful digital solutions.
           </p>
         </div>
         

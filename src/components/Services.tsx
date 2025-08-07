@@ -130,7 +130,7 @@ const Services = () => {
               Ready to Start Your Project?
             </h3>
             <p className="text-gray-600 mb-8 text-lg">
-              Let's discuss how we can help you build the perfect solution for your business needs.
+              Let&apos;s discuss how we can help you build the perfect solution for your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
