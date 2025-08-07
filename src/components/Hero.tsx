@@ -107,9 +107,8 @@ const Hero = () => {
                   src="/dashboard.jpg"
                   alt="StationByte Development Services - Custom Software Solutions"
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
                   priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
                 />
                 {/* StationByte logo overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
