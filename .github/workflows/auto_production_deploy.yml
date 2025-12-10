@@ -30,14 +30,14 @@ jobs:
         run: |
           if docker ps -a --format '{{.Names}}' | grep -q '^stationbyte_frontend_production$'; then
             echo "Container exists"
-            docker-compose -f docker-compose.production.yml down --volumes --remove-orphans            
+            docker compose -f docker-compose.production.yml down --volumes --remove-orphans            
           else
             echo "Container does not exist"         
           fi
 
       - name: Start container
         run: |
-          docker-compose -f docker-compose.production.yml -p stationbyte_frontend_production up --build -d
+          docker compose -f docker-compose.production.yml -p stationbyte_frontend_production up --build -d
           docker system prune -a --volumes --force
 
       - name: Check if container nginx exists
@@ -60,7 +60,7 @@ jobs:
 
       - name: Clean up
         run: |
-          docker-compose -f docker-compose.production.yml down --volumes --remove-orphans
+          docker compose -f docker-compose.production.yml down --volumes --remove-orphans
           docker system prune -a --volumes -f
 
       - name: Deployment notification
