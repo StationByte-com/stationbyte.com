@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+// 
 const About = () => {
   const stats = [
     { number: '50+', label: 'Projects Delivered' },
