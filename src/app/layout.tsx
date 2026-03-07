@@ -1,13 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#4361ee",
+};
 
 export const metadata: Metadata = {
   title: "StationByte - Innovative Software Solutions",
   description: "StationByte creates powerful, user-friendly software that helps businesses streamline operations and boost productivity.",
   keywords: "SaaS, software, business solutions, time tracking, SkedEz, productivity",
   authors: [{ name: "StationByte LLC" }],
-  themeColor: "#4361ee",
-  viewport: "width=device-width, initial-scale=1.0",
   icons: {
     icon: [
       {
