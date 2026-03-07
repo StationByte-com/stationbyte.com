@@ -4,13 +4,13 @@ import Image from 'next/image';
 const Portfolio = () => {
   const projects = [
     {
-      title: "EazyClock",
+      title: "SkedEz",
       category: "Scheduling Platform",
       description: "A next-generation intelligent scheduling platform that streamlines appointment management for businesses. Features smart scheduling, client management, and comprehensive analytics dashboard.",
-      image: "/eazyclock-logo.png",
+      image: "/skedez-logo.png",
       technologies: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
       features: ["Smart Scheduling", "Client Management", "Analytics Dashboard", "Automated Reminders"],
-      link: "https://eazyclock.com",
+      link: "https://skedez.com",
       status: "Live Product"
     },
     {
