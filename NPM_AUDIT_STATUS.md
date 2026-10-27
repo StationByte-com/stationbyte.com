@@ -1,41 +1,61 @@
 # NPM Audit Status
 
-Date: 2026-05-08
+Date: 2026-10-27
 
-Branch: codex/fix-npm-vulnerabilities
+Branch: fix/npm-vulnerabilities-next16
 
 ## Summary
 
-Package updates were applied without npm overrides, forced audit fixes, dependency downgrades, or a Next.js major upgrade.
+All vulnerabilities were resolved with package updates only: no npm overrides, no `npm audit fix --force`, no downgrades.
 
-Updated packages:
+Before: 10 vulnerable packages (2 critical, 7 high, 1 moderate): `next`, `tar`, `postcss` (direct and Next's internal copy), `sharp`, `brace-expansion`, `browserslist`, `js-yaml`, `nanoid`, `source-map-js`, `@humanfs/node`.
 
-- next 15.5.18
-- eslint-config-next 15.5.18
-- postcss 8.5.14
-- Transitive vulnerable packages refreshed through npm lockfile resolution, including brace-expansion, flatted, picomatch, and tar.
+After: `npm audit` reports 0 vulnerabilities.
 
-## Remaining Audit Finding
+Next.js 15.x still pins its internal `postcss@8.4.31` (vulnerable up to 8.5.22) in every release, including 15.5.28, so the only update-only fix was the Next.js 16 major upgrade (16.4.3 pins `postcss@8.5.23` and `sharp@^0.35.5`).
 
-`npm audit` still reports 2 moderate severity vulnerabilities involving `next` and its internal `postcss` dependency:
+## Updated packages
 
-- `postcss <8.5.10`: GHSA-qx2v-qp2m-jg93, "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output"
-- `next 9.3.4-canary.0 - 16.3.0-canary.5`: depends on vulnerable versions of `postcss`
+- next 15.5.18 → 16.4.3
+- react / react-dom 19.1.0 → 19.3.1
+- eslint-config-next 15.5.18 → 16.4.3
+- postcss 8.5.14 → 8.5.32
+- tailwindcss / @tailwindcss/postcss 4.1.8 → 4.3.3 (drops the vulnerable `tar` dependency)
+- autoprefixer 10.4.21 → 10.6.2
+- eslint 9.28.0 → 9.39.5
+- @eslint/eslintrc 3.3.1 → 3.3.7
+- typescript 5.8.3 → 5.9.3
+- @types/react / @types/react-dom → 19.3.0, @types/node → 20.19.43
+- Transitive packages refreshed through lockfile resolution.
 
-No high severity vulnerabilities are reported by the final audit.
+Majors intentionally not taken (no vulnerabilities):
 
-The remaining finding is caused by Next.js pinning its internal `postcss` dependency to `8.4.31`. The project is on stable `next@15.5.18`, which still pins internal `postcss@8.4.31`; stable `next@16.2.6` also still pins internal `postcss@8.4.31`. `npm audit` suggests `npm audit fix --force`, which would install `next@9.3.3`; that is an unsafe downgrade and a breaking change. The current canary release has moved its internal `postcss` dependency, but canary adoption and Next.js major upgrades are outside the approved scope.
+- ESLint 10: `eslint-plugin-react`, `eslint-plugin-import` and `eslint-plugin-jsx-a11y` (required by `eslint-config-next`) do not yet declare ESLint 10 peer support, so installing it would need `--legacy-peer-deps` or overrides. ESLint 9.39.5 is the newest compatible stable release (npm marks the 9.x line as no longer supported).
+- TypeScript 7.
+- @types/node 26 (kept aligned with Node 20 in the Dockerfile).
+
+## Next.js 16 migration changes
+
+- `lint` script changed from `next lint` (removed in Next 16) to `eslint .`.
+- `eslint.config.mjs` now imports the native flat configs from `eslint-config-next` instead of using `FlatCompat`.
+- `next build` updated `tsconfig.json` (`jsx: react-jsx`, `.next/dev/types/**/*.ts` include).
+- `next dev` now generates `AGENTS.md` (Next.js agent rules) and recreates it on every run, so it is committed.
 
 ## Verification
 
-Task 2 ran:
+- `npm audit`: found 0 vulnerabilities.
+- `npm run lint`: 0 errors, 1 warning (`@next/next/no-page-custom-font` in `src/app/layout.tsx`).
+- `npm run build`: succeeded on Next.js 16.4.3 (Turbopack).
 
-- `npm audit`: exits with code 1 because of the remaining 2 moderate `next`/internal `postcss` findings described above.
+### Regression check against `main` (Next 15.5.18)
 
-Final verification after package updates should include:
+Both builds were served side by side with `next start` and compared with Playwright (Chromium) at 1440×900 and 375×812:
 
-- `npm audit`
-- `npm run lint`
-- `npm run build`
-
-Task 2 did not run `npm run lint` or `npm run build`.
+- Routes `/`, a missing page (404), static assets and `/_next/image` optimization: same status codes and image output.
+- Rendered text, links, classes, `alt` and `id` attributes of `/` and the 404 page: identical.
+- Full-page screenshots with CSS animations frozen: 0 differing pixels on both pages and both viewports.
+- Testimonials carousel (every slide via dots, pause, prev/next): 0 differing pixels.
+- Mobile menu open/close and body scroll lock, header anchor navigation, 404 "home" link: same behavior.
+- No browser console errors other than the expected 404 response. Next 16 also prefetches the 404 route's RSC payload (one extra 404 fetch).
+- `next dev` (Turbopack): `/` and the 404 page render with no error overlay. The `next/image` "missing sizes" warning for `/dashboard.jpg` also appears on `main`.
+- `Dockerfile.production` builds from a clean checkout (`npm ci` reports 0 vulnerabilities) and the container serves `/`, the 404 page and optimized images. The `EACCES` error writing `/app/.next/cache/images` when running as `user: node` also happens on `main` (the image cache folder is root-owned), so it is not caused by this upgrade.
