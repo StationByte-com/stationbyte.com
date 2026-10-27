@@ -28,11 +28,17 @@ Next.js 15.x still pins its internal `postcss@8.4.31` (vulnerable up to 8.5.22) 
 - @types/react / @types/react-dom → 19.3.0, @types/node → 20.19.43
 - Transitive packages refreshed through lockfile resolution.
 
-Majors intentionally not taken (no vulnerabilities):
+## Follow-up update (2026-10-27): remaining packages
 
-- ESLint 10: `eslint-plugin-react`, `eslint-plugin-import` and `eslint-plugin-jsx-a11y` (required by `eslint-config-next`) do not yet declare ESLint 10 peer support, so installing it would need `--legacy-peer-deps` or overrides. ESLint 9.39.5 is the newest compatible stable release (npm marks the 9.x line as no longer supported).
-- TypeScript 7.
-- @types/node 26 (kept aligned with Node 20 in the Dockerfile).
+- typescript 5.9.3 → 6.0.3
+- @types/node 20.19.43 → 24.19.2, matching the runtime
+- `Dockerfile.production` base image `node:20-alpine` (end of life since 2026-04-30) → `node:24-alpine` (current LTS)
+
+Every package is now on its newest stable version that installs without overrides or `--legacy-peer-deps`. Newer majors that remain blocked:
+
+- ESLint 10: the latest `eslint-plugin-react` (7.37.5), `eslint-plugin-import` (2.32.0) and `eslint-plugin-jsx-a11y` (6.10.2), all required by `eslint-config-next`, declare peer support only up to ESLint 9. ESLint 9.39.5 is the newest compatible release.
+- TypeScript 7: `typescript-eslint` (8.72.1, required by `eslint-config-next`) requires `typescript <6.1.0`. TypeScript 6.0.3 is the newest compatible release.
+- @types/node 26: types track the Node runtime. Node 26 only enters LTS on 2026-10-28, so the runtime and types stay on Node 24 LTS.
 
 ## Next.js 16 migration changes
 
