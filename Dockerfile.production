@@ -1,48 +1,23 @@
-# Dockerfile.production
+# Production image, built by Coolify from main. Next.js standalone output: the runtime stage holds only
+# the traced server files, static assets and public/, no npm install and no dev dependencies.
 
-# Stage 1: Build
 FROM node:26-alpine AS build
-
 WORKDIR /app
-
-# Install build dependencies
-RUN apk add --no-cache --virtual .gyp \
-    python3 \
-    make \
-    g++ \
-    cairo-dev \
-    jpeg-dev \
-    pango-dev \
-    giflib-dev
-
-# Copy package files and install dependencies
+ENV NEXT_TELEMETRY_DISABLED=1
 COPY package*.json ./
 RUN npm ci
-
-# Copy all application files
 COPY . .
-
-# Build the Next.js application
 RUN npm run build
 
-# Stage 2: Runtime
 FROM node:26-alpine AS runtime
-
 WORKDIR /app
-
-# Copy the package files and install only production dependencies
-COPY package*.json ./
-RUN npm ci --omit=dev
-
-# Copy the built application from the build stage
-COPY --from=build /app/.next ./.next
-COPY --from=build /app/public ./public
-
-# Set environment variables
-ENV PORT=6300
-
-# Expose the correct port
+ENV NODE_ENV=production \
+    NEXT_TELEMETRY_DISABLED=1 \
+    PORT=6300 \
+    HOSTNAME=0.0.0.0
+COPY --from=build --chown=node:node /app/.next/standalone ./
+COPY --from=build --chown=node:node /app/.next/static ./.next/static
+COPY --from=build --chown=node:node /app/public ./public
+USER node
 EXPOSE 6300
-
-# Start the application
-CMD ["npm", "start"]
+CMD ["node", "server.js"]

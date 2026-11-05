@@ -11,6 +11,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Self-contained server for the Docker image (Dockerfile.production): config is baked in at build time.
+  output: "standalone",
   // Pin the project root; a stray lockfile higher up the disk otherwise makes Next guess wrong.
   turbopack: { root: process.cwd() },
   images: {
