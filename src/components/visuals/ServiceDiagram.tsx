@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { BrowserFrame, PhoneFrame } from "@/components/site/Frames";
+import { useMessages, useTranslations } from "next-intl";
 import { useTicker } from "./useTicker";
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -11,19 +12,17 @@ function Caption({ children }: { children: string }) {
 }
 
 /* ------------------------------------------------------------------ AI: request → context → routing → guardrails, scored by evals */
-const STAGES = [
-  { k: "Task", v: "Summarise this support ticket" },
-  { k: "Context", v: "3 documents retrieved" },
-  { k: "Routing", v: "fast model · precise model" },
-  { k: "Guardrails", v: "personal data masked" },
-  { k: "Answer", v: "with sources" },
-];
+// The routing stage (index 2) shows the two models as chips instead of its text.
+const ROUTING = 2;
+const STAGE_COUNT = 5;
 const CASES = 40;
 const FAILS = new Set([7, 23]);
 
 function AiDiagram() {
+  const t = useMessages().visuals.ai;
+  const STAGES = t.stages;
   const { ref, tick } = useTicker(700, 60);
-  const active = tick % (STAGES.length + 2);
+  const active = tick % (STAGE_COUNT + 2);
   const run = Math.min(CASES, (tick % 70) * 2);
   const passed = Array.from({ length: run }, (_, i) => i).filter((i) => !FAILS.has(i)).length;
   const done = run >= CASES;
@@ -43,16 +42,16 @@ function AiDiagram() {
                   }`}
                 >
                   <span className={`eyebrow transition-colors duration-500 ${on ? "text-signal-ink" : "text-fog"}`}>{s.k}</span>
-                  {s.k === "Routing" ? (
+                  {i === ROUTING ? (
                     <span className="flex flex-wrap gap-1.5 text-[13px]">
-                      {["fast", "precise"].map((m, j) => (
+                      {t.models.map((m, j) => (
                         <span
                           key={m}
                           className={`rounded-md px-2 py-0.5 transition-colors duration-500 ${
                             Math.floor(tick / 7) % 2 === j ? "bg-signal text-white" : "bg-edge text-fog"
                           }`}
                         >
-                          {m} model
+                          {m}
                         </span>
                       ))}
                     </span>
@@ -70,7 +69,7 @@ function AiDiagram() {
 
         <div className="mt-6 grid gap-6 border-t border-edge pt-6 md:grid-cols-[1fr_auto] md:items-end">
           <div className="flex flex-col gap-3">
-            <p className="eyebrow text-fog">Eval suite · every change</p>
+            <p className="eyebrow text-fog">{t.eval}</p>
             <div className="grid grid-cols-[repeat(20,minmax(0,1fr))] gap-1">
               {Array.from({ length: CASES }, (_, i) => (
                 <span
@@ -86,25 +85,19 @@ function AiDiagram() {
             <span className="font-mono text-[28px] font-medium tabular-nums tracking-[-0.02em] text-paper">
               {passed}/{CASES}
             </span>
-            <span className={`eyebrow transition-colors ${done ? "text-signal-ink" : "text-fog"}`}>{done ? "Above threshold · ship" : "Running"}</span>
+            <span className={`eyebrow transition-colors ${done ? "text-signal-ink" : "text-fog"}`}>{done ? t.pass : t.running}</span>
           </div>
         </div>
       </div>
-      <Caption>Illustration · how a feature is checked before it ships</Caption>
+      <Caption>{t.caption}</Caption>
     </div>
   );
 }
 
 /* ------------------------------------------------------------------ SaaS: a request travelling down the platform layers */
-const LAYERS = [
-  { k: "Customers", items: ["Team A", "Team B", "Team C"] },
-  { k: "Your product", items: ["Web app", "Admin", "Dashboards"] },
-  { k: "API", items: ["REST", "Webhooks", "Auth"] },
-  { k: "Services", items: ["Billing", "Email", "Calendar", "Files"] },
-  { k: "Data", items: ["PostgreSQL", "Backups", "Monitoring"] },
-];
-
 function SaasDiagram() {
+  const LAYERS = useMessages().visuals.saas.layers;
+  const t = useTranslations("visuals.saas");
   const { ref, tick } = useTicker(650, 2);
   const step = tick % (LAYERS.length + 2);
   const tenant = Math.floor(tick / (LAYERS.length + 2)) % 3;
@@ -140,19 +133,18 @@ function SaasDiagram() {
           );
         })}
         <p className="pt-2 text-[14px] text-fog">
-          Every row of data carries its team. A request from <b className="font-medium text-paper">{LAYERS[0].items[tenant]}</b> only ever sees{" "}
-          {LAYERS[0].items[tenant]}&apos;s data.
+          {t.rich("note", { team: LAYERS[0].items[tenant], b: (chunks) => <b className="font-medium text-paper">{chunks}</b> })}
         </p>
       </div>
-      <Caption>Illustration · one request through the platform</Caption>
+      <Caption>{t("caption")}</Caption>
     </div>
   );
 }
 
 /* ------------------------------------------------------------------ Web & mobile: one core, two surfaces */
-const SHARED = ["Types", "API client", "Validation", "Design tokens"];
-
 function AppsDiagram() {
+  const t = useMessages().visuals.apps;
+  const SHARED = t.items;
   const { ref, tick } = useTicker(1100, 0);
   const lit = tick % SHARED.length;
 
@@ -160,13 +152,13 @@ function AppsDiagram() {
     <div ref={ref}>
       <div className="relative rounded-[22px] border border-edge bg-graphite p-6 pb-10 md:p-10 md:pb-14">
         <div className="relative pr-[22%]">
-          <BrowserFrame src="/images/skedez-desktop.webp" alt="SkedEz in a desktop browser" url="skedez.com" sizes="(min-width: 1024px) 640px, 80vw" />
+          <BrowserFrame src="/images/skedez-desktop.webp" alt={t.desktopAlt} url="skedez.com" sizes="(min-width: 1024px) 640px, 80vw" />
           <div className="absolute -bottom-6 right-0 w-[30%] md:-bottom-10">
-            <PhoneFrame src="/images/skedez-mobile.webp" alt="SkedEz on a phone" sizes="220px" />
+            <PhoneFrame src="/images/skedez-mobile.webp" alt={t.phoneAlt} sizes="220px" />
           </div>
         </div>
         <div className="mt-12 flex flex-wrap items-center gap-2.5 md:mt-16">
-          <span className="eyebrow mr-2 text-fog">Shared by both</span>
+          <span className="eyebrow mr-2 text-fog">{t.shared}</span>
           {SHARED.map((s, i) => (
             <span
               key={s}
@@ -179,28 +171,26 @@ function AppsDiagram() {
           ))}
         </div>
       </div>
-      <Caption>SkedEz · one codebase, web and mobile</Caption>
+      <Caption>{t.caption}</Caption>
     </div>
   );
 }
 
 /* ------------------------------------------------------------------ Design: flow → wireframe → final, on one screen */
-const MODES = ["Flow", "Wireframe", "Final"] as const;
-const SERVICES = [
-  { name: "Cut and blow-dry", time: "1 hr" },
-  { name: "Balayage", time: "2 hr 30 min" },
-  { name: "Men's cut", time: "30 min" },
-];
-
 function DesignDiagram() {
+  const { design: t, booking } = useMessages().visuals;
+  const MODES = t.modes;
+  const SERVICES = booking.services.slice(0, 3);
   const { ref, tick } = useTicker(2600, 2);
-  const mode = MODES[tick % MODES.length];
+  // 0 flow, 1 wireframe, 2 final; labels come from messages.
+  const index = tick % MODES.length;
+  const mode = MODES[index];
 
   return (
     <div ref={ref}>
       <div className="rounded-[22px] border border-edge bg-graphite p-6 md:p-8">
         <div className="mb-6 flex items-center justify-between gap-4">
-          <span className="eyebrow text-fog">Booking screen</span>
+          <span className="eyebrow text-fog">{t.screen}</span>
           <span className="flex rounded-full border border-edge p-1" aria-hidden="true">
             {MODES.map((m) => (
               <span key={m} className={`rounded-full px-3 py-1 text-[13px] transition-colors duration-500 ${m === mode ? "bg-paper text-ink" : "text-fog"}`}>
@@ -218,9 +208,9 @@ function DesignDiagram() {
               exit={{ opacity: 0, y: -12, filter: "blur(6px)" }}
               transition={{ duration: 0.55, ease }}
             >
-              {mode === "Flow" && (
+              {index === 0 && (
                 <div className="flex flex-col items-center gap-3 pt-6">
-                  {["Choose a service", "Pick a time", "Confirm and get reminders"].map((s, i) => (
+                  {t.flow.map((s, i) => (
                     <div key={s} className="flex flex-col items-center gap-3">
                       <span className="rounded-xl border border-dashed border-fog/50 px-5 py-3 text-[15px] text-paper">{s}</span>
                       {i < 2 && <span aria-hidden="true" className="h-6 w-px bg-fog/40" />}
@@ -228,7 +218,7 @@ function DesignDiagram() {
                   ))}
                 </div>
               )}
-              {mode === "Wireframe" && (
+              {index === 1 && (
                 <div className="flex flex-col gap-3 rounded-2xl border border-dashed border-fog/40 p-5">
                   <span className="h-4 w-1/2 rounded bg-edge" />
                   <span className="h-3 w-1/3 rounded bg-edge/70" />
@@ -241,13 +231,13 @@ function DesignDiagram() {
                   <span className="mt-2 h-11 rounded-full border border-dashed border-fog/60" />
                 </div>
               )}
-              {mode === "Final" && (
+              {index === 2 && (
                 <div className="flex flex-col gap-3 rounded-2xl bg-white p-5 text-ink shadow-[0_30px_60px_-30px_rgb(0_0_0/0.6)]">
                   <div className="flex items-center gap-3">
-                    <span className="grid size-9 place-items-center rounded-lg bg-ink text-[12px] font-semibold text-white">SL</span>
+                    <span className="grid size-9 place-items-center rounded-lg bg-ink text-[12px] font-semibold text-white">{booking.initials}</span>
                     <span className="flex flex-col">
-                      <b className="text-[15px] font-semibold">Studio Lumière</b>
-                      <span className="text-[12px] text-steel">Choose a service</span>
+                      <b className="text-[15px] font-semibold">{booking.business}</b>
+                      <span className="text-[12px] text-steel">{booking.choose}</span>
                     </span>
                   </div>
                   {SERVICES.map((s, i) => (
@@ -259,14 +249,14 @@ function DesignDiagram() {
                       <span className={`text-[12px] ${i === 0 ? "text-white/70" : "text-steel"}`}>{s.time}</span>
                     </span>
                   ))}
-                  <span className="mt-2 rounded-full bg-signal py-3 text-center text-[14px] font-medium text-white">Book · Tue 9:30</span>
+                  <span className="mt-2 rounded-full bg-signal py-3 text-center text-[14px] font-medium text-white">{t.book}</span>
                 </div>
               )}
             </motion.div>
           </AnimatePresence>
         </div>
       </div>
-      <Caption>Illustration · the same screen at three stages</Caption>
+      <Caption>{t.caption}</Caption>
     </div>
   );
 }

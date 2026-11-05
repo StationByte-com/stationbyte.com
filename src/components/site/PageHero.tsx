@@ -1,7 +1,9 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Eyebrow from "@/components/motion/Eyebrow";
+import { useLocale, useTranslations } from "next-intl";
 import JsonLd from "./JsonLd";
-import { site } from "@/content/site";
+import { absoluteUrl } from "@/content/seo";
+import type { Locale } from "@/i18n/locales";
 
 type Crumb = { href: string; label: string };
 
@@ -10,7 +12,7 @@ type PageHeroProps = {
   trail?: Crumb[];
   current: string;
   eyebrow: string;
-  title: [string, string?];
+  title: readonly string[];
   lede: React.ReactNode;
   children?: React.ReactNode;
   /** Optional illustration beside the text from lg up, below it on smaller screens. */
@@ -21,7 +23,9 @@ const delay = (ms: number) => ({ style: { "--reveal-delay": `${ms}ms` } as React
 
 /** Shared top of every inner page: breadcrumbs (with BreadcrumbList data), label, two-line masked headline, lede. */
 export default function PageHero({ trail = [], current, eyebrow, title, lede, children, visual }: PageHeroProps) {
-  const crumbs = [{ href: "/", label: "Home" }, ...trail];
+  const t = useTranslations("common");
+  const locale = useLocale() as Locale;
+  const crumbs = [{ href: "/", label: t("home") }, ...trail];
 
   return (
     <section className="pt-[72px]">
@@ -33,7 +37,7 @@ export default function PageHero({ trail = [], current, eyebrow, title, lede, ch
             "@type": "ListItem",
             position: i + 1,
             name,
-            ...(i < crumbs.length ? { item: `${site.url}${crumbs[i].href === "/" ? "" : crumbs[i].href}` } : {}),
+            ...(i < crumbs.length ? { item: absoluteUrl(locale, crumbs[i].href) } : {}),
           })),
         }}
       />
@@ -43,7 +47,7 @@ export default function PageHero({ trail = [], current, eyebrow, title, lede, ch
         }`}
       >
       <div className="flex min-w-0 flex-col gap-7">
-        <nav aria-label="Breadcrumb" data-reveal>
+        <nav aria-label={t("breadcrumb")} data-reveal>
           <ol className="eyebrow flex flex-wrap items-center gap-2 text-steel">
             {crumbs.map((c) => (
               <li key={c.href} className="flex items-center gap-2">
@@ -70,7 +74,7 @@ export default function PageHero({ trail = [], current, eyebrow, title, lede, ch
         >
           <span className="line-mask" {...delay(140)}>
             <span>{title[0]}</span>
-          </span>
+          </span>{" "}
           {title[1] && (
             <span className="line-mask" {...delay(240)}>
               <span>{title[1]}</span>

@@ -2,7 +2,7 @@
 
 import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 import { useRef } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { motion, useMotionValue, useSpring } from "motion/react";
 
 const MotionLink = motion.create(Link);
@@ -32,7 +32,7 @@ export default function Cta({ href, children, variant = "solid", arrow = "→", 
   const sx = useSpring(x, { stiffness: 300, damping: 20, mass: 0.4 });
   const sy = useSpring(y, { stiffness: 300, damping: 20, mass: 0.4 });
 
-  // Internal pages go through the router; external, mailto and in-page links stay plain anchors.
+  // Internal pages go through the locale-aware router (adds /es, /ja...); external, mailto and in-page links stay plain anchors.
   const Anchor = href.startsWith("/") && !external ? MotionLink : motion.a;
 
   return (

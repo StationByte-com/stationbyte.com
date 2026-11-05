@@ -1,26 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useRef } from "react";
 import Puzzle from "./Puzzle";
 import Cta from "@/components/motion/Cta";
 import Eyebrow from "@/components/motion/Eyebrow";
 import { motion, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
 import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
+import { useMessages } from "next-intl";
 
 const MotionLink = motion.create(Link);
-
-const facts = [
-  ["Plan", "Free plan, no card"],
-  ["Pricing", "No commission"],
-  ["Languages", "Clients book in 6"],
-];
 
 /** Selected work band. On /work the page hero carries the heading, so `intro` is off there. */
 export default function Work({ intro = true }: { intro?: boolean }) {
   // Without the section heading, the cards sit directly under the page h1.
   const Heading = intro ? "h3" : "h2";
+  const { home, common } = useMessages();
+  const t = home.work;
   const reduce = useReducedMotionSafe();
   const frame = useRef<HTMLAnchorElement>(null);
   const { scrollYProgress } = useScroll({ target: frame, offset: ["start end", "end start"] });
@@ -40,14 +37,14 @@ export default function Work({ intro = true }: { intro?: boolean }) {
         {intro && (
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div className="flex flex-col gap-5">
-            <div data-reveal><Eyebrow className="text-fog">Selected work</Eyebrow></div>
+            <div data-reveal><Eyebrow className="text-fog">{t.eyebrow}</Eyebrow></div>
             <h2 className="display text-[clamp(42px,5.5vw,80px)]">
-              <span className="line-mask"><span>Products we build</span></span>
-              <span className="line-mask" style={{ "--reveal-delay": "90ms" } as React.CSSProperties}><span>and run.</span></span>
+              <span className="line-mask"><span>{t.title[0]}</span></span>{" "}
+              <span className="line-mask" style={{ "--reveal-delay": "90ms" } as React.CSSProperties}><span>{t.title[1]}</span></span>
             </h2>
           </div>
           <p data-reveal className="max-w-[420px] text-fog">
-            Running our own product in production shapes how we build for clients.
+            {t.lede}
           </p>
         </div>
         )}
@@ -59,7 +56,7 @@ export default function Work({ intro = true }: { intro?: boolean }) {
             whileInView="shown"
             viewport={{ once: true, amount: 0.3 }}
             href="/work/skedez"
-            aria-label="Read the SkedEz case study"
+            aria-label={t.cardLabel}
             className="group relative min-w-0 flex-[999_1_560px] cursor-none overflow-hidden rounded-2xl border border-edge bg-ink"
             onPointerMove={(e) => {
               if (e.pointerType !== "mouse") return;
@@ -80,7 +77,7 @@ export default function Work({ intro = true }: { intro?: boolean }) {
             >
               <Image
                 src="/images/skedez-desktop.webp"
-                alt="SkedEz homepage: Clients book you 24/7. You just show up."
+                alt={t.desktopAlt}
                 fill
                 sizes="(min-width: 1440px) 820px, 60vw"
                 className="object-cover object-top transition-transform duration-700 ease-station group-hover:scale-[1.02]"
@@ -89,7 +86,7 @@ export default function Work({ intro = true }: { intro?: boolean }) {
             <div className="relative aspect-[390/640] sm:hidden">
               <Image
                 src="/images/skedez-mobile.webp"
-                alt="SkedEz on a phone: Clients book you 24/7. You just show up."
+                alt={t.mobileAlt}
                 fill
                 sizes="100vw"
                 className="object-cover object-top"
@@ -100,19 +97,18 @@ export default function Work({ intro = true }: { intro?: boolean }) {
               style={{ x: sx, y: sy, scale }}
               className="pointer-events-none absolute left-0 top-0 -ml-11 -mt-11 hidden size-22 place-items-center rounded-full bg-signal text-sm font-medium text-white [@media(pointer:fine)]:grid"
             >
-              Case study
+              {t.cursor}
             </motion.span>
           </MotionLink>
 
           <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-5 px-2 pb-4 md:p-0">
-            <Eyebrow className="text-signal-ink">In-house product · Live</Eyebrow>
+            <Eyebrow className="text-signal-ink">{t.productEyebrow}</Eyebrow>
             <Heading className="text-5xl font-semibold tracking-[-0.04em]">SkedEz</Heading>
             <p className="text-fog">
-              Online booking for service businesses. Clients book any free time, reminders go out on their own, and on paid
-              plans every booking lands in Google Calendar.
+              {t.productBody}
             </p>
             <dl className="border-t border-edge">
-              {facts.map(([k, v]) => (
+              {t.facts.map(({ k, v }) => (
                 <div key={k} className="flex justify-between gap-4 border-b border-edge py-3">
                   <dt className="text-fog">{k}</dt>
                   <dd>{v}</dd>
@@ -120,9 +116,9 @@ export default function Work({ intro = true }: { intro?: boolean }) {
               ))}
             </dl>
             <div className="flex flex-wrap items-center gap-5">
-              <Cta href="/work/skedez" variant="light">Read the case study</Cta>
+              <Cta href="/work/skedez" variant="light">{common.readCaseStudy}</Cta>
               <Cta href="https://skedez.com" variant="link" arrow="↗" external className="hover:!text-signal-ink">
-                Visit skedez.com
+                {common.visitSkedez}
               </Cta>
             </div>
           </div>
@@ -139,15 +135,15 @@ export default function Work({ intro = true }: { intro?: boolean }) {
               className="-z-10 object-cover object-right opacity-80 transition-transform duration-[1.4s] ease-station hover:scale-[1.03]"
             />
             <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(100deg,rgb(22_22_24/0.96)_30%,rgb(22_22_24/0.55)_65%,rgb(22_22_24/0.15))]" />
-            <Eyebrow className="text-fog">Client work</Eyebrow>
+            <Eyebrow className="text-fog">{t.clientEyebrow}</Eyebrow>
             <div className="flex flex-col gap-4">
-              <Heading className="text-[clamp(28px,2.6vw,36px)] font-semibold leading-[1.05] tracking-[-0.035em]">Work like yours, on a call.</Heading>
+              <Heading className="text-[clamp(28px,2.6vw,36px)] font-semibold leading-[1.05] tracking-[-0.035em]">{t.clientTitle}</Heading>
               <p className="max-w-[460px] text-fog">
-                Pablo&apos;s earlier projects are on the Studio page. Tell us what you&apos;re building and we&apos;ll walk you through the ones closest to it.
+                {t.clientBody}
               </p>
             </div>
             <Cta href="/contact" variant="link" className="self-start hover:!text-signal-ink">
-              Ask about similar work
+              {t.clientCta}
             </Cta>
           </article>
 

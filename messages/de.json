@@ -1,0 +1,1328 @@
+{
+  "meta": {
+    "title": "StationByte · Softwareentwicklung für KI, SaaS, Web & Apps",
+    "description": "StationByte ist ein Softwarestudio: Wir konzipieren, entwickeln und betreiben KI-Funktionen, SaaS-Plattformen, Web- & Mobile-Apps bis in die Produktion.",
+    "ogAlt": "StationByte: acht Glaskacheln in einem Raster, die mittlere leuchtet blau"
+  },
+  "common": {
+    "startProject": "Projekt starten",
+    "howWeWork": "So arbeiten wir",
+    "seeOurWork": "Projekte ansehen",
+    "home": "Startseite",
+    "breadcrumb": "Brotkrümelnavigation",
+    "skipToContent": "Zum Inhalt springen",
+    "copy": "Kopieren",
+    "copyAddress": "Adresse kopieren",
+    "copied": "Kopiert ✓",
+    "emailCopied": "E-Mail-Adresse kopiert",
+    "toolsLabel": "Unsere Technologien",
+    "playStrip": "Technologieleiste abspielen",
+    "pauseStrip": "Technologieleiste anhalten",
+    "nextStepEyebrow": "Nächster Schritt",
+    "nextStepTitle": [
+      "Erzählen Sie uns,",
+      "was Sie bauen."
+    ],
+    "nextStepBody": "Ein paar Zeilen reichen für den Anfang. Wir melden uns innerhalb von 48 Stunden – mit Rückfragen oder einem Terminvorschlag.",
+    "readCaseStudy": "Zur Case Study",
+    "visitSkedez": "Zu skedez.com",
+    "aboutStudio": "Über das Studio",
+    "tags": {
+      "agents": "Agenten",
+      "evals": "Evals",
+      "prototyping": "Prototyping",
+      "designSystems": "Designsysteme"
+    }
+  },
+  "nav": {
+    "work": "Projekte",
+    "services": "Leistungen",
+    "process": "Prozess",
+    "studio": "Studio",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz"
+  },
+  "header": {
+    "homeLabel": "StationByte – zur Startseite",
+    "main": "Hauptnavigation",
+    "mobile": "Mobile Navigation",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "footer": {
+    "label": "Fußzeile",
+    "studio": "Studio",
+    "services": "Leistungen",
+    "products": "Produkte",
+    "contact": "Kontakt",
+    "language": "Sprache",
+    "tagline": "8 Kacheln · 1 freies Feld"
+  },
+  "language": {
+    "label": "Sprache",
+    "change": "Sprache: {name}. Sprache wechseln",
+    "suggestLabel": "Sprachvorschlag",
+    "suggestText": "Diese Seite gibt es auch auf Deutsch.",
+    "suggestGo": "Auf Deutsch lesen",
+    "suggestStay": "Auf {language} bleiben"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Softwarestudio · KI · SaaS · Web · Mobile",
+      "title": [
+        "Wir bauen Software,",
+        "die live geht."
+      ],
+      "nowBuilding": "In Arbeit",
+      "words": [
+        "KI-Produkte",
+        "SaaS-Lösungen",
+        "Mobile Apps",
+        "Interne Tools",
+        "Dashboards"
+      ],
+      "lede": "StationByte ist ein Softwarestudio. Wir konzipieren, entwickeln und betreiben KI-Funktionen, SaaS-Plattformen sowie Web- und Mobile-Apps für Gründerteams und wachsende Unternehmen – vom ersten Prototyp bis in die Produktion.",
+      "figure": "Abb. 01 · Acht Kacheln, ein freies Feld",
+      "filmAlt": "Acht Kacheln aus Glas und Graphit in einem Raster auf spiegelndem Boden, die mittlere leuchtet blau, ein Feld ist frei"
+    },
+    "work": {
+      "eyebrow": "Ausgewählte Projekte",
+      "title": [
+        "Produkte, die wir",
+        "bauen und betreiben."
+      ],
+      "lede": "Weil wir ein eigenes Produkt in Produktion betreiben, wissen wir, worauf es bei Kundenprojekten ankommt.",
+      "cardLabel": "Zur Case Study über SkedEz",
+      "desktopAlt": "SkedEz-Startseite: „Kunden buchen rund um die Uhr. Sie müssen nur noch da sein.“",
+      "mobileAlt": "SkedEz auf dem Smartphone: „Kunden buchen rund um die Uhr. Sie müssen nur noch da sein.“",
+      "cursor": "Case Study",
+      "productEyebrow": "Eigenes Produkt · Live",
+      "productBody": "Online-Terminbuchung für Dienstleister. Kunden buchen jeden freien Termin, Erinnerungen gehen automatisch raus, und in den kostenpflichtigen Tarifen landet jede Buchung in Google Calendar.",
+      "facts": [
+        {
+          "k": "Tarif",
+          "v": "Kostenlos, ohne Kreditkarte"
+        },
+        {
+          "k": "Preise",
+          "v": "Keine Provision"
+        },
+        {
+          "k": "Sprachen",
+          "v": "Buchung in 6 Sprachen"
+        }
+      ],
+      "clientEyebrow": "Kundenprojekte",
+      "clientTitle": "Ähnliche Projekte – im Gespräch.",
+      "clientBody": "Pablos frühere Projekte finden Sie auf der Studio-Seite. Erzählen Sie uns, was Sie bauen, und wir stellen Ihnen die Projekte vor, die Ihrem am nächsten kommen.",
+      "clientCta": "Nach ähnlichen Projekten fragen"
+    },
+    "puzzle": {
+      "title": [
+        "Das freie Feld",
+        "gehört Ihnen."
+      ],
+      "start": "Tippen Sie auf eine Kachel neben der Lücke",
+      "solved": "Alles an seinem Platz",
+      "moves": "{count, plural, one {# Zug} other {# Züge}}",
+      "group": "Schiebepuzzle",
+      "tile": "{core, select, yes {Blaue Kachel} other {Kachel}}, Zeile {row}, Spalte {col}{movable, select, yes {, verschiebbar} other {}}",
+      "footer": "Nächster Halt"
+    },
+    "services": {
+      "eyebrow": "Leistungen",
+      "title": [
+        "Vier Leistungen,",
+        "sauber umgesetzt."
+      ],
+      "all": "Alle Leistungen",
+      "detail": "{title} im Detail"
+    },
+    "process": {
+      "eyebrow": "Prozess",
+      "title": "Von der Idee in den Betrieb.",
+      "lede": "Sie bekommen früh einen funktionierenden Link statt eines Statusberichts. Jede Phase endet mit etwas, das Sie nutzen können."
+    },
+    "studio": {
+      "eyebrow": "Studio",
+      "title": [
+        "Kleines Studio.",
+        "Große Erfahrung."
+      ],
+      "lede": "Die StationByte LLC ist ein Softwarestudio, gegründet von <link>Pablo Italo</link> – Senior Engineer für KI und Full-Stack sowie Hands-on-CTO. Wer mit Ihnen spricht, schreibt auch Ihren Code.",
+      "imageAlt": "Gebrochen weiße Keramikkacheln, im Morgenlicht zu einem Raster gestapelt, eine blaue Kachel auf dem höchsten Stapel"
+    },
+    "contact": {
+      "eyebrow": "Projekt starten",
+      "title": [
+        "Erzählen Sie uns,",
+        "was Sie bauen."
+      ],
+      "body": "Wir antworten innerhalb von 48 Stunden, in Ihrer Sprache. Schreiben Sie uns, was Sie bauen, wo das Projekt heute steht und bis wann Sie es brauchen – oder <link>nutzen Sie das Projektformular</link>."
+    }
+  },
+  "studio": {
+    "principles": [
+      "Sie arbeiten direkt mit dem Entwicklungsteam, nicht mit Account Managern.",
+      "Kleine, prüfbare Releases – jede Woche.",
+      "Wir bleiben auch nach dem Launch an Bord."
+    ],
+    "principleNotes": [
+      "Niemand steht zwischen Ihnen und der Arbeit. Fragen gehen direkt an die Person, die sie beantworten kann.",
+      "Änderungen kommen in kleinen, prüfbaren Schritten. So gibt es keine großen Überraschungen.",
+      "Mit dem Launch beginnt das Leben eines Produkts. Deshalb planen wir von Anfang an für die Zeit danach."
+    ]
+  },
+  "process": {
+    "stages": [
+      {
+        "title": "Analyse",
+        "body": "Wir klären Problem, Zielgruppe und Rahmenbedingungen und legen gemeinsam fest, was am Ende stehen soll.",
+        "happens": "Gespräche mit Ihnen und, wo möglich, mit den Menschen, die das Produkt später nutzen. Wir sehen uns an, was es heute gibt: die Daten und die Systeme, mit denen alles zusammenspielen muss.",
+        "get": [
+          "Schriftlicher Leistungsumfang mit Erfolgskriterien",
+          "Die Risiken und wie wir sie senken",
+          "Ein Plan und eine Aufwandsschätzung"
+        ],
+        "need": "Zeit mit der entscheidenden Person, Zugang zu bestehenden Systemen und Daten und ein paar echte Nutzer für Gespräche."
+      },
+      {
+        "title": "Design",
+        "body": "Abläufe und Screens zum Durchklicken, bevor wir Produktionscode schreiben.",
+        "happens": "Zuerst die User Flows, dann ein klickbarer Prototyp der wichtigsten Aufgaben, getestet mit den Menschen, die ihn nutzen werden. Danach folgen visuelles Design und Komponentensystem.",
+        "get": [
+          "Ein Prototyp zum Durchklicken",
+          "Screens für jeden Zustand, mobil und Desktop",
+          "Ein Designsystem in Figma und im Code"
+        ],
+        "need": "Schnelles Feedback zum Prototyp, idealerweise innerhalb von ein bis zwei Tagen nach jedem Review."
+      },
+      {
+        "title": "Entwicklung",
+        "body": "Wöchentliche Releases auf eine Staging-Umgebung. Sie sehen den Fortschritt direkt im Produkt.",
+        "happens": "Kleine, geprüfte Änderungen, jede Woche auf eine Staging-Umgebung ausgeliefert, die Sie jederzeit öffnen können – mit einer kurzen Demo der Fortschritte.",
+        "get": [
+          "Funktionierende Software, jede Woche",
+          "Ein Changelog in verständlicher Sprache",
+          "Tests für die kritischen Abläufe"
+        ],
+        "need": "Eine Person, die Fragen zum Umfang innerhalb der Woche mit Ja oder Nein beantworten kann."
+      },
+      {
+        "title": "Betrieb",
+        "body": "Launch, Monitoring und Weiterentwicklung. Wir bleiben auch nach dem Go-live an Bord.",
+        "happens": "Launch mit Monitoring und Alerts, danach Fehlerbehebung und die nächste Runde Verbesserungen – auf Basis dessen, wie das Produkt tatsächlich genutzt wird.",
+        "get": [
+          "Eine Launch-Checkliste, gemeinsam abgearbeitet",
+          "Monitoring, Alerts und Backups",
+          "Dokumentation und Video-Walkthroughs für Ihr Team"
+        ],
+        "need": "Eine Einschätzung, was als Nächstes verbessert werden soll – aus Nutzerfeedback und Ihren Zahlen."
+      }
+    ],
+    "rhythm": [
+      {
+        "when": "Anfang der Woche",
+        "what": "Wir stimmen die Ziele der Woche ab und klären, was sie blockiert."
+      },
+      {
+        "when": "Unter der Woche",
+        "what": "Kurze schriftliche Updates in einem gemeinsamen Kanal, Fragen werden am selben Arbeitstag beantwortet."
+      },
+      {
+        "when": "Ende der Woche",
+        "what": "Ein Release auf Staging und eine kurze Demo der Änderungen."
+      }
+    ],
+    "engagements": [
+      {
+        "name": "Discovery-Sprint",
+        "fit": "Sie haben eine Idee oder ein Problem und brauchen einen belastbaren Plan.",
+        "shape": "Fester Umfang, fester Preis. Am Ende stehen ein schriftlicher Plan, ein klickbarer Prototyp und eine Schätzung für die Umsetzung."
+      },
+      {
+        "name": "Produktentwicklung",
+        "fit": "Sie wissen, was gebaut werden soll, und brauchen erfahrene Leute für Design, Entwicklung und Launch.",
+        "shape": "In Meilensteinen geplant, jeder endet mit funktionierender Software. Abgerechnet wird pro Meilenstein."
+      },
+      {
+        "name": "Laufende Betreuung",
+        "fit": "Ihr Produkt ist live und braucht kontinuierliche Verbesserungen, neue Features oder KI-Funktionen.",
+        "shape": "Monatliche Vereinbarung mit festem Kapazitätskontingent, das wir jeden Monat gemeinsam überprüfen."
+      }
+    ],
+    "agreements": [
+      {
+        "title": "Ihre Accounts",
+        "body": "Code, Cloud, App Stores und Drittanbieterdienste laufen vom ersten Tag an über Accounts, die Ihnen gehören."
+      },
+      {
+        "title": "Ihr Code, Ihre Designs",
+        "body": "Sobald die Rechnungen bezahlt sind, gehört Ihnen alles, was wir für Sie erstellen: Quellcode, Figma-Dateien, Dokumentation."
+      },
+      {
+        "title": "Saubere Übergabe",
+        "body": "Dokumentation, Runbooks und Video-Walkthroughs – ob Ihr eigenes Team übernimmt oder wir an Bord bleiben."
+      }
+    ]
+  },
+  "founder": {
+    "role": "Gründer · KI- und Full-Stack-Engineer",
+    "jobTitle": "Gründer, KI- und Full-Stack-Engineer",
+    "bio": "Pablo ist Senior Engineer für KI und Full-Stack, Tech Lead und Hands-on-CTO. Er hat StationByte gegründet, um Produkte so zu bauen wie seine eigenen: mit erfahrenen Leuten, die selbst Hand anlegen, wöchentlichen Releases und Betreuung über den Launch hinaus.",
+    "stats": [
+      "Projekte und Plattformen im Live-Betrieb",
+      "Nutzer insgesamt",
+      "Marken nutzen ElevateAB, eine dieser Plattformen"
+    ],
+    "projects": [
+      "Ein kontrollierter KI-Assistent mit Model-Routing, Inhaltsfiltern und Zugang über mehrere Kanäle",
+      "Architektur und Entwicklung einer Klima- und Energieanalyseplattform in der Frühphase",
+      "Ein auf Compliance ausgerichtetes E-Signatur-SaaS, von der ersten Version bis in die Produktion",
+      "Eine Shopify-Experimentierplattform, die von über 1.200 Marken genutzt wird"
+    ]
+  },
+  "services": {
+    "ai-product-engineering": {
+      "title": "KI-Produktentwicklung",
+      "body": "LLM-Funktionen, Agenten, Retrieval und Automatisierungen, ausgerichtet an echten Aufgaben Ihrer Nutzer – mit Kosten, Latenz und Evaluierung im Blick ab dem ersten Release.",
+      "metaTitle": "KI-Entwicklung & LLM-Integration",
+      "description": "LLM-Funktionen, KI-Agenten, RAG und Automatisierungen direkt in Ihrem Produkt – Qualität, Kosten und Latenz gemessen ab dem ersten Release.",
+      "headline": [
+        "KI, auf die sich",
+        "Ihre Kunden verlassen."
+      ],
+      "imageAlt": "Kacheln aus Glas und Graphit in einem Raster um eine hell blau leuchtende Kernkachel",
+      "diagram": [
+        "Wie ein Feature",
+        "live gehen darf."
+      ],
+      "problem": "Die meisten KI-Funktionen bleiben irgendwo zwischen überzeugender Demo und echtem Kundenvertrauen stecken. Die Lücke schließt selten das Modell, sondern ein Eval-Set, Budgets für Kosten und Latenz, Berechtigungen, Fallbacks und Monitoring.",
+      "deliverables": [
+        {
+          "title": "LLM-Funktionen in Ihrem Produkt",
+          "body": "Assistenten, Suche, Textentwürfe, Extraktion und Klassifizierung – eingebaut in die Screens, die Ihre Nutzer ohnehin verwenden."
+        },
+        {
+          "title": "Agenten und Automatisierungen",
+          "body": "Workflows, die Ihre APIs und Tools aufrufen, mit Freigabeschritten überall dort, wo ein Fehler teuer wäre."
+        },
+        {
+          "title": "RAG mit Ihren Daten",
+          "body": "Antworten auf Basis Ihrer Dokumente und Datenbanken, mit Quellenangabe und unter Einhaltung der Zugriffsrechte."
+        },
+        {
+          "title": "Eval-Suites",
+          "body": "Echte Beispiele, bei jeder Änderung automatisch bewertet. So wird die Qualität vor dem Release gemessen, nicht danach."
+        },
+        {
+          "title": "Budgets für Kosten und Latenz",
+          "body": "Model-Routing, Caching und Limits pro Aufgabe; Kosten und Antwortzeiten werden in Produktion laufend erfasst."
+        },
+        {
+          "title": "Guardrails",
+          "body": "Inhaltsfilter, Umgang mit personenbezogenen Daten und Audit-Logs, von Anfang an mitgedacht."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Bei der Aufgabe anfangen",
+          "body": "Wir wählen eine Aufgabe, die Nutzer heute erledigen, und definieren ein gutes Ergebnis, bevor wir ein Modell auswählen."
+        },
+        {
+          "title": "Zuerst das Eval-Set",
+          "body": "Beispiele aus dem echten Einsatz werden zur Testsuite, die jede Prompt- und Modelländerung bestehen muss."
+        },
+        {
+          "title": "Erst eine kleine Gruppe",
+          "body": "Die Funktion geht hinter einem Feature-Flag live, Feedback und Ausgaben werden vom ersten Tag an protokolliert."
+        },
+        {
+          "title": "Messen, dann ausrollen",
+          "body": "Qualität, Kosten pro Aufgabe und Latenz entscheiden, wann die Funktion für alle ausgerollt wird."
+        }
+      ],
+      "proof": {
+        "label": "Aus der Arbeit unseres Gründers",
+        "body": "Unser Gründer Pablo Italo hat für Iluy.ai einen kontrollierten KI-Assistenten gebaut – mit Model-Routing, Inhaltsfiltern und Zugang über mehrere Kanäle.",
+        "cta": "Über das Studio"
+      },
+      "questions": [
+        {
+          "q": "Welches Modell sollten wir nutzen?",
+          "a": "Meist mehr als eines. Wir wählen pro Aufgabe nach gemessener Qualität, Kosten und Latenz und halten die Wahl austauschbar. Ein besseres oder günstigeres Modell ist dann eine Konfigurationsänderung, kein Neubau."
+        },
+        {
+          "q": "Werden unsere Daten zum Training von Modellen verwendet?",
+          "a": "Wir setzen auf die Business-APIs der Anbieter, die standardmäßig nicht mit Ihren Daten trainieren. Wenn Daten Ihre Infrastruktur nicht verlassen dürfen, planen wir mit selbst gehosteten Modellen."
+        },
+        {
+          "q": "Woher wissen wir, dass es funktioniert?",
+          "a": "Durch ein Eval-Set aus echten Beispielen, das bei jeder Änderung bewertet wird, und nach dem Release durch Monitoring und Prüfung der Live-Ausgaben."
+        }
+      ]
+    },
+    "saas-platforms": {
+      "title": "SaaS-Plattformen",
+      "body": "Mandantenfähige Anwendungen, Dashboards, Abrechnung, APIs und die Cloud-Infrastruktur darunter – gebaut, um ohne Neuentwicklung zu wachsen.",
+      "metaTitle": "SaaS-Entwicklung: Plattformen, die mitwachsen",
+      "description": "Mandantenfähige SaaS-Anwendungen mit Accounts, Teams, Abrechnung, APIs und Admin-Tools – auf einer Cloud-Infrastruktur, die ohne Neuentwicklung mitwächst.",
+      "headline": [
+        "SaaS, das mitwächst.",
+        "Ohne Neuentwicklung."
+      ],
+      "imageAlt": "Drei Ebenen aus Glas- und Graphitkacheln übereinander, in der mittleren Ebene leuchtet eine blaue Kachel",
+      "diagram": [
+        "Eine Anfrage,",
+        "alle Schichten."
+      ],
+      "problem": "Ein SaaS-Produkt besteht aus dem Feature, das Kunden sehen, und vielem, was sie nicht sehen: Accounts, Teams, Rollen, Abrechnung, E-Mails, Admin-Tools, Backups. Wer dieses Fundament früh richtig legt, kann wachsen, ohne von vorn anzufangen.",
+      "deliverables": [
+        {
+          "title": "Accounts, Teams und Rollen",
+          "body": "Mandantenfähiges Datenmodell, Login per E-Mail oder Google, Einladungen und Berechtigungen."
+        },
+        {
+          "title": "Abos und Abrechnung",
+          "body": "Tarife, Testphasen, Upgrades, fehlgeschlagene Zahlungen und Rechnungen mit Stripe, End-to-End getestet."
+        },
+        {
+          "title": "APIs und Integrationen",
+          "body": "Öffentliche APIs, Webhooks und Anbindungen an die Tools Ihrer Kunden, vom Kalender bis WhatsApp."
+        },
+        {
+          "title": "Dashboards und Admin",
+          "body": "Reporting für Ihre Kunden und interne Tools für den Support. So braucht Ihr Team keinen Entwickler, um einem Nutzer zu helfen."
+        },
+        {
+          "title": "Infrastruktur",
+          "body": "Container, CI/CD, Staging, Backups und Monitoring auf AWS oder bei dem Anbieter, den Sie bereits nutzen."
+        },
+        {
+          "title": "Sicherheit, solide umgesetzt",
+          "body": "Minimale Zugriffsrechte, Secrets-Management, Audit-Trails sowie Datenexport und Löschung für Ihre Nutzer."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Zuerst das Datenmodell",
+          "body": "Mandanten, Berechtigungen und Abrechnung prägen alles andere. Deshalb entwerfen wir sie vor dem ersten Screen."
+        },
+        {
+          "title": "Eine Anwendung, ein Deployment",
+          "body": "Ein gut strukturierter Monolith ist schneller live und leichter zu betreiben. Services werden erst ausgelagert, wenn Last oder Teamgröße es verlangen."
+        },
+        {
+          "title": "Staging ab Woche eins",
+          "body": "Jede Änderung läuft in einer produktionsnahen Umgebung, die Sie öffnen und ausprobieren können."
+        },
+        {
+          "title": "Observability vor dem Launch",
+          "body": "Fehler, Logs und zentrale Kennzahlen sind angebunden, bevor die ersten echten Kunden kommen."
+        }
+      ],
+      "proof": {
+        "label": "Case Study",
+        "body": "SkedEz, unsere eigene Buchungsplattform: mandantenfähige Accounts und Teams, Stripe-Abos, Integrationen mit Google Calendar und WhatsApp – in Produktion.",
+        "cta": "Zur Case Study über SkedEz"
+      },
+      "questions": [
+        {
+          "q": "Wie vermeiden Sie eine spätere Neuentwicklung?",
+          "a": "Indem wir Mandantenfähigkeit, Berechtigungen und Abrechnung zuerst richtig aufsetzen, die Codebasis modular halten und Komplexität wie Queues oder separate Services erst einführen, wenn ein messbarer Bedarf besteht."
+        },
+        {
+          "q": "Welche Cloud nutzen Sie?",
+          "a": "AWS oder den Anbieter, den Sie bereits nutzen. Alles läuft in Containern, das Produkt ist also an keinen Hoster gebunden."
+        },
+        {
+          "q": "Was gehört zur Abrechnung eigentlich dazu?",
+          "a": "Tarife, Testphasen, Up- und Downgrades, fehlgeschlagene Zahlungen und erneute Versuche, Rechnungen und Steuern sowie die Webhooks, die Ihre Datenbank mit Stripe synchron halten. Diese Abläufe testen wir End-to-End."
+        }
+      ]
+    },
+    "web-and-mobile-apps": {
+      "title": "Web- und Mobile-Apps",
+      "body": "Schnelle Websites, Web-Apps sowie iOS- und Android-Apps – mit einer gemeinsamen Codebasis, wo es sinnvoll ist, und nativ, wo nicht.",
+      "metaTitle": "App-Entwicklung für Web, iOS & Android",
+      "description": "Websites, Web-Apps sowie iOS- und Android-Apps – mit einer gemeinsamen Codebasis, wo sie hilft, und nativer Entwicklung, wo es darauf ankommt.",
+      "headline": [
+        "Im Browser und",
+        "in jeder Tasche."
+      ],
+      "imageAlt": "Eine breite Milchglasplatte und eine hohe Glasplatte, beide mit Kacheln, in jeder eine blaue Kachel",
+      "diagram": [
+        "Zwei Oberflächen,",
+        "ein Kern."
+      ],
+      "problem": "Sie brauchen Ihr Produkt im Web und auf dem Smartphone – ohne es dreimal zu bauen und zu pflegen und ohne eine App, die sich wie eine Website im Rahmen anfühlt.",
+      "deliverables": [
+        {
+          "title": "Websites und Web-Apps",
+          "body": "Schnell, barrierefrei und gut auffindbar in Suchmaschinen, gebaut mit Next.js und React."
+        },
+        {
+          "title": "iOS und Android aus einer Codebasis",
+          "body": "React Native mit Expo. So erscheinen die meisten Features gleichzeitig auf beiden Plattformen."
+        },
+        {
+          "title": "Nativ, wo es darauf ankommt",
+          "body": "Native Module für Kamera, Sensoren, Widgets und alles, was besonders performant sein muss."
+        },
+        {
+          "title": "Login, Zahlungen, Benachrichtigungen",
+          "body": "Login mit Google und Apple, In-App-Käufe und Abos, Push-Benachrichtigungen."
+        },
+        {
+          "title": "Store-Veröffentlichung",
+          "body": "Builds und Einträge für App Store und Google Play sowie Over-the-Air-Updates für Fixes zwischen den Releases."
+        },
+        {
+          "title": "Performance und Barrierefreiheit",
+          "body": "Schneller erster Seitenaufbau, flüssiges Scrollen, Screenreader-Labels und Touch-Flächen in Daumengröße."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Teilen, was hilft",
+          "body": "Geschäftslogik, Designsystem und die meisten Screens werden geteilt, die Konventionen jeder Plattform respektiert."
+        },
+        {
+          "title": "Nativ, wenn nötig",
+          "body": "Würde ein gemeinsamer Ansatz das Nutzererlebnis verschlechtern, entwickeln wir diesen Teil nativ."
+        },
+        {
+          "title": "Release-Pipeline früh",
+          "body": "Builds, Testgeräte und Update-Kanäle richten wir in den ersten Wochen ein, nicht in den letzten."
+        },
+        {
+          "title": "Test auf echten Geräten",
+          "body": "Jedes Release wird auf echten Smartphones geprüft, nicht nur im Simulator."
+        }
+      ],
+      "proof": {
+        "label": "Case Study",
+        "body": "Die App von SkedEz basiert auf einer plattformübergreifenden Codebasis – zuerst fürs Web gebaut und bereit für die App Stores, dazu eine Marketing-Website mit Next.js.",
+        "cta": "Zur Case Study über SkedEz"
+      },
+      "questions": [
+        {
+          "q": "Nativ oder plattformübergreifend?",
+          "a": "Für die meisten Produkte plattformübergreifend, weil eine Codebasis schneller gebaut und günstiger gepflegt ist. Nativ für Apps, die von Gerätefunktionen leben oder jedes Quäntchen Performance brauchen. Oft ist es eine Mischung."
+        },
+        {
+          "q": "Übernehmen Sie die Veröffentlichung im App Store?",
+          "a": "Ja: Builds, Signierung, Store-Einträge und Einreichung zur Prüfung, eingerichtet unter Ihren eigenen Entwicklerkonten."
+        },
+        {
+          "q": "Können Website und App Code teilen?",
+          "a": "Ja. Typen, API-Clients, Validierung und Design-Tokens werden geteilt. Eine Änderung greift so überall gleichzeitig."
+        }
+      ]
+    },
+    "product-design": {
+      "title": "Produktdesign",
+      "body": "UX-Research, User Flows, Interface-Design und Designsysteme – von den Leuten, die sie auch umsetzen. So geht bei der Übergabe nichts verloren.",
+      "metaTitle": "Produktdesign & UX/UI-Design",
+      "description": "UX-Research, User Flows, Interface-Design und Designsysteme vom Team, das sie auch umsetzt. So geht bei der Übergabe an die Entwicklung nichts verloren.",
+      "headline": [
+        "Gestaltet von denen,",
+        "die es bauen."
+      ],
+      "imageAlt": "Kacheln aus Glas, Milchglas und Graphit schweben in verschiedenen Höhen auseinander, eine leuchtet blau",
+      "diagram": [
+        "Vom Ablauf",
+        "zum fertigen Screen."
+      ],
+      "problem": "Designs, die in der Datei stimmen und im Code nicht funktionieren, kosten doppelt. Wenn dieselben Leute das Produkt gestalten und bauen, entfällt die Übergabe – und mit ihr das meiste, was dabei verloren geht.",
+      "deliverables": [
+        {
+          "title": "UX-Research",
+          "body": "Interviews und Analysen, wie Menschen heute arbeiten, verdichtet zu einer kurzen Liste von Problemen, die sich zu lösen lohnen."
+        },
+        {
+          "title": "User Flows und Wireframes",
+          "body": "Der Weg durch jede Aufgabe, abgestimmt, bevor jemand über Farben diskutiert."
+        },
+        {
+          "title": "Klickbare Prototypen",
+          "body": "Etwas zum Durchklicken, das Sie Nutzern zeigen können, bevor Code geschrieben wird."
+        },
+        {
+          "title": "Interface-Design",
+          "body": "Jeder Screen und jeder Zustand, auch leer, ladend und fehlerhaft, in Smartphone- und Desktop-Größe."
+        },
+        {
+          "title": "Designsysteme",
+          "body": "Tokens, Komponenten und Richtlinien, synchron gehalten in Figma und im Code."
+        },
+        {
+          "title": "Branding für Produkte",
+          "body": "Logo, Farben, Typografie und Motion, die in einer Oberfläche funktionieren – wie bei dieser Website."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Die Aufgabe verstehen",
+          "body": "Wer es nutzt, was erledigt werden soll und wo es heute hakt."
+        },
+        {
+          "title": "Prototyp vor Code",
+          "body": "Abläufe werden durchgeklickt und getestet, solange Änderungen noch günstig sind."
+        },
+        {
+          "title": "Feinschliff im Browser",
+          "body": "Abstände, Animationen und responsives Verhalten stimmen wir im echten Produkt ab."
+        },
+        {
+          "title": "Ein System",
+          "body": "Design-Tokens steuern Figma und Codebasis gleichermaßen, damit beide nicht auseinanderlaufen."
+        }
+      ],
+      "proof": {
+        "label": "Eigene Arbeit",
+        "body": "Die Marke StationByte, diese Website und ihr Motion-System haben wir selbst gestaltet und gebaut – vom Logo-Raster bis zum Glasfilm im Hero.",
+        "cta": "Projekte ansehen"
+      },
+      "questions": [
+        {
+          "q": "Können Sie mit unserer bestehenden Marke arbeiten?",
+          "a": "Ja. Wir bauen Ihre Marke zu einem Produkt-Designsystem aus und schlagen nur dort Änderungen vor, wo sie auf dem Bildschirm nicht trägt."
+        },
+        {
+          "q": "Bekommen wir die Designdateien?",
+          "a": "Ja. Figma-Dateien, Komponenten und Tokens übergeben wir zusammen mit dem Code, in Ihren Accounts."
+        },
+        {
+          "q": "Testen Sie mit echten Nutzern?",
+          "a": "Ja, mit Prototypen vor der Entwicklung und mit dem Live-Produkt danach. Schon eine Handvoll Sessions deckt die meisten relevanten Probleme auf."
+        }
+      ]
+    }
+  },
+  "skedez": {
+    "description": "Wie StationByte SkedEz entwickelt und betreibt: Online-Terminbuchung für Dienstleister mit Buchungsseiten, Erinnerungen, Google Calendar, Teams und Abos.",
+    "summary": "Online-Terminbuchung für Dienstleister. Wir haben sie konzipiert, gebaut und betreiben sie – von der Datenbank bis zu den Erinnerungen.",
+    "facts": [
+      {
+        "k": "Typ",
+        "v": "Eigenes Produkt"
+      },
+      {
+        "k": "Unsere Rolle",
+        "v": "Produkt, Design, Entwicklung, Betrieb"
+      },
+      {
+        "k": "Plattformen",
+        "v": "Web-App und Buchungsseiten"
+      },
+      {
+        "k": "Status",
+        "v": "Live auf skedez.com"
+      }
+    ],
+    "problem": "Friseursalons, Physiotherapiepraxen, Personal Trainer und Beratungen verlieren Stunden mit Hin-und-her-Nachrichten über Termine und mit Kunden, die ihren Termin vergessen. Viele Buchungstools nehmen eine Provision pro Buchung oder rechnen pro Kunde ab. Wir wollten eines, das beides nicht tut und das ein Betrieb selbst einrichten kann.",
+    "built": [
+      {
+        "title": "Eine Buchungsseite pro Betrieb",
+        "body": "Geteilt als Link in der Bio, im Google-Unternehmensprofil oder auf der Website. Kunden wählen eine Leistung und einen freien Termin."
+      },
+      {
+        "title": "Erinnerungen, die sich selbst verschicken",
+        "body": "E-Mail 24 Stunden und 1 Stunde vor jeder Buchung in allen Tarifen, WhatsApp in den kostenpflichtigen Tarifen."
+      },
+      {
+        "title": "Google Calendar",
+        "body": "In den kostenpflichtigen Tarifen landen Buchungen in Google Calendar, mit Google-Meet-Link, wenn die Leistung online stattfindet."
+      },
+      {
+        "title": "Teams",
+        "body": "Bis zu 20 Personen, jede mit eigenen Leistungen und Arbeitszeiten."
+      },
+      {
+        "title": "Kunden",
+        "body": "Kundenliste mit CSV-Import, Export jederzeit und ein Dashboard mit Buchungen, Stornierungen und Kunden."
+      },
+      {
+        "title": "Sechs Sprachen",
+        "body": "Buchungsseiten auf Englisch, Portugiesisch, Spanisch, Französisch, Deutsch und Italienisch."
+      },
+      {
+        "title": "Tarife und Abrechnung",
+        "body": "Die Tarife Free, Pro und Teams, mit 15 Tagen Testphase für die kostenpflichtigen Tarife. Keine Provision auf Buchungen."
+      },
+      {
+        "title": "Datenschutz eingebaut",
+        "body": "Datenexport und Kontolöschung direkt in den Einstellungen, ganz ohne Support-Ticket."
+      }
+    ],
+    "notes": [
+      {
+        "title": "Abrechnung getestet, als ginge es um Geld – denn darum geht es",
+        "body": "Checkout, Tarifwechsel und fehlgeschlagene Zahlungen sind durch End-to-End-Tests abgedeckt. Kein Euro hängt an einer manuellen Prüfung."
+      },
+      {
+        "title": "Eine Codebasis für die App",
+        "body": "Eine plattformübergreifende Codebasis bedient die Web-App und ist bereit für iOS und Android. Jedes Feature wird nur einmal gebaut."
+      },
+      {
+        "title": "Selfservice ab der ersten Minute",
+        "body": "Ein Betrieb erstellt seine Buchungsseite, legt Leistungen an und teilt den Link – ganz ohne Hilfe. Für den kostenlosen Tarif ist keine Karte nötig."
+      }
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": "0 €",
+        "note": "1 Person, 1 Leistung, 10 Buchungen pro Monat"
+      },
+      {
+        "plan": "Pro",
+        "price": "9,90 €/Monat",
+        "note": "1 Person, unbegrenzte Leistungen und Buchungen, WhatsApp, Google Calendar"
+      },
+      {
+        "plan": "Teams",
+        "price": "14,90 €/Monat",
+        "note": "Bis zu 20 Personen mit eigenen Arbeitszeiten, alle Pro-Funktionen inklusive"
+      }
+    ]
+  },
+  "contactForm": {
+    "formTitle": "Projektformular",
+    "honeypot": "Website",
+    "name": "Ihr Name",
+    "email": "E-Mail",
+    "kind": "Was bauen Sie?",
+    "kinds": {
+      "ai": "KI-Funktion",
+      "saas": "SaaS-Plattform",
+      "apps": "Web- oder Mobile-App",
+      "design": "Produktdesign",
+      "unsure": "Noch unklar"
+    },
+    "budget": "Budget",
+    "optional": "(optional)",
+    "chooseRange": "Budgetrahmen wählen",
+    "budgets": {
+      "under": "Unter {amount}",
+      "range": "{from}–{to}",
+      "over": "Über {amount}",
+      "unsure": "Noch unklar"
+    },
+    "message": "Worum geht es?",
+    "placeholder": "Was Sie bauen, wo das Projekt heute steht und bis wann Sie es brauchen.",
+    "errors": {
+      "name": "Bitte geben Sie Ihren Namen an.",
+      "email": "Bitte geben Sie eine E-Mail-Adresse an, an die wir antworten können, z. B. name@firma.de.",
+      "message": "Ein, zwei Sätze zu Ihrem Vorhaben reichen.",
+      "summary": "Bitte prüfen Sie noch ein paar Felder, bevor wir das Formular senden können."
+    },
+    "failed": "Beim Senden ist etwas schiefgelaufen. Ihre Nachricht ist bereit zum Versand per E-Mail.",
+    "limited": "Das waren einige Nachrichten in kurzer Zeit, daher ist das Formular vorübergehend pausiert. Ihre Nachricht ist bereit zum Versand per E-Mail.",
+    "unconfigured": "Das Formular kann gerade keine Nachrichten senden, aber Ihre Nachricht ist bereit zum Versand per E-Mail.",
+    "openMail": "Im E-Mail-Programm öffnen",
+    "orWrite": "Oder schreiben Sie direkt an {email}.",
+    "privacy": "Wir verwenden diese Angaben nur, um Ihnen zu antworten. Mehr dazu in unserer <link>Datenschutzerklärung</link>.",
+    "send": "Senden",
+    "sending": "Wird gesendet…",
+    "sentTitle": "Angekommen. Feld belegt.",
+    "sentBody": "Ihre Nachricht ist bei uns. Sie erhalten innerhalb von 48 Stunden eine Antwort – von einem echten Menschen, an die angegebene Adresse.",
+    "mail": {
+      "subject": "Neues Projekt: {name}",
+      "name": "Name",
+      "email": "E-Mail",
+      "building": "Vorhaben",
+      "budget": "Budget",
+      "notSpecified": "Keine Angabe",
+      "shortened": "[Nachricht gekürzt – bitte den Rest hier einfügen.]"
+    },
+    "progress": {
+      "yourProject": "Ihr Projekt",
+      "sent": "Gesendet · Feld belegt",
+      "ready": "Bereit zum Senden",
+      "answered": "{count} von 5 beantwortet",
+      "start": "Beginnen Sie, wo Sie möchten",
+      "hint": "Name, E-Mail und ein paar Zeilen – mehr brauchen wir nicht."
+    }
+  },
+  "visuals": {
+    "architecture": {
+      "clients": [
+        {
+          "k": "App",
+          "v": "Web und Mobile"
+        },
+        {
+          "k": "Buchungsseiten",
+          "v": "Sechs Sprachen"
+        },
+        {
+          "k": "Website",
+          "v": "Marketing und Registrierung"
+        }
+      ],
+      "api": "API",
+      "oneApi": "Eine API",
+      "data": "Daten",
+      "database": "Verwaltete Datenbank",
+      "databaseNote": "mit Backups und Monitoring",
+      "services": [
+        {
+          "k": "Zahlungen",
+          "v": "Abos und Testphasen"
+        },
+        {
+          "k": "Kalender",
+          "v": "Google Calendar und Meet"
+        },
+        {
+          "k": "Nachrichten",
+          "v": "E-Mail und WhatsApp"
+        },
+        {
+          "k": "Dateien",
+          "v": "Importe und Exporte"
+        }
+      ]
+    },
+    "booking": {
+      "steps": [
+        {
+          "title": "Leistung wählen",
+          "body": "Kunden öffnen den Buchungslink aus der Bio, dem Google-Unternehmensprofil oder von der Website und wählen, was sie brauchen."
+        },
+        {
+          "title": "Termin wählen",
+          "body": "Angezeigt werden nur tatsächlich freie Zeiten, berechnet aus den Arbeitszeiten jeder Person und bestehenden Buchungen."
+        },
+        {
+          "title": "Gebucht",
+          "body": "Die Buchung ist sofort bestätigt. In den kostenpflichtigen Tarifen landet sie in Google Calendar, mit Google-Meet-Link, wenn die Leistung online stattfindet."
+        },
+        {
+          "title": "Erinnert",
+          "body": "E-Mail 24 Stunden und 1 Stunde vorher, in den kostenpflichtigen Tarifen auch per WhatsApp. Niemand muss hinterhertelefonieren."
+        }
+      ],
+      "business": "Salon Lindner",
+      "initials": "SL",
+      "sample": "Beispielbetrieb",
+      "choose": "Leistung wählen",
+      "services": [
+        {
+          "name": "Schneiden & Föhnen",
+          "time": "1 Std."
+        },
+        {
+          "name": "Balayage",
+          "time": "2 Std. 30 Min."
+        },
+        {
+          "name": "Herrenhaarschnitt",
+          "time": "30 Min."
+        },
+        {
+          "name": "Ansatzfarbe",
+          "time": "1 Std. 30 Min."
+        }
+      ],
+      "continue": "Weiter",
+      "day": "Dienstag",
+      "book": "{time} Uhr buchen",
+      "booked": "Gebucht",
+      "bookedLine": "{service} · Di {time} Uhr",
+      "calendar": "Zu Google Calendar hinzugefügt",
+      "reminders": [
+        {
+          "channel": "E-Mail",
+          "when": "Mo 9:30",
+          "text": "Erinnerung: Schneiden & Föhnen morgen um 9:30 Uhr."
+        },
+        {
+          "channel": "WhatsApp",
+          "when": "Di 8:30",
+          "text": "Bis in einer Stunde im Salon Lindner."
+        }
+      ],
+      "poweredBy": "Buchungsseite von SkedEz"
+    },
+    "dataFlow": {
+      "you": "Sie",
+      "youBody": "Name, E-Mail, Nachricht",
+      "team": "Unser Team",
+      "teamBody": "Nur für die Antwort",
+      "not": "Nicht auf dieser Website",
+      "items": [
+        "Cookies",
+        "Analyse-Tools",
+        "Werbepixel",
+        "Tracker"
+      ]
+    },
+    "deviceDuo": {
+      "desktopAlt": "SkedEz-Startseite im Desktop-Browser",
+      "phoneAlt": "SkedEz auf dem Smartphone",
+      "live": "Live · skedez.com"
+    },
+    "stages": {
+      "scope": "Umfang · v1",
+      "sharedDoc": "Geteiltes Dokument",
+      "scopeItems": [
+        "Zielgruppe und Aufgaben",
+        "Das Zielbild",
+        "Risiken, priorisiert",
+        "Plan und Schätzung"
+      ],
+      "prototype": "Prototyp",
+      "clickable": "Klickbar",
+      "releases": "Releases",
+      "staging": "staging",
+      "releaseItems": [
+        "Login und Teams",
+        "Buchungsseite",
+        "Erinnerungen",
+        "Abrechnung"
+      ],
+      "week": "Woche {n}",
+      "monitoring": "Monitoring",
+      "checks": "Alle Checks grün",
+      "monitoringNote": "Antwortzeiten, Fehler und Backups, mit Alarm, sobald etwas abweicht."
+    },
+    "week": {
+      "days": [
+        "Mo",
+        "Di",
+        "Mi",
+        "Do",
+        "Fr"
+      ],
+      "plan": "Planung",
+      "planLong": "Woche planen",
+      "update": "Update",
+      "ship": "Release",
+      "release": "Release + Demo"
+    },
+    "ai": {
+      "stages": [
+        {
+          "k": "Aufgabe",
+          "v": "Dieses Support-Ticket zusammenfassen"
+        },
+        {
+          "k": "Kontext",
+          "v": "3 Dokumente gefunden"
+        },
+        {
+          "k": "Routing",
+          "v": "schnelles Modell · präzises Modell"
+        },
+        {
+          "k": "Guardrails",
+          "v": "personenbezogene Daten maskiert"
+        },
+        {
+          "k": "Antwort",
+          "v": "mit Quellen"
+        }
+      ],
+      "models": [
+        "schnelles Modell",
+        "präzises Modell"
+      ],
+      "eval": "Eval-Suite · jede Änderung",
+      "pass": "Über Schwellenwert · Release",
+      "running": "Läuft",
+      "caption": "Illustration · so wird ein Feature vor dem Release geprüft"
+    },
+    "saas": {
+      "layers": [
+        {
+          "k": "Kunden",
+          "items": [
+            "Team A",
+            "Team B",
+            "Team C"
+          ]
+        },
+        {
+          "k": "Ihr Produkt",
+          "items": [
+            "Web-App",
+            "Admin",
+            "Dashboards"
+          ]
+        },
+        {
+          "k": "API",
+          "items": [
+            "REST",
+            "Webhooks",
+            "Auth"
+          ]
+        },
+        {
+          "k": "Dienste",
+          "items": [
+            "Abrechnung",
+            "E-Mail",
+            "Kalender",
+            "Dateien"
+          ]
+        },
+        {
+          "k": "Daten",
+          "items": [
+            "PostgreSQL",
+            "Backups",
+            "Monitoring"
+          ]
+        }
+      ],
+      "note": "Jeder Datensatz gehört zu einem Team. Eine Anfrage von <b>{team}</b> sieht immer nur die Daten von {team}.",
+      "caption": "Illustration · eine Anfrage durch die Plattform"
+    },
+    "apps": {
+      "desktopAlt": "SkedEz im Desktop-Browser",
+      "phoneAlt": "SkedEz auf dem Smartphone",
+      "shared": "Gemeinsam genutzt",
+      "items": [
+        "Typen",
+        "API-Client",
+        "Validierung",
+        "Design-Tokens"
+      ],
+      "caption": "SkedEz · eine Codebasis für Web und Mobile"
+    },
+    "design": {
+      "screen": "Buchungsansicht",
+      "modes": [
+        "Ablauf",
+        "Wireframe",
+        "Final"
+      ],
+      "flow": [
+        "Leistung wählen",
+        "Termin wählen",
+        "Bestätigen, Erinnerung erhalten"
+      ],
+      "book": "Buchen · Di 9:30",
+      "caption": "Illustration · derselbe Screen in drei Phasen"
+    }
+  },
+  "pages": {
+    "work": {
+      "title": "Projekte",
+      "description": "Ausgewählte Projekte von StationByte: SkedEz, unsere eigene Buchungsplattform in Produktion, und Kundenprojekte, die wir Ihnen im Gespräch vorstellen.",
+      "ogAlt": "SkedEz im Desktop-Browser neben den Worten „Produkte, die wir bauen und betreiben“",
+      "eyebrow": "Ausgewählte Projekte",
+      "heading": [
+        "Produkte, die wir",
+        "bauen und betreiben."
+      ],
+      "lede": "Wir zeigen, was wir vollständig offenlegen können: unser eigenes Produkt, live in Produktion. Kundenprojekte, die Ihrem am nächsten kommen, stellen wir Ihnen im Gespräch vor.",
+      "nextStep": [
+        "Projekte wie Ihres",
+        "kennenlernen?"
+      ]
+    },
+    "skedez": {
+      "title": "SkedEz – Case Study",
+      "ogAlt": "Die SkedEz-Startseite neben den Worten „Buchungen, die von selbst laufen“",
+      "articleHeadline": "SkedEz: Buchungen, die von selbst laufen",
+      "eyebrow": "Case Study · Eigenes Produkt",
+      "heading": [
+        "SkedEz: Buchungen,",
+        "die von selbst laufen."
+      ],
+      "disclaimerBold": "SkedEz ist unser eigenes Produkt, kein Kundenprojekt.",
+      "disclaimer": "Wir zeigen es, weil wir es als einziges Produkt komplett offenlegen können: die Entscheidungen und die Live-App.",
+      "problemEyebrow": "Das Problem",
+      "problemTitle": [
+        "Verlorene Zeit,",
+        "verpasste Termine."
+      ],
+      "flowEyebrow": "Aus Kundensicht",
+      "flowTitle": [
+        "Eine Buchung in",
+        "vier Schritten."
+      ],
+      "builtEyebrow": "Was wir gebaut haben",
+      "builtTitle": [
+        "Alles, was kleine",
+        "Betriebe brauchen."
+      ],
+      "howEyebrow": "Wie es gebaut ist",
+      "howTitle": [
+        "Entscheidungen",
+        "für stabilen Betrieb."
+      ],
+      "stackEyebrow": "Stack",
+      "stackTitle": "Worauf es läuft",
+      "stackNote": "Wie eine Buchung vom Bildschirm des Kunden bis zur Erinnerung läuft. Die Markierung folgt einer Buchung durch das System.",
+      "liveEyebrow": "Heute live",
+      "liveTitle": [
+        "Drei Tarife,",
+        "keine Provision."
+      ],
+      "liveNote": "Preise wie auf skedez.com veröffentlicht. Kostenpflichtige Tarife starten mit einer 15-tägigen Testphase (Kreditkarte erforderlich); für den kostenlosen Tarif ist keine Karte nötig.",
+      "seeLive": "Live ansehen auf skedez.com",
+      "nextStep": [
+        "Sie planen etwas",
+        "Ähnliches?"
+      ]
+    },
+    "services": {
+      "title": "Leistungen",
+      "description": "KI-Entwicklung, SaaS-Plattformen, Web- und App-Entwicklung sowie Produktdesign: was StationByte baut, was Sie bekommen und wie wir arbeiten.",
+      "ogAlt": "Vier Renderings von Glaskacheln, eines pro Leistung von StationByte",
+      "eyebrow": "Leistungen",
+      "heading": [
+        "Was wir gestalten,",
+        "bauen und betreiben."
+      ],
+      "lede": "Vier Leistungen, umgesetzt von Senior Engineers. Die meisten Projekte nutzen mehr als eine: Eine KI-Funktion braucht ein Produkt drumherum, und ein Produkt braucht ein Design, das auch im Code funktioniert.",
+      "agreementsEyebrow": "In jedem Projekt",
+      "agreementsTitle": "Ab Tag eins in Ihrer Hand.",
+      "fullProcess": "Zum gesamten Prozess"
+    },
+    "service": {
+      "eyebrow": "Leistung {n} · {title}",
+      "ogAlt": "{alt}, neben den Worten {headline}",
+      "whatYouGet": "Was Sie bekommen",
+      "howItWorks": "So funktioniert es",
+      "approachEyebrow": "Vorgehen",
+      "approachTitle": "Wie wir vorgehen",
+      "questionsEyebrow": "Fragen",
+      "questionsTitle": "Häufige Fragen",
+      "others": "Weitere Leistungen"
+    },
+    "process": {
+      "title": "Prozess",
+      "description": "So arbeitet StationByte: Analyse, Design, Entwicklung, Betrieb. Wöchentliche Releases, drei Kooperationsmodelle, Code und Accounts ab Tag eins bei Ihnen.",
+      "ogAlt": "Stapel aus Keramikkacheln, die zu einem vollen Raster wachsen, neben den Worten „Von der Idee in den Betrieb“",
+      "eyebrow": "So arbeiten wir",
+      "heading": [
+        "Von der Idee",
+        "in den Betrieb."
+      ],
+      "lede": "Sie bekommen früh einen funktionierenden Link statt eines Statusberichts. Jede Phase endet mit etwas, das Sie nutzen können – und Sie können nach jeder Phase aufhören und alles mitnehmen, was wir erstellt haben.",
+      "waysLink": "Modelle der Zusammenarbeit",
+      "stage": "Phase {n}",
+      "happens": "Was passiert",
+      "youGet": "Was Sie bekommen",
+      "weNeed": "Was wir von Ihnen brauchen",
+      "weekEyebrow": "Jede Woche",
+      "weekTitle": [
+        "Ein Rhythmus,",
+        "auf den Sie bauen."
+      ],
+      "weekNote": "Jede Woche dieselben drei Termine. So wissen Sie immer, was läuft, ohne nachfragen zu müssen.",
+      "figAlt": "Vier Stapel aus gebrochen weißen Keramikkacheln, die von einer Kachel zu einem vollen Raster mit einer blauen Kachel in der Mitte wachsen",
+      "figCaption": "Abb. 03 · Jede Phase ergänzt das Byte",
+      "waysEyebrow": "Modelle der Zusammenarbeit",
+      "waysTitle": [
+        "Drei Modelle,",
+        "ein Team."
+      ],
+      "waysNote": "Der übliche erste Schritt ist ein Discovery-Sprint. Jedes Angebot erhalten Sie schriftlich, mit Umfang, Zeitplan und Preis – vereinbart, bevor die Arbeit beginnt.",
+      "fits": "Passt, wenn",
+      "how": "So funktioniert es",
+      "agreementsEyebrow": "Vereinbarungen",
+      "agreementsTitle": [
+        "Ab Tag eins",
+        "in Ihrer Hand."
+      ],
+      "nextStep": [
+        "Erster Schritt:",
+        "Discovery-Sprint."
+      ]
+    },
+    "studio": {
+      "title": "Studio",
+      "description": "StationByte ist ein kleines Softwarestudio, gegründet von Pablo Italo, Senior Engineer für KI und Full-Stack. Wer mit Ihnen spricht, schreibt Ihren Code.",
+      "ogAlt": "Keramikkacheln im Morgenlicht, eine davon blau, neben den Worten „Kleines Studio. Große Erfahrung.“",
+      "eyebrow": "Studio",
+      "heading": [
+        "Kleines Studio.",
+        "Große Erfahrung."
+      ],
+      "lede": "Die StationByte LLC ist ein Softwarestudio. Wir konzipieren, entwickeln und betreiben KI-Funktionen, SaaS-Plattformen sowie Web- und Mobile-Apps für Gründerteams und wachsende Unternehmen – und betreiben mit <link>SkedEz</link> ein eigenes Produkt.",
+      "videoAlt": "Gebrochen weiße Keramikkacheln, im Morgenlicht am Fenster zu einem Raster gestapelt, eine blaue Kachel auf dem höchsten Stapel",
+      "figCaption": "Abb. 02 · Morgenlicht, eine blaue Kachel",
+      "howEyebrow": "So arbeiten wir",
+      "howTitle": [
+        "Drei Versprechen,",
+        "die wir halten."
+      ],
+      "fullProcess": "Der gesamte Prozess",
+      "founderEyebrow": "Gründer",
+      "portraitAlt": "Porträt von Pablo Italo",
+      "trackRecord": "Pablos bisherige Projekte",
+      "projectsNote": "Projekte, die Pablo geleitet, gebaut oder mitentwickelt hat, wie auf pabloitalo.com aufgeführt.",
+      "companyEyebrow": "Das Unternehmen",
+      "companyTitle": [
+        "Das Wichtigste",
+        "in Kürze."
+      ],
+      "benchAlt": "Eine helle Werkbank aus Eiche mit zugeklapptem Laptop, einem Stapel gebrochen weißer Kacheln, einer blauen Kachel, einem Notizbuch und einer Tasse",
+      "legalName": "Firmenname",
+      "whatWeDo": "Was wir tun",
+      "ourProduct": "Unser Produkt",
+      "ourProductValue": "<link>SkedEz</link>, Online-Terminbuchung für Dienstleister",
+      "contact": "Kontakt",
+      "languages": "Sprachen"
+    },
+    "contact": {
+      "title": "Projekt starten",
+      "description": "Erzählen Sie uns, was Sie bauen – per Formular oder an contact@stationbyte.com. Wir antworten innerhalb von 48 Stunden, in Ihrer Sprache.",
+      "ogAlt": "Keramikkacheln, die blaue im letzten freien Feld, neben den Worten „Erzählen Sie uns, was Sie bauen“",
+      "eyebrow": "Projekt starten",
+      "heading": [
+        "Erzählen Sie uns,",
+        "was Sie bauen."
+      ],
+      "lede": "Ein paar Zeilen reichen für den Anfang, in der Sprache Ihrer Wahl. Wir antworten innerhalb von 48 Stunden – und zwar aus der Entwicklung, nicht aus dem Vertrieb.",
+      "videoAlt": "Acht gebrochen weiße Keramikkacheln in einem Raster auf Leinen, eine blaue Kachel gleitet in das letzte freie Feld",
+      "ratherEmail": "Lieber per E-Mail?",
+      "emailTip": "Schreiben Sie uns, was Sie bauen, wo das Projekt heute steht und bis wann Sie es brauchen.",
+      "whatNext": "Wie es weitergeht",
+      "steps": [
+        {
+          "title": "Wir antworten",
+          "body": "Innerhalb von 48 Stunden, in Ihrer Sprache, mit Rückfragen oder einem Terminvorschlag."
+        },
+        {
+          "title": "Wir telefonieren",
+          "body": "Ein Gespräch darüber, was Sie bauen, wo das Projekt steht und was am Ende stehen soll."
+        },
+        {
+          "title": "Sie erhalten ein Angebot",
+          "body": "Schriftlich, mit Umfang, Zeitplan und Preis. Meist zuerst ein Discovery-Sprint."
+        }
+      ],
+      "notReady": "Noch nicht bereit für ein Gespräch? Lesen Sie, <process>wie wir arbeiten</process>, oder sehen Sie sich <product>ein Produkt von uns</product> an."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "description": "Wie die StationByte LLC personenbezogene Daten auf stationbyte.com und bei Ihrer Kontaktaufnahme erhebt, verwendet und schützt.",
+      "ogAlt": "Das StationByte-Kachelzeichen neben den Worten „Ihre Daten, so wenig wie nötig“",
+      "current": "Datenschutz",
+      "eyebrow": "Datenschutzerklärung · Stand: {date}",
+      "heading": [
+        "Ihre Daten,",
+        "so wenig wie nötig."
+      ],
+      "lede": "Wir erheben nur, was wir brauchen, um Ihnen zu antworten und diese Website zu betreiben. Keine Cookies, keine Analyse-Tools, kein Tracking.",
+      "onThisPage": "Auf dieser Seite",
+      "translationNote": "Diese Übersetzung dient nur der besseren Verständlichkeit; bei Abweichungen ist die englische Fassung maßgeblich.",
+      "sections": {
+        "who": {
+          "title": "Wer wir sind",
+          "p1": "Diese Website wird von der StationByte LLC („StationByte“, „wir“) betrieben. Wir sind für die Verarbeitung der hier beschriebenen personenbezogenen Daten verantwortlich. Bei Fragen zu dieser Datenschutzerklärung oder zu Ihren Daten schreiben Sie an <mail>contact@stationbyte.com</mail>."
+        },
+        "collect": {
+          "title": "Welche Daten wir erheben",
+          "p1": "<b>Wenn Sie uns kontaktieren.</b> Wenn Sie das <form>Projektformular</form> nutzen oder uns eine E-Mail schreiben, erhalten wir Ihren Namen, Ihre E-Mail-Adresse, Angaben zu Ihrem Vorhaben, einen Budgetrahmen, sofern Sie einen auswählen, Ihre Nachricht und alles, was Sie darüber hinaus mitteilen.",
+          "p2": "<b>Wenn Sie die Website besuchen.</b> Wie die meisten Websites protokolliert unser Server bei jedem Aufruf übliche technische Angaben: IP-Adresse, Browser- und Gerätetyp, die aufgerufene Seite und den Zeitpunkt. Wir verwenden diese Angaben nicht, um Sie zu identifizieren.",
+          "p3": "<b>Cookies und Tracking.</b> Diese Website setzt keine Cookies und verwendet keine Analyse-, Werbe- oder Tracking-Tools. Schriften, Bilder und Videos werden von unserem eigenen Server ausgeliefert. Wenn Sie eine Sprache wählen oder die Leiste mit dem Sprachvorschlag schließen, speichert Ihr Browser diese Auswahl in seinem eigenen Speicher; sie wird nie an uns übermittelt."
+        },
+        "use": {
+          "title": "Wofür wir die Daten verwenden und auf welcher Rechtsgrundlage",
+          "i1": "<b>Um Ihnen zu antworten und ein von Ihnen angefragtes Angebot zu erstellen</b>: Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO).",
+          "i2": "<b>Um ein Projekt umzusetzen</b>, wenn wir zusammenarbeiten: Erfüllung unseres Vertrags (Art. 6 Abs. 1 lit. b DSGVO).",
+          "i3": "<b>Um die Website sicher und funktionsfähig zu halten</b>, anhand von Serverprotokollen: unser berechtigtes Interesse am Schutz der Website und ihrer Besucher (Art. 6 Abs. 1 lit. f DSGVO)."
+        },
+        "never": {
+          "title": "Was wir nie tun",
+          "p1": "Wir verkaufen Ihre Daten nicht, geben sie nicht für Werbezwecke weiter, tragen Sie in keinen Newsletter ein und verwenden sie nicht zum Training von KI-Modellen."
+        },
+        "share": {
+          "title": "Wer die Daten außerdem verarbeitet",
+          "p1": "Nur die Dienstleister, die wir für den Betrieb der Website und die Beantwortung Ihrer Anfrage benötigen: unser Hosting-Anbieter, der die Serverprotokolle speichert; unser Team-Chat (Slack), der die Einsendungen über das Projektformular empfängt; und unser E-Mail-Anbieter, der die Nachrichten speichert, die Sie uns senden. Sie verarbeiten die Daten nach unseren Weisungen und dürfen sie nicht für eigene Zwecke verwenden.",
+          "p2": "Ihre Daten können außerhalb des Landes verarbeitet werden, in dem Sie leben. Wo das Gesetz es verlangt, nutzen wir die dort vorgesehenen Garantien, etwa Standardvertragsklauseln."
+        },
+        "keep": {
+          "title": "Wie lange wir die Daten speichern",
+          "i1": "Anfragen, aus denen kein Projekt entsteht: Löschung innerhalb von 12 Monaten nach unserer letzten Nachricht.",
+          "i2": "Korrespondenz mit Kunden: so lange, wie die Zusammenarbeit und gesetzliche Aufbewahrungspflichten es erfordern.",
+          "i3": "Serverprotokolle: nur so lange, wie es für die Sicherheit der Website nötig ist, danach werden sie gelöscht."
+        },
+        "rights": {
+          "title": "Ihre Rechte",
+          "p1": "Sie können Auskunft über Ihre Daten verlangen, ihre Berichtigung, Löschung oder Übertragung sowie die Einschränkung ihrer Verarbeitung, und Sie können der Verarbeitung widersprechen. Schreiben Sie an <mail>contact@stationbyte.com</mail>; wir antworten innerhalb eines Monats. Gegebenenfalls müssen wir vorher Ihre Identität überprüfen.",
+          "p2": "Wenn Sie sich in der EU, im Vereinigten Königreich oder in einem anderen Land mit Datenschutzgesetzen befinden, können Sie sich zudem bei Ihrer zuständigen Datenschutzaufsichtsbehörde beschweren. Wir würden uns freuen, wenn Sie uns zuvor die Gelegenheit geben, das Anliegen zu klären."
+        },
+        "security": {
+          "title": "Sicherheit",
+          "p1": "Die Website wird ausschließlich über HTTPS ausgeliefert, und Zugriff auf Nachrichten und Server haben nur die Personen, die ihn benötigen."
+        },
+        "children": {
+          "title": "Kinder",
+          "p1": "Diese Website richtet sich an Unternehmen. Sie ist nicht für Kinder bestimmt, und wir erheben nicht wissentlich Daten von Kindern."
+        },
+        "changes": {
+          "title": "Änderungen",
+          "p1": "Wenn sich unser Umgang mit Daten ändert, aktualisieren wir diese Seite und das Datum oben."
+        }
+      }
+    },
+    "notFound": {
+      "title": "Seite nicht gefunden",
+      "eyebrow": "Fehler 404",
+      "heading": "Dieses Feld ist leer.",
+      "body": "Die angefragte Seite gibt es hier nicht. Vielleicht ist sie beim Umbau der Website umgezogen.",
+      "back": "Zur Startseite"
+    }
+  },
+  "schema": {
+    "knowsAbout": [
+      "KI-Produktentwicklung",
+      "Large Language Models",
+      "SaaS-Entwicklung",
+      "Webentwicklung",
+      "App-Entwicklung",
+      "Produktdesign"
+    ],
+    "skedezCategory": "Software für Online-Terminbuchung",
+    "areaServed": "Weltweit",
+    "whatYouGet": "{title}: Was Sie bekommen"
+  },
+  "llms": {
+    "about": "Die StationByte LLC ist ein kleines Softwarestudio, gegründet von Pablo Italo. Es konzipiert, entwickelt und betreibt KI-Funktionen, SaaS-Plattformen sowie Web- und Mobile-Apps für Gründerteams und wachsende Unternehmen und betreibt ein eigenes Produkt, SkedEz (Online-Terminbuchung für Dienstleister). Kontakt: contact@stationbyte.com. Antwort innerhalb von 48 Stunden, in jeder Sprache dieser Website.",
+    "pages": "Seiten",
+    "homeLink": "Startseite",
+    "home": "was das Studio macht, ausgewählte Projekte, Leistungen, Prozess, Studio und Kontakt.",
+    "work": "SkedEz, das eigene Produkt des Studios, und wie man Projekte sehen kann, die dem eigenen ähneln.",
+    "skedez": "Problem, was gebaut wurde, technische Umsetzung, Stack und aktuelle Tarife.",
+    "services": "die vier Leistungen und was jede umfasst.",
+    "process": "Analyse, Design, Entwicklung, Betrieb; der Wochenrhythmus; Modelle der Zusammenarbeit; Vereinbarungen.",
+    "studio": "wie das Studio arbeitet und wer dahintersteht.",
+    "contact": "das Projektformular und die E-Mail-Adresse.",
+    "optional": "Optional",
+    "fullText": "Volltext für Sprachmodelle",
+    "sitemap": "Sitemap",
+    "languages": "Weitere Sprachen",
+    "languagesNote": "Dieselbe Website in anderen Sprachen:",
+    "whatYouGet": "Was Sie bekommen:",
+    "approach": "Vorgehen:",
+    "questions": "Häufige Fragen von Kunden:",
+    "tools": "Technologien: {list}.",
+    "youGet": "Sie bekommen: {list}.",
+    "needed": "Von Ihnen benötigt: {text}",
+    "everyWeek": "Jede Woche:",
+    "ways": "Modelle der Zusammenarbeit:",
+    "fitsWhen": "Passt, wenn:",
+    "howItWorks": "So funktioniert es:",
+    "agreements": "Vereinbarungen:",
+    "workHeading": "Projekte: Case Study SkedEz",
+    "skedezIntro": "URL: {url}. Live auf {live}. SkedEz ist das eigene Produkt des Studios, kein Kundenprojekt.",
+    "built": "Was gebaut wurde:",
+    "notes": "Technische Hinweise:",
+    "plans": "Tarife (wie auf skedez.com veröffentlicht):",
+    "clientWork": "Kundenprojekte stellt das Studio Interessenten im Gespräch vor, ausgewählt nach Nähe zum jeweiligen Vorhaben.",
+    "projects": "Projekte, die Pablo geleitet, gebaut oder mitentwickelt hat (laut pabloitalo.com):",
+    "stack": "Technologien, mit denen das Studio arbeitet: {list}.",
+    "contactLine": "Formular unter {url} oder E-Mail an {email}."
+  }
+}

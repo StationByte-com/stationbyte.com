@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import { site } from "@/content/site";
 
 /** The studio address as text with a copy button; falls back to opening the mail app. */
 export default function CopyEmail() {
+  const t = useTranslations("common");
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -41,12 +43,12 @@ export default function CopyEmail() {
             exit={{ y: -14, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            {copied ? "Copied ✓" : "Copy"}
+            {copied ? t("copied") : t("copy")}
           </motion.span>
         </AnimatePresence>
       </motion.button>
       <span role="status" className="sr-only">
-        {copied ? "Email address copied" : ""}
+        {copied ? t("emailCopied") : ""}
       </span>
     </div>
   );

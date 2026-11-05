@@ -3,9 +3,24 @@
   "configurations": [
     {
       "name": "stationbyte-prod",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["next", "start", "-p", "3107"],
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cp -R public .next/standalone/ && cp -R .next/static .next/standalone/.next/ && PORT=3107 HOSTNAME=0.0.0.0 node .next/standalone/server.js"
+      ],
       "port": 3107
+    },
+    {
+      "name": "stationbyte-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "next",
+        "dev",
+        "--turbopack",
+        "-p",
+        "3108"
+      ],
+      "port": 3108
     }
   ]
 }

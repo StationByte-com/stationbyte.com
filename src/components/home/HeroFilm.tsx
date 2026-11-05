@@ -15,7 +15,7 @@ const timecode = (s: number) => {
  * The hero film: an 8-second seamless glass loop, path-traced in Blender Cycles (scripts/hero-film).
  * Poster is frame 1, so the first paint and the loop start match. Drifts with the cursor and pushes in on scroll.
  */
-export default function HeroFilm() {
+export default function HeroFilm({ alt }: { alt: string }) {
   const reduce = useReducedMotionSafe();
   const frame = useRef<HTMLDivElement>(null);
   const video = useRef<HTMLVideoElement>(null);
@@ -82,7 +82,7 @@ export default function HeroFilm() {
           <source media="(max-width: 639px)" srcSet="/video/hero-tall-poster.jpg" />
           <img
             src="/video/hero-wide-poster.jpg"
-            alt="Eight glass and graphite tiles in a grid on a reflective floor, the centre tile glowing blue, one slot open"
+            alt={alt}
             className="absolute inset-0 h-full w-full object-cover object-[60%_0%]"
             fetchPriority="high"
           />

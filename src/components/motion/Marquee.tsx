@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 /** Slow, pausable strip of items. The only looping animation on the site. */
 export default function Marquee({ items, label }: { items: string[]; label: string }) {
+  const t = useTranslations("common");
   const [paused, setPaused] = useState(false);
   const row = (hidden: boolean) => (
     <ul aria-hidden={hidden || undefined} className="flex shrink-0 items-center">
@@ -30,7 +32,7 @@ export default function Marquee({ items, label }: { items: string[]; label: stri
         aria-pressed={paused}
         className="absolute right-[clamp(16px,4.5vw,64px)] top-1/2 grid size-9 -translate-y-1/2 place-items-center rounded-full border border-line bg-paper text-steel transition-colors hover:text-ink"
       >
-        <span className="sr-only">{paused ? "Play" : "Pause"} the tools strip</span>
+        <span className="sr-only">{paused ? t("playStrip") : t("pauseStrip")}</span>
         {paused ? (
           <svg width="10" height="12" viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" fill="currentColor" /></svg>
         ) : (

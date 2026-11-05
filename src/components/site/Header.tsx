@@ -1,12 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import Logo from "@/components/brand/Logo";
 import { nav } from "@/content/site";
+import type { Locale } from "@/i18n/locales";
+import { LanguageChips, LanguageMenu } from "./LanguageSwitcher";
+import LanguageSuggest, { type Suggestion } from "./LanguageSuggest";
 
-export default function Header() {
+export default function Header({ suggestions }: { suggestions: Record<Locale, Suggestion> }) {
+  const t = useTranslations();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [away, setAway] = useState(false);
@@ -71,11 +75,11 @@ export default function Header() {
       } ${open ? "bg-ink text-paper" : ""}`}
     >
       <div className="shell flex h-[72px] items-center justify-between gap-6">
-        <Link href="/" aria-label="StationByte home" onClick={close} className="group/logo relative z-10 block">
+        <Link href="/" aria-label={t("header.homeLabel")} onClick={close} className="group/logo relative z-10 block">
           <Logo assemble shuffle className="h-[26px] w-auto" />
         </Link>
 
-        <nav aria-label="Main" className="hidden items-center gap-9 text-[15px] md:flex">
+        <nav aria-label={t("header.main")} className="hidden items-center gap-7 text-[15px] md:flex lg:gap-9">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -83,7 +87,7 @@ export default function Header() {
               aria-current={current(item.href) ? "page" : undefined}
               className="relative text-ink/80 transition-colors hover:text-ink aria-[current=page]:text-ink"
             >
-              {item.label}
+              {t(`nav.${item.key}`)}
               {/* The active page gets the open-slot tile under its label. */}
               <span
                 aria-hidden="true"
@@ -93,11 +97,12 @@ export default function Header() {
               />
             </Link>
           ))}
+          <LanguageMenu />
           <Link
             href="/contact"
             className="rounded-full bg-ink px-5 py-3 font-medium text-paper transition-[background-color,transform] duration-300 ease-station hover:-translate-y-px hover:bg-signal"
           >
-            Start a project
+            {t("common.startProject")}
           </Link>
         </nav>
 
@@ -111,7 +116,7 @@ export default function Header() {
             open ? "border-edge bg-graphite" : "border-line bg-white"
           }`}
         >
-          <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
+          <span className="sr-only">{open ? t("header.closeMenu") : t("header.openMenu")}</span>
           <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
             {[0, 1, 2].flatMap((r) =>
               [0, 1, 2].map((c) => {
@@ -138,8 +143,10 @@ export default function Header() {
         </button>
       </div>
 
+      {!open && <LanguageSuggest suggestions={suggestions} placement="header" />}
+
       <div id="mobile-menu" hidden={!open} className="fixed inset-0 top-[72px] bg-ink text-paper md:hidden">
-        <nav aria-label="Mobile" className="shell flex h-full flex-col justify-between pb-10 pt-8">
+        <nav aria-label={t("header.mobile")} className="shell flex h-full flex-col justify-between gap-8 overflow-y-auto pb-10 pt-8">
           <ul className="flex flex-col">
             {nav.map((item) => (
               <li key={item.href} className="border-b border-edge">
@@ -147,17 +154,20 @@ export default function Header() {
                   href={item.href}
                   onClick={close}
                   aria-current={current(item.href) ? "page" : undefined}
-                  className="flex items-baseline justify-between py-5 text-[40px] font-semibold tracking-[-0.04em] aria-[current=page]:text-signal-ink"
+                  className="flex items-baseline justify-between py-4 text-[40px] font-semibold tracking-[-0.04em] aria-[current=page]:text-signal-ink [:lang(ja)_&]:text-[32px] [:lang(ja)_&]:tracking-normal [:lang(ko)_&]:text-[32px] [:lang(ko)_&]:tracking-normal"
                 >
-                  {item.label}
+                  {t(`nav.${item.key}`)}
                   <span aria-hidden="true" className="text-2xl text-fog">→</span>
                 </Link>
               </li>
             ))}
           </ul>
-          <Link href="/contact" onClick={close} className="rounded-full bg-paper px-6 py-4 text-center font-medium text-ink">
-            Start a project
-          </Link>
+          <div className="flex flex-col gap-6">
+            {open && <LanguageChips onPick={close} />}
+            <Link href="/contact" onClick={close} className="rounded-full bg-paper px-6 py-4 text-center font-medium text-ink">
+              {t("common.startProject")}
+            </Link>
+          </div>
         </nav>
       </div>
     </header>

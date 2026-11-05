@@ -4,13 +4,17 @@ import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 import { useState } from "react";
 import { AnimatePresence, motion} from "motion/react";
 import Eyebrow from "@/components/motion/Eyebrow";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { site } from "@/content/site";
 
 // The tile edge in studio-macro.webp (1672x941), traced so a light can travel along it.
 const EDGE = "M 345 268 C 352 470, 470 565, 760 652 S 1440 838, 1672 900";
 
 export default function Contact() {
+  const t = useTranslations("home.contact");
+  const tc = useTranslations("common");
+  const [l1, l2] = t.raw("title") as string[];
   const [copied, setCopied] = useState(false);
   const reduce = useReducedMotionSafe();
 
@@ -46,11 +50,11 @@ export default function Contact() {
 
       <div className="shell flex flex-col gap-8 py-32 md:py-36">
         <div data-reveal>
-          <Eyebrow className="text-signal-ink">Start a project</Eyebrow>
+          <Eyebrow className="text-signal-ink">{t("eyebrow")}</Eyebrow>
         </div>
         <h2 className="display max-w-[820px] text-[clamp(42px,5vw,72px)]">
-          <span className="line-mask"><span>Tell us what</span></span>
-          <span className="line-mask" style={{ "--reveal-delay": "90ms" } as React.CSSProperties}><span>you&apos;re building.</span></span>
+          <span className="line-mask"><span>{l1}</span></span>{" "}
+          <span className="line-mask" style={{ "--reveal-delay": "90ms" } as React.CSSProperties}><span>{l2}</span></span>
         </h2>
         <div data-reveal className="flex flex-wrap items-center gap-5">
           <a
@@ -85,20 +89,22 @@ export default function Contact() {
                 exit={{ y: -18, opacity: 0 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
               >
-                {copied ? "Copied ✓" : "Copy address"}
+                {copied ? tc("copied") : tc("copyAddress")}
               </motion.span>
             </AnimatePresence>
           </motion.button>
           <span role="status" className="sr-only">
-            {copied ? "Email address copied" : ""}
+            {copied ? tc("emailCopied") : ""}
           </span>
         </div>
         <p data-reveal className="max-w-[560px] text-fog">
-          We reply {site.replyTime}. Include what you&apos;re building, where it stands today, and when you need it, or{" "}
-          <Link href="/contact" className="text-paper underline decoration-edge underline-offset-4 transition-colors hover:decoration-signal-ink">
-            use the project form
-          </Link>
-          .
+          {t.rich("body", {
+            link: (chunks) => (
+              <Link href="/contact" className="text-paper underline decoration-edge underline-offset-4 transition-colors hover:decoration-signal-ink">
+                {chunks}
+              </Link>
+            ),
+          })}
         </p>
       </div>
     </section>

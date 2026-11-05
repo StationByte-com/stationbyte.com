@@ -283,3 +283,49 @@ html.lenis body {
 .slot-mover {
   animation: slot-move 8s var(--ease-switch) infinite;
 }
+
+/* ------------------------------------------------------------------ Languages
+   Unlayered on purpose: these beat Tailwind's utility layer, so per-element tracking and leading
+   classes written for Latin text are corrected for other scripts without touching every component. */
+
+/* Japanese and Korean: Geist has no CJK glyphs, so Latin stays in Geist and the rest falls through to the
+   platform's own CJK font (Hiragino / Apple SD Gothic on Apple, Yu Gothic / Malgun Gothic on Windows, Noto CJK on
+   Android and Linux). Nothing extra to download: a webfont would be thousands of glyphs in a hundred-plus slices. */
+html:lang(ja) {
+  --font-sans: var(--font-geist-sans), "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+  --font-mono: var(--font-geist-mono), "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", monospace;
+  line-break: strict;
+}
+html:lang(ko) {
+  --font-sans: var(--font-geist-sans), "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", "Noto Sans KR", sans-serif;
+  --font-mono: var(--font-geist-mono), "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", monospace;
+  /* Korean wraps between words, never inside one. */
+  word-break: keep-all;
+}
+:is(:lang(ja), :lang(ko)) body {
+  line-height: 1.75;
+}
+/* Tight negative tracking and sub-1 leading suit Latin display type and crush CJK. */
+:is(:lang(ja), :lang(ko)) :is(h1, h2, h3, .display, [class*="tracking-[-"]) {
+  letter-spacing: -0.01em;
+}
+:is(:lang(ja), :lang(ko)) :is(h1, h2, h3, .display) {
+  line-height: 1.2;
+}
+:is(:lang(ja), :lang(ko)) .eyebrow {
+  letter-spacing: 0.04em;
+}
+/* Break Japanese at natural phrase boundaries (Chrome 119+, ignored elsewhere), and keep a few characters
+   such as 「す。」 from ending up alone on the last line. */
+html:lang(ja) {
+  word-break: auto-phrase;
+}
+:is(:lang(ja), :lang(ko)) p {
+  text-wrap: pretty;
+}
+
+/* German and Dutch compounds can outgrow a narrow column: hyphenate headings, and never overflow. */
+:is(:lang(de), :lang(nl)) :is(h1, h2, h3, .display) {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}

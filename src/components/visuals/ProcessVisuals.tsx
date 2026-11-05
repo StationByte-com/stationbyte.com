@@ -1,15 +1,16 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useMessages } from "next-intl";
 import { useTicker } from "./useTicker";
 
 const ease = [0.16, 1, 0.3, 1] as const;
-const STAGES = ["Discover", "Design", "Build", "Operate"];
 // How much of the byte is in place after each stage; the last tile is the open slot, ready for what's next.
 const FILLED = [2, 4, 7, 8];
 
 /** Hero: the logo grid assembling stage by stage. */
 export function StageGrid() {
+  const STAGES = useMessages().process.stages.map((s) => s.title);
   const { ref, tick } = useTicker(1500, 3);
   const stage = tick % STAGES.length;
 
@@ -57,16 +58,17 @@ const card = "rounded-[20px] border border-line bg-white p-6 shadow-[0_30px_60px
 
 /** What each stage produces, drawn small. */
 export function StageArtifact({ index }: { index: number }) {
+  const t = useMessages().visuals.stages;
   const { ref, tick } = useTicker(900, 6);
 
   if (index === 0) {
-    const items = ["Users and their jobs", "What done looks like", "Risks, ranked", "Plan and estimate"];
+    const items = t.scopeItems;
     const done = Math.min(items.length, tick % 7);
     return (
       <div ref={ref} className={card}>
         <div className="mb-4 flex items-center justify-between">
-          <span className="eyebrow text-steel">Scope · v1</span>
-          <span className="rounded-full bg-paper px-2.5 py-1 text-[12px] text-steel">Shared doc</span>
+          <span className="eyebrow text-steel">{t.scope}</span>
+          <span className="rounded-full bg-paper px-2.5 py-1 text-[12px] text-steel">{t.sharedDoc}</span>
         </div>
         <ul className="flex flex-col gap-2.5">
           {items.map((it, i) => (
@@ -87,8 +89,8 @@ export function StageArtifact({ index }: { index: number }) {
     return (
       <div ref={ref} className={card}>
         <div className="mb-4 flex items-center justify-between">
-          <span className="eyebrow text-steel">Prototype</span>
-          <span className="rounded-full bg-paper px-2.5 py-1 text-[12px] text-steel">Clickable</span>
+          <span className="eyebrow text-steel">{t.prototype}</span>
+          <span className="rounded-full bg-paper px-2.5 py-1 text-[12px] text-steel">{t.clickable}</span>
         </div>
         <div className="relative flex items-center gap-3">
           {[0, 1, 2].map((i) => (
@@ -111,15 +113,15 @@ export function StageArtifact({ index }: { index: number }) {
   }
 
   if (index === 2) {
-    const log = ["Sign-in and teams", "Booking page", "Reminders", "Billing"];
+    const log = t.releaseItems;
     const shown = (tick % 6) + 1;
     return (
       <div ref={ref} className={card}>
         <div className="mb-4 flex items-center justify-between">
-          <span className="eyebrow text-steel">Releases</span>
+          <span className="eyebrow text-steel">{t.releases}</span>
           <span className="flex items-center gap-1.5 rounded-full bg-paper px-2.5 py-1 text-[12px] text-steel">
             <span className="size-1.5 rounded-full bg-signal" />
-            staging
+            {t.staging}
           </span>
         </div>
         <ol className="flex flex-col gap-2">
@@ -131,7 +133,7 @@ export function StageArtifact({ index }: { index: number }) {
               }`}
             >
               <span>{l}</span>
-              <span className="font-mono text-[12px] text-steel">Week {i + 1}</span>
+              <span className="font-mono text-[12px] text-steel">{t.week.replace("{n}", String(i + 1))}</span>
             </li>
           ))}
         </ol>
@@ -143,13 +145,13 @@ export function StageArtifact({ index }: { index: number }) {
   return (
     <div ref={ref} className={card}>
       <div className="mb-4 flex items-center justify-between">
-        <span className="eyebrow text-steel">Monitoring</span>
+        <span className="eyebrow text-steel">{t.monitoring}</span>
         <span className="flex items-center gap-1.5 rounded-full bg-paper px-2.5 py-1 text-[12px] text-steel">
           <span className="relative grid size-1.5 place-items-center">
             <span className="absolute inset-0 rounded-full bg-signal [animation:ping_1.8s_ease-out_infinite]" />
             <span className="size-1.5 rounded-full bg-signal" />
           </span>
-          All checks passing
+          {t.checks}
         </span>
       </div>
       <svg viewBox="0 0 300 90" className="w-full" aria-hidden="true">
@@ -168,15 +170,16 @@ export function StageArtifact({ index }: { index: number }) {
           transition={{ duration: 2.2, ease: "easeInOut" }}
         />
       </svg>
-      <p className="mt-2 text-[13px] text-steel">Response time, errors and backups, with alerts when something drifts.</p>
+      <p className="mt-2 text-[13px] text-steel">{t.monitoringNote}</p>
     </div>
   );
 }
 
-const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 
 /** The weekly rhythm as a week: plan Monday, updates midweek, release and demo Friday. */
 export function WeekStrip() {
+  const w = useMessages().visuals.week;
+  const DAYS = w.days;
   const { ref, tick } = useTicker(120, 70);
   const t = (tick % 90) / 75; // 0 → 1.2, the playhead rests a moment on Friday
   const pos = Math.min(1, t);
@@ -191,21 +194,22 @@ export function WeekStrip() {
               <span className="eyebrow text-fog">{d}</span>
               {i === 0 && (
                 <span className="rounded-lg bg-edge px-1.5 py-1.5 text-[11px] text-paper md:px-2 md:text-[13px]">
-                  Plan<span className="hidden md:inline"> the week</span>
+                  <span className="md:hidden">{w.plan}</span>
+                  <span className="hidden md:inline">{w.planLong}</span>
                 </span>
               )}
               {i > 0 && i < 4 && (
                 <span className="flex flex-col gap-1.5">
                   <span className="h-1.5 w-4/5 rounded bg-edge" />
                   <span className="h-1.5 w-3/5 rounded bg-edge" />
-                  <span className="hidden text-[12px] text-fog sm:inline">Update</span>
+                  <span className="hidden text-[12px] text-fog sm:inline">{w.update}</span>
                 </span>
               )}
               {i === 4 && (
                 <span className={`flex items-center gap-1.5 rounded-lg px-1.5 py-1.5 text-[11px] transition-colors duration-500 md:px-2 md:text-[13px] ${pos >= 0.95 ? "bg-signal text-white" : "bg-edge text-paper"}`}>
                   <span aria-hidden="true" className="hidden md:inline">↑</span>
-                  <span className="md:hidden">Ship</span>
-                  <span className="hidden md:inline">Release + demo</span>
+                  <span className="md:hidden">{w.ship}</span>
+                  <span className="hidden md:inline">{w.release}</span>
                 </span>
               )}
             </div>

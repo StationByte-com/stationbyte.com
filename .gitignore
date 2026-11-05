@@ -43,3 +43,7 @@ next-env.d.ts
 # hero film render frames
 /.render
 !.env.example
+messages/*.d.json.ts
+
+# Playwright MCP screenshots and snapshots
+/.playwright-mcp

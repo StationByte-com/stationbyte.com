@@ -6,7 +6,7 @@ import { useRef } from "react";
 import SplitFlap from "@/components/motion/SplitFlap";
 import Cta from "@/components/motion/Cta";
 import Eyebrow from "@/components/motion/Eyebrow";
-import { nowBuilding } from "@/content/site";
+import { useTranslations } from "next-intl";
 import HeroFilm from "./HeroFilm";
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -15,6 +15,9 @@ const ease = [0.16, 1, 0.3, 1] as const;
 const delay = (ms: number) => ({ style: { "--reveal-delay": `${ms}ms` } as React.CSSProperties });
 
 export default function Hero() {
+  const t = useTranslations("home.hero");
+  const tc = useTranslations("common");
+  const [l1, l2] = t.raw("title") as string[];
   const reduce = useReducedMotionSafe();
   const media = useRef<HTMLDivElement>(null);
 
@@ -23,32 +26,31 @@ export default function Hero() {
     <section id="top" className="pt-[72px]">
       <div className="shell flex flex-col items-center gap-7 pb-16 pt-20 text-center md:pt-28">
         <div data-reveal {...delay(150)}>
-          <Eyebrow className="text-steel">Software studio · AI · SaaS · Web · Mobile</Eyebrow>
+          <Eyebrow className="text-steel">{t("eyebrow")}</Eyebrow>
         </div>
 
         <h1 className="display text-[clamp(48px,8vw,120px)] leading-[0.92] tracking-[-0.05em]">
           <span className="line-mask" {...delay(250)}>
-            <span>We build software</span>
-          </span>
+            <span>{l1}</span>
+          </span>{" "}
           <span className="line-mask" {...delay(370)}>
-            <span>that ships.</span>
+            <span>{l2}</span>
           </span>
         </h1>
 
         <div data-reveal className="flex flex-wrap items-center justify-center gap-3.5" {...delay(550)}>
-          <span className="eyebrow text-steel">Now building</span>
-          <SplitFlap words={nowBuilding} className="text-[clamp(14px,1.6vw,20px)]" />
+          <span className="eyebrow text-steel">{t("nowBuilding")}</span>
+          <SplitFlap words={t.raw("words") as string[]} className="text-[clamp(14px,1.6vw,20px)]" />
         </div>
 
         <p data-reveal className="max-w-[640px] text-[clamp(18px,1.6vw,22px)] leading-normal text-steel" {...delay(650)}>
-          StationByte is a software studio. We design, build and run AI features, SaaS platforms, and web and mobile
-          apps for founders and growing teams, from first prototype to production.
+          {t("lede")}
         </p>
 
         <div data-reveal className="flex flex-wrap items-center justify-center gap-5 pt-2" {...delay(750)}>
-          <Cta href="/contact">Start a project</Cta>
+          <Cta href="/contact">{tc("startProject")}</Cta>
           <Cta href="/work" variant="link" arrow="">
-            See our work
+            {tc("seeOurWork")}
           </Cta>
         </div>
       </div>
@@ -62,9 +64,9 @@ export default function Hero() {
           transition={reduce ? { duration: 0 } : { duration: 1.4, delay: 0.5, ease }}
         >
           <div className="relative aspect-[4/5] sm:aspect-[16/9] lg:aspect-[16/8]">
-            <HeroFilm />
+            <HeroFilm alt={t("filmAlt")} />
           </div>
-          <p className="eyebrow pointer-events-none absolute bottom-6 left-6 text-fog md:bottom-8 md:left-8">Fig. 01 · Eight tiles, one open slot</p>
+          <p className="eyebrow pointer-events-none absolute bottom-6 left-6 text-fog md:bottom-8 md:left-8">{t("figure")}</p>
         </motion.div>
       </div>
     </section>

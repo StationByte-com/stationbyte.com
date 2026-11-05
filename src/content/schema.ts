@@ -1,26 +1,32 @@
+import type { Messages } from "next-intl";
 import { founder, site } from "./site";
-import { services, type Service } from "./services";
+import { services, type ServiceSlug } from "./services";
+import { skedez } from "./work";
+import { absoluteUrl, ogImage } from "./seo";
+import { localeInfo, locales, type Locale } from "@/i18n/locales";
 
-// Stable @ids so every page's structured data points at the same organisation, site and founder.
+// Stable @ids: one organisation, site and founder, whichever language a page is in.
 export const ids = {
   org: `${site.url}/#organization`,
   site: `${site.url}/#website`,
   founder: `${site.url}/studio#pablo-italo`,
 };
 
-const founderNode = {
+const allLanguages = locales.map((l) => localeInfo[l].hreflang);
+
+const founderNode = (copy: Messages) => ({
   "@type": "Person",
   "@id": ids.founder,
   name: founder.name,
-  jobTitle: "Founder, AI and full-stack engineer",
+  jobTitle: copy.founder.jobTitle,
   url: "https://pabloitalo.com",
   image: `${site.url}/images/pablo-italo.webp`,
   sameAs: founder.links.map((l) => l.href),
   worksFor: { "@id": ids.org },
-};
+});
 
-/** Site-wide graph, rendered once in the root layout. */
-export const siteGraph = {
+/** Site-wide graph, rendered once in the locale layout. */
+export const siteGraph = (locale: Locale, copy: Messages) => ({
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -32,87 +38,86 @@ export const siteGraph = {
       logo: { "@type": "ImageObject", url: `${site.url}/icons/icon-512.png`, width: 512, height: 512 },
       image: `${site.url}/opengraph-image.jpg`,
       email: site.email,
-      description: site.description,
+      description: copy.meta.description,
       founder: { "@id": ids.founder },
-      contactPoint: { "@type": "ContactPoint", contactType: "sales", email: site.email, url: `${site.url}/contact`, availableLanguage: ["English"] },
-      knowsAbout: ["AI product engineering", "Large language models", "SaaS development", "Web development", "Mobile app development", "Product design"],
-      makesOffer: services.map((s) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: s.title, url: `${site.url}/services/${s.slug}` } })),
-      owns: { "@type": "Product", name: "SkedEz", url: "https://skedez.com", category: "Online booking software" },
+      contactPoint: { "@type": "ContactPoint", contactType: "sales", email: site.email, url: absoluteUrl(locale, "/contact"), availableLanguage: allLanguages },
+      knowsAbout: copy.schema.knowsAbout,
+      knowsLanguage: allLanguages,
+      makesOffer: services.map((s) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: copy.services[s.slug].title, url: absoluteUrl(locale, `/services/${s.slug}`) } })),
+      owns: { "@type": "Product", name: skedez.name, url: skedez.url, category: copy.schema.skedezCategory },
     },
     {
       "@type": "WebSite",
       "@id": ids.site,
       url: site.url,
       name: site.name,
-      description: site.description,
-      inLanguage: "en-GB",
+      description: copy.meta.description,
+      inLanguage: allLanguages,
       publisher: { "@id": ids.org },
     },
-    founderNode,
-  ],
-};
-
-export const servicesList = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: "Services",
-  url: `${site.url}/services`,
-  isPartOf: { "@id": ids.site },
-  mainEntity: {
-    "@type": "ItemList",
-    itemListElement: services.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: s.title, url: `${site.url}/services/${s.slug}` })),
-  },
-};
-
-export const serviceGraph = (s: Service) => ({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      name: s.title,
-      serviceType: s.metaTitle,
-      description: s.description,
-      url: `${site.url}/services/${s.slug}`,
-      image: `${site.url}/og/${s.slug}.jpg`,
-      provider: { "@id": ids.org },
-      areaServed: "Worldwide",
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: `${s.title}: what you get`,
-        itemListElement: s.deliverables.map((d) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: d.title, description: d.body } })),
-      },
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: s.questions.map((q) => ({ "@type": "Question", name: q.q, acceptedAnswer: { "@type": "Answer", text: q.a } })),
-    },
+    founderNode(copy),
   ],
 });
 
-export const aboutPage = {
+const page = (type: string, locale: Locale, name: string, path: string) => ({
   "@context": "https://schema.org",
-  "@type": "AboutPage",
-  name: "Studio",
-  url: `${site.url}/studio`,
+  "@type": type,
+  name,
+  url: absoluteUrl(locale, path),
+  inLanguage: localeInfo[locale].hreflang,
   isPartOf: { "@id": ids.site },
-  about: { "@id": ids.org },
-  mainEntity: founderNode,
+});
+
+export const servicesList = (locale: Locale, copy: Messages) => ({
+  ...page("CollectionPage", locale, copy.pages.services.title, "/services"),
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: services.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: copy.services[s.slug].title, url: absoluteUrl(locale, `/services/${s.slug}`) })),
+  },
+});
+
+export const serviceGraph = (slug: ServiceSlug, locale: Locale, copy: Messages, whatYouGet: string) => {
+  const s = copy.services[slug];
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        name: s.title,
+        serviceType: s.metaTitle,
+        description: s.description,
+        url: absoluteUrl(locale, `/services/${slug}`),
+        inLanguage: localeInfo[locale].hreflang,
+        image: `${site.url}${ogImage(locale, slug)}`,
+        provider: { "@id": ids.org },
+        areaServed: copy.schema.areaServed,
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: whatYouGet,
+          itemListElement: s.deliverables.map((d) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: d.title, description: d.body } })),
+        },
+      },
+      {
+        "@type": "FAQPage",
+        inLanguage: localeInfo[locale].hreflang,
+        mainEntity: s.questions.map((q) => ({ "@type": "Question", name: q.q, acceptedAnswer: { "@type": "Answer", text: q.a } })),
+      },
+    ],
+  };
 };
 
-export const contactPage = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  name: "Start a project",
-  url: `${site.url}/contact`,
-  isPartOf: { "@id": ids.site },
+export const aboutPage = (locale: Locale, copy: Messages) => ({
+  ...page("AboutPage", locale, copy.pages.studio.title, "/studio"),
   about: { "@id": ids.org },
-};
+  mainEntity: founderNode(copy),
+});
 
-export const workPage = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: "Work",
-  url: `${site.url}/work`,
-  isPartOf: { "@id": ids.site },
-  mainEntity: { "@type": "ItemList", itemListElement: [{ "@type": "ListItem", position: 1, name: "SkedEz case study", url: `${site.url}/work/skedez` }] },
-};
+export const contactPage = (locale: Locale, copy: Messages) => ({
+  ...page("ContactPage", locale, copy.pages.contact.title, "/contact"),
+  about: { "@id": ids.org },
+});
+
+export const workPage = (locale: Locale, copy: Messages) => ({
+  ...page("CollectionPage", locale, copy.pages.work.title, "/work"),
+  mainEntity: { "@type": "ItemList", itemListElement: [{ "@type": "ListItem", position: 1, name: copy.pages.skedez.title, url: absoluteUrl(locale, "/work/skedez") }] },
+});

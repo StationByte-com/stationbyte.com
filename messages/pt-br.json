@@ -1,0 +1,1328 @@
+{
+  "meta": {
+    "title": "StationByte · Software house de IA, SaaS, web e mobile",
+    "description": "A StationByte é uma software house. Projetamos, desenvolvemos e operamos recursos de IA, plataformas SaaS e apps web e mobile, do protótipo à produção.",
+    "ogAlt": "StationByte: oito peças de vidro em grade, com a do centro brilhando em azul"
+  },
+  "common": {
+    "startProject": "Começar um projeto",
+    "howWeWork": "Como trabalhamos",
+    "seeOurWork": "Ver projetos",
+    "home": "Início",
+    "breadcrumb": "Trilha de navegação",
+    "skipToContent": "Pular para o conteúdo",
+    "copy": "Copiar",
+    "copyAddress": "Copiar endereço",
+    "copied": "Copiado ✓",
+    "emailCopied": "E-mail copiado",
+    "toolsLabel": "Ferramentas com que trabalhamos",
+    "playStrip": "Retomar a faixa de ferramentas",
+    "pauseStrip": "Pausar a faixa de ferramentas",
+    "nextStepEyebrow": "Próximo passo",
+    "nextStepTitle": [
+      "Conte o que",
+      "você está criando."
+    ],
+    "nextStepBody": "Algumas linhas bastam para começar. Respondemos em até 48 horas, com perguntas ou um horário para conversar.",
+    "readCaseStudy": "Ler o case",
+    "visitSkedez": "Acessar skedez.com",
+    "aboutStudio": "Sobre o estúdio",
+    "tags": {
+      "agents": "Agentes",
+      "evals": "Avaliações",
+      "prototyping": "Prototipagem",
+      "designSystems": "Design systems"
+    }
+  },
+  "nav": {
+    "work": "Projetos",
+    "services": "Serviços",
+    "process": "Processo",
+    "studio": "Estúdio",
+    "contact": "Contato",
+    "privacy": "Privacidade"
+  },
+  "header": {
+    "homeLabel": "Página inicial da StationByte",
+    "main": "Principal",
+    "mobile": "Menu mobile",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "footer": {
+    "label": "Rodapé",
+    "studio": "Estúdio",
+    "services": "Serviços",
+    "products": "Produtos",
+    "contact": "Contato",
+    "language": "Idioma",
+    "tagline": "8 peças · 1 vaga aberta"
+  },
+  "language": {
+    "label": "Idioma",
+    "change": "Idioma: {name}. Mudar de idioma",
+    "suggestLabel": "Sugestão de idioma",
+    "suggestText": "Esta página também está disponível em português.",
+    "suggestGo": "Ler em português",
+    "suggestStay": "Continuar em {language}"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Software house · IA · SaaS · Web · Mobile",
+      "title": [
+        "Criamos software",
+        "que sai do papel."
+      ],
+      "nowBuilding": "Construindo agora",
+      "words": [
+        "Produtos de IA",
+        "Sistemas SaaS",
+        "Apps mobile",
+        "Backoffice",
+        "Dashboards"
+      ],
+      "lede": "A StationByte é uma software house. Projetamos, desenvolvemos e operamos recursos de IA, plataformas SaaS e apps web e mobile para founders e times em crescimento, do primeiro protótipo à produção.",
+      "figure": "Fig. 01 · Oito peças, uma vaga aberta",
+      "filmAlt": "Oito peças de vidro e grafite em grade sobre um piso espelhado, com a peça central brilhando em azul e um espaço vazio"
+    },
+    "work": {
+      "eyebrow": "Projetos selecionados",
+      "title": [
+        "Produtos que criamos",
+        "e operamos."
+      ],
+      "lede": "Manter um produto nosso em produção molda o jeito como construímos para clientes.",
+      "cardLabel": "Ler o case do SkedEz",
+      "desktopAlt": "Página inicial do SkedEz: seus clientes agendam 24/7. Você só precisa aparecer.",
+      "mobileAlt": "SkedEz no celular: seus clientes agendam 24/7. Você só precisa aparecer.",
+      "cursor": "Case",
+      "productEyebrow": "Produto próprio · No ar",
+      "productBody": "Agendamento online para negócios de serviços. O cliente reserva qualquer horário livre, os lembretes saem sozinhos e, nos planos pagos, cada agendamento cai direto no Google Calendar.",
+      "facts": [
+        {
+          "k": "Plano",
+          "v": "Gratuito, sem cartão"
+        },
+        {
+          "k": "Preço",
+          "v": "Sem comissão"
+        },
+        {
+          "k": "Idiomas",
+          "v": "Clientes agendam em 6"
+        }
+      ],
+      "clientEyebrow": "Projetos para clientes",
+      "clientTitle": "Projetos como o seu, numa conversa.",
+      "clientBody": "Os projetos anteriores do Pablo estão na página do Estúdio. Conte o que você está criando e apresentamos os que mais se parecem com o seu.",
+      "clientCta": "Perguntar sobre projetos parecidos"
+    },
+    "puzzle": {
+      "title": [
+        "A vaga em aberto",
+        "é sua."
+      ],
+      "start": "Toque numa peça ao lado do espaço vazio",
+      "solved": "Tudo no lugar",
+      "moves": "{count, plural, one {# jogada} other {# jogadas}}",
+      "group": "Quebra-cabeça de peças deslizantes",
+      "tile": "{core, select, yes {Peça azul} other {Peça}}, linha {row}, coluna {col}{movable, select, yes {, pode deslizar} other {}}",
+      "footer": "A seguir no quadro"
+    },
+    "services": {
+      "eyebrow": "Serviços",
+      "title": [
+        "Quatro coisas,",
+        "bem-feitas."
+      ],
+      "all": "Todos os serviços",
+      "detail": "{title} em detalhes"
+    },
+    "process": {
+      "eyebrow": "Processo",
+      "title": "Da ideia ao produto no ar.",
+      "lede": "Você recebe um link funcionando logo no início, não um relatório de status. Cada etapa termina com algo que você pode usar."
+    },
+    "studio": {
+      "eyebrow": "Estúdio",
+      "title": [
+        "Time enxuto.",
+        "Só gente sênior."
+      ],
+      "lede": "A StationByte LLC é uma software house fundada por <link>Pablo Italo</link>, engenheiro sênior de IA e full-stack e CTO mão na massa. Quem fala com você é quem escreve o seu código.",
+      "imageAlt": "Peças de cerâmica off-white empilhadas em grade sob a luz da manhã, com uma peça azul na pilha mais alta"
+    },
+    "contact": {
+      "eyebrow": "Começar um projeto",
+      "title": [
+        "Conte o que",
+        "você está criando."
+      ],
+      "body": "Respondemos em até 48 horas, no seu idioma. Conte o que você está criando, em que pé está hoje e para quando precisa, ou <link>use o formulário de projeto</link>."
+    }
+  },
+  "studio": {
+    "principles": [
+      "Você trabalha com engenheiros, não com gerentes de conta.",
+      "Entregas pequenas e fáceis de revisar, toda semana.",
+      "Continuamos com você depois do lançamento."
+    ],
+    "principleNotes": [
+      "Ninguém entre você e o trabalho. As perguntas vão direto para quem sabe responder.",
+      "As mudanças saem em partes pequenas que você consegue revisar, então nada grande chega de surpresa.",
+      "O lançamento é o começo da vida do produto, então já planejamos o que vem depois."
+    ]
+  },
+  "process": {
+    "stages": [
+      {
+        "title": "Descoberta",
+        "body": "Mapeamos o problema, os usuários e as restrições, e combinamos o que significa estar pronto.",
+        "happens": "Conversas com você e, sempre que possível, com quem vai usar o produto. Analisamos o que já existe hoje, os dados e os sistemas com que ele precisa funcionar.",
+        "get": [
+          "Escopo e critérios de sucesso por escrito",
+          "Os riscos e como vamos reduzi-los",
+          "Um plano e uma estimativa"
+        ],
+        "need": "Tempo com quem decide, acesso aos sistemas e dados existentes e alguns usuários reais para conversar."
+      },
+      {
+        "title": "Design",
+        "body": "Fluxos e telas navegáveis antes de escrevermos código de produção.",
+        "happens": "Primeiro os fluxos de usuário, depois um protótipo navegável das tarefas principais, testado com quem vai usar. Em seguida vêm o design visual e o sistema de componentes.",
+        "get": [
+          "Um protótipo para você navegar",
+          "Telas para cada estado, no celular e no desktop",
+          "Um design system no Figma e no código"
+        ],
+        "need": "Feedback rápido sobre o protótipo, de preferência em um ou dois dias após cada revisão."
+      },
+      {
+        "title": "Desenvolvimento",
+        "body": "Entregas semanais em um link de staging. Você acompanha o progresso no próprio produto.",
+        "happens": "Mudanças pequenas e revisadas, publicadas toda semana em um ambiente de staging que você pode abrir quando quiser, com uma demo rápida do que avançou.",
+        "get": [
+          "Software funcionando toda semana",
+          "Um changelog em linguagem simples",
+          "Testes nos fluxos que importam"
+        ],
+        "need": "Alguém que possa dizer sim ou não às dúvidas de escopo dentro da mesma semana."
+      },
+      {
+        "title": "Operação",
+        "body": "Lançamento, monitoramento e evolução. Continuamos com você depois do go-live.",
+        "happens": "Lançamento com monitoramento e alertas já configurados e, depois, correções e a próxima rodada de melhorias com base em como as pessoas realmente usam o produto.",
+        "get": [
+          "Um checklist de lançamento, executado com você",
+          "Monitoramento, alertas e backups",
+          "Documentação e vídeos explicativos para o seu time"
+        ],
+        "need": "Uma visão clara do que melhorar em seguida, com base nos seus usuários e nos seus números."
+      }
+    ],
+    "rhythm": [
+      {
+        "when": "Início da semana",
+        "what": "Alinhamos as metas da semana e o que estiver impedindo o avanço."
+      },
+      {
+        "when": "Durante a semana",
+        "what": "Atualizações curtas por escrito em um canal compartilhado; perguntas respondidas no mesmo dia útil."
+      },
+      {
+        "when": "Fim da semana",
+        "what": "Uma release em staging e uma demo rápida do que mudou."
+      }
+    ],
+    "engagements": [
+      {
+        "name": "Sprint de descoberta",
+        "fit": "Você tem uma ideia ou um problema e precisa de um plano em que possa confiar.",
+        "shape": "Escopo e preço fechados. Termina com um plano por escrito, um protótipo navegável e uma estimativa para o desenvolvimento."
+      },
+      {
+        "name": "Desenvolvimento de produto",
+        "fit": "Você sabe o que quer construir e precisa de gente sênior para desenhar, desenvolver e lançar.",
+        "shape": "Planejado em marcos, cada um terminando com software funcionando. Preço por marco."
+      },
+      {
+        "name": "Sustentação e evolução",
+        "fit": "Seu produto está no ar e precisa de melhorias constantes, novas funcionalidades ou trabalho com IA.",
+        "shape": "Um contrato mensal com capacidade reservada, revisado em conjunto todo mês."
+      }
+    ],
+    "agreements": [
+      {
+        "title": "Contas no seu nome",
+        "body": "Código, nuvem, lojas de apps e serviços de terceiros ficam em contas suas desde o primeiro dia."
+      },
+      {
+        "title": "Código e design são seus",
+        "body": "Com as faturas pagas, tudo o que criamos para você é seu: código-fonte, arquivos do Figma, documentação."
+      },
+      {
+        "title": "Transição sem atrito",
+        "body": "Documentação, runbooks e vídeos explicativos, seja o seu time assumindo, seja a gente continuando."
+      }
+    ]
+  },
+  "founder": {
+    "role": "Fundador · Engenheiro de IA e full-stack",
+    "jobTitle": "Fundador, engenheiro de IA e full-stack",
+    "bio": "Pablo é engenheiro sênior de IA e full-stack, tech lead e CTO mão na massa. Fundou a StationByte para construir produtos do jeito que constrói os próprios: gente sênior no trabalho, entregas semanais e acompanhamento depois do lançamento.",
+    "stats": [
+      "projetos e plataformas em produção",
+      "usuários no total",
+      "marcas usando o ElevateAB, uma dessas plataformas"
+    ],
+    "projects": [
+      "Um assistente de IA controlado, com roteamento de modelos, filtros de conteúdo e acesso multicanal",
+      "Arquitetura e desenvolvimento de uma plataforma de análise climática e energética em estágio inicial",
+      "Um SaaS de assinatura eletrônica focado em compliance, do início do desenvolvimento à produção",
+      "Uma plataforma de experimentação para Shopify usada por mais de 1.200 marcas"
+    ]
+  },
+  "services": {
+    "ai-product-engineering": {
+      "title": "Engenharia de produtos com IA",
+      "body": "Funcionalidades com LLM, agentes, RAG e automações pensados a partir de tarefas reais dos usuários, com custo, latência e qualidade medidos desde a primeira release.",
+      "metaTitle": "Desenvolvimento de produtos com IA",
+      "description": "Funcionalidades com LLM, agentes, RAG e automações integrados ao seu produto, com avaliação, custo e latência medidos desde a primeira release.",
+      "headline": [
+        "IA em que seus",
+        "clientes confiam."
+      ],
+      "imageAlt": "Peças de vidro e grafite em grade ao redor de uma peça central que brilha em azul intenso",
+      "diagram": [
+        "Como um recurso",
+        "merece ir ao ar."
+      ],
+      "problem": "A maioria dos recursos de IA empaca entre uma boa demo e algo em que o cliente confia. O que fecha essa distância raramente é o modelo: é um conjunto de avaliação, limites de custo e latência, permissões, fallbacks e monitoramento.",
+      "deliverables": [
+        {
+          "title": "LLM dentro do seu produto",
+          "body": "Assistentes, busca, redação, extração e classificação, integrados às telas que as pessoas já usam."
+        },
+        {
+          "title": "Agentes e automações",
+          "body": "Fluxos que chamam as suas APIs e ferramentas, com etapas de aprovação onde um erro sairia caro."
+        },
+        {
+          "title": "RAG sobre os seus dados",
+          "body": "Respostas baseadas nos seus documentos e no seu banco de dados, com as fontes à vista e as regras de acesso respeitadas."
+        },
+        {
+          "title": "Suítes de avaliação",
+          "body": "Exemplos reais, pontuados automaticamente a cada mudança, para medir a qualidade antes da release, não depois."
+        },
+        {
+          "title": "Limites de custo e latência",
+          "body": "Roteamento de modelos, cache e limites por tarefa, com gasto e tempo de resposta acompanhados em produção."
+        },
+        {
+          "title": "Guardrails",
+          "body": "Filtros de conteúdo, tratamento de dados pessoais e logs de auditoria, previstos desde o início."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Partir de uma tarefa",
+          "body": "Escolhemos uma tarefa que o usuário faz hoje e definimos como é um bom resultado antes de escolher o modelo."
+        },
+        {
+          "title": "Avaliação antes de tudo",
+          "body": "Exemplos de uso real viram a suíte de testes que toda mudança de prompt ou de modelo precisa passar."
+        },
+        {
+          "title": "Lançar para poucos",
+          "body": "O recurso vai ao ar atrás de uma feature flag, com feedback e respostas registrados desde o primeiro dia."
+        },
+        {
+          "title": "Medir, depois ampliar",
+          "body": "Qualidade, custo por tarefa e latência decidem quando o recurso chega a todo mundo."
+        }
+      ],
+      "proof": {
+        "label": "Da trajetória do nosso fundador",
+        "body": "Nosso fundador, Pablo Italo, criou para a Iluy.ai um assistente de IA controlado, com roteamento de modelos, filtros de conteúdo e acesso por vários canais.",
+        "cta": "Sobre o estúdio"
+      },
+      "questions": [
+        {
+          "q": "Qual modelo devemos usar?",
+          "a": "Normalmente, mais de um. Escolhemos por tarefa, com base em qualidade, custo e latência medidos, e deixamos a escolha intercambiável: trocar por um modelo melhor ou mais barato vira uma mudança de configuração, não uma reescrita."
+        },
+        {
+          "q": "Nossos dados vão ser usados para treinar modelos?",
+          "a": "Usamos as APIs corporativas dos provedores, que por padrão não treinam com os seus dados. Quando os dados não podem sair da sua infraestrutura, projetamos com modelos self-hosted."
+        },
+        {
+          "q": "Como saber se funciona?",
+          "a": "Com um conjunto de avaliação montado a partir de exemplos reais e pontuado a cada mudança, além de monitoramento e revisão das respostas em produção depois do lançamento."
+        }
+      ]
+    },
+    "saas-platforms": {
+      "title": "Plataformas SaaS",
+      "body": "Apps multi-tenant, dashboards, cobrança, APIs e a infraestrutura em nuvem por trás de tudo isso, feitos para crescer sem reescrita.",
+      "metaTitle": "Desenvolvimento de plataformas SaaS",
+      "description": "Apps SaaS multi-tenant com contas, times, cobrança, APIs e painel administrativo, em uma infraestrutura em nuvem feita para crescer sem reescrita.",
+      "headline": [
+        "SaaS que cresce",
+        "sem reescrita."
+      ],
+      "imageAlt": "Três camadas de peças de vidro e grafite empilhadas, com uma peça azul brilhando na camada do meio",
+      "diagram": [
+        "Uma requisição,",
+        "todas as camadas."
+      ],
+      "problem": "Um produto SaaS é a funcionalidade que o cliente vê e muita coisa que ele não vê: contas, times, perfis de acesso, cobrança, e-mails, ferramentas de admin, backups. Acertar essa base cedo é o que permite ao produto crescer sem começar do zero.",
+      "deliverables": [
+        {
+          "title": "Contas, times e perfis de acesso",
+          "body": "Modelo de dados multi-tenant, login com e-mail ou Google, convites e permissões."
+        },
+        {
+          "title": "Assinaturas e cobrança",
+          "body": "Planos, períodos de teste, upgrades, pagamentos recusados e faturas no Stripe, testados de ponta a ponta."
+        },
+        {
+          "title": "APIs e integrações",
+          "body": "APIs públicas, webhooks e conexões com as ferramentas que seus clientes usam, da agenda ao WhatsApp."
+        },
+        {
+          "title": "Dashboards e admin",
+          "body": "Relatórios para os seus clientes e ferramentas internas de suporte, para que o seu time não precise de um dev para ajudar um usuário."
+        },
+        {
+          "title": "Infraestrutura",
+          "body": "Containers, CI/CD, staging, backups e monitoramento na AWS ou no provedor que você já usa."
+        },
+        {
+          "title": "Segurança básica, resolvida",
+          "body": "Acesso com privilégio mínimo, gestão de secrets, trilhas de auditoria, e exportação e exclusão de dados para os seus usuários."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Modelo de dados primeiro",
+          "body": "Multi-tenancy, permissões e cobrança moldam todo o resto, então desenhamos tudo isso antes da primeira tela."
+        },
+        {
+          "title": "Um app, um deploy",
+          "body": "Um monolito bem estruturado vai ao ar mais rápido e é mais fácil de operar. Serviços só são separados quando a carga ou os times exigem."
+        },
+        {
+          "title": "Staging desde a primeira semana",
+          "body": "Toda mudança roda em um ambiente parecido com o de produção, que você pode abrir e testar."
+        },
+        {
+          "title": "Observabilidade antes do lançamento",
+          "body": "Erros, logs e métricas-chave ficam configurados antes de os clientes reais chegarem."
+        }
+      ],
+      "proof": {
+        "label": "Case",
+        "body": "SkedEz, nossa própria plataforma de agendamento: contas e times multi-tenant, assinaturas no Stripe e integrações com Google Calendar e WhatsApp, em produção.",
+        "cta": "Ler o case do SkedEz"
+      },
+      "questions": [
+        {
+          "q": "Como vocês evitam uma reescrita lá na frente?",
+          "a": "Acertando multi-tenancy, permissões e cobrança primeiro, mantendo o código modular e só adicionando complexidade, como filas ou serviços separados, quando existe uma necessidade medida."
+        },
+        {
+          "q": "Qual nuvem vocês usam?",
+          "a": "AWS ou o provedor que você já usa. Tudo roda em containers, então o produto não fica preso a um único host."
+        },
+        {
+          "q": "O que a cobrança envolve, na prática?",
+          "a": "Planos, períodos de teste, upgrades e downgrades, pagamentos recusados e novas tentativas, faturas e impostos, além dos webhooks que mantêm o seu banco de dados em sincronia com o Stripe. Testamos esses fluxos de ponta a ponta."
+        }
+      ]
+    },
+    "web-and-mobile-apps": {
+      "title": "Apps web e mobile",
+      "body": "Sites rápidos, aplicações web e apps para iOS e Android, com código compartilhado quando faz sentido e nativo quando não faz.",
+      "metaTitle": "Desenvolvimento de aplicativos web e mobile",
+      "description": "Sites, aplicações web e aplicativos para iOS e Android, com código compartilhado onde ajuda e desenvolvimento nativo onde faz diferença.",
+      "headline": [
+        "Na web e",
+        "na palma da mão."
+      ],
+      "imageAlt": "Uma placa larga de vidro fosco e uma placa alta de vidro, cada uma com peças, e uma peça azul em cada",
+      "diagram": [
+        "Duas telas,",
+        "um só núcleo."
+      ],
+      "problem": "Você precisa do produto na web e no celular, sem pagar para construir e manter tudo três vezes, e sem um app que parece um site dentro de uma moldura.",
+      "deliverables": [
+        {
+          "title": "Sites e aplicações web",
+          "body": "Rápidos, acessíveis e fáceis de encontrar nos buscadores, feitos com Next.js e React."
+        },
+        {
+          "title": "iOS e Android com um só código",
+          "body": "React Native com Expo, para que a maioria das funcionalidades chegue às duas plataformas de uma vez."
+        },
+        {
+          "title": "Nativo onde importa",
+          "body": "Módulos nativos para câmera, sensores, widgets ou qualquer parte em que o desempenho seja crítico."
+        },
+        {
+          "title": "Login, pagamentos, notificações",
+          "body": "Login com Google e Apple, compras e assinaturas dentro do app, notificações push."
+        },
+        {
+          "title": "Publicação nas lojas",
+          "body": "Builds, páginas na App Store e no Google Play e atualizações over-the-air para correções entre uma versão e outra."
+        },
+        {
+          "title": "Desempenho e acessibilidade",
+          "body": "Carregamento inicial rápido, rolagem fluida, rótulos para leitores de tela e áreas de toque do tamanho de um polegar."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Compartilhar o que ajuda",
+          "body": "Regras de negócio, design system e a maioria das telas são compartilhados; as convenções de cada plataforma são respeitadas."
+        },
+        {
+          "title": "Nativo quando precisa",
+          "body": "Quando a abordagem compartilhada comprometeria a experiência, aquela parte é escrita em código nativo."
+        },
+        {
+          "title": "Pipeline de release desde cedo",
+          "body": "Builds, aparelhos de teste e canais de atualização ficam prontos nas primeiras semanas, não nas últimas."
+        },
+        {
+          "title": "Testes em aparelhos reais",
+          "body": "Toda versão é verificada em celulares de verdade, não só em simuladores."
+        }
+      ],
+      "proof": {
+        "label": "Case",
+        "body": "O app do SkedEz tem um único código multiplataforma, feito primeiro para a web e pronto para as lojas de apps, ao lado de um site institucional em Next.js.",
+        "cta": "Ler o case do SkedEz"
+      },
+      "questions": [
+        {
+          "q": "Nativo ou multiplataforma?",
+          "a": "Multiplataforma para a maioria dos produtos, porque um único código é mais rápido de construir e mais barato de manter. Nativo para apps que dependem de recursos do aparelho ou precisam de cada gota de desempenho. Muitas vezes, é uma mistura."
+        },
+        {
+          "q": "Vocês cuidam da publicação nas lojas?",
+          "a": "Sim: builds, assinatura, páginas nas lojas e envio para revisão, tudo configurado nas suas próprias contas de desenvolvedor."
+        },
+        {
+          "q": "O site e o app podem compartilhar código?",
+          "a": "Sim. Tipos, clientes de API, validações e tokens de design são compartilhados, então uma mudança chega a todos os lugares de uma vez."
+        }
+      ]
+    },
+    "product-design": {
+      "title": "Design de produto",
+      "body": "Pesquisa, fluxos, design de interface e design systems, feitos por quem também desenvolve, para que nada se perca no handoff.",
+      "metaTitle": "Design de produto e UX/UI",
+      "description": "Pesquisa, fluxos de usuário, design de interface e design systems, feitos por quem também desenvolve o produto, para nada se perder no handoff.",
+      "headline": [
+        "Desenhado por",
+        "quem desenvolve."
+      ],
+      "imageAlt": "Peças de vidro, vidro fosco e grafite flutuando separadas em alturas diferentes, uma delas brilhando em azul",
+      "diagram": [
+        "Do fluxo",
+        "à tela final."
+      ],
+      "problem": "Um design que parece certo no arquivo e quebra no código sai caro duas vezes. Quando quem desenha o produto também o desenvolve, o handoff desaparece, e com ele quase tudo o que se perde no caminho.",
+      "deliverables": [
+        {
+          "title": "Pesquisa",
+          "body": "Entrevistas e análise de como as pessoas trabalham hoje, transformadas em uma lista curta de problemas que valem a pena resolver."
+        },
+        {
+          "title": "Fluxos e wireframes",
+          "body": "O caminho de cada tarefa, combinado antes de alguém discutir cores."
+        },
+        {
+          "title": "Protótipos navegáveis",
+          "body": "Algo que você pode clicar e colocar na frente de usuários antes de escrever código."
+        },
+        {
+          "title": "Design de interface",
+          "body": "Todas as telas e estados, incluindo vazio, carregando e erro, em tamanhos de celular e desktop."
+        },
+        {
+          "title": "Design system",
+          "body": "Tokens, componentes e diretrizes sincronizados no Figma e no código."
+        },
+        {
+          "title": "Marca para produtos",
+          "body": "Logo, cores, tipografia e animações que funcionam dentro de uma interface, como as deste site."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Mapear a tarefa",
+          "body": "Quem usa, o que a pessoa está tentando fazer e onde isso dá errado hoje."
+        },
+        {
+          "title": "Protótipo antes do código",
+          "body": "Os fluxos são clicados e testados enquanto mudar ainda é barato."
+        },
+        {
+          "title": "Acabamento no navegador",
+          "body": "Espaçamentos, animações e comportamento responsivo são ajustados no produto real."
+        },
+        {
+          "title": "Um só sistema",
+          "body": "Os tokens de design alimentam o Figma e o código ao mesmo tempo, para que os dois não se distanciem."
+        }
+      ],
+      "proof": {
+        "label": "Trabalho nosso",
+        "body": "A marca StationByte, este site e o seu sistema de animações foram desenhados e desenvolvidos internamente, da grade do logo ao filme de vidro no topo da página inicial.",
+        "cta": "Ver projetos"
+      },
+      "questions": [
+        {
+          "q": "Vocês trabalham a partir da nossa marca atual?",
+          "a": "Sim. Expandimos o que você já tem em um design system de produto e só sugerimos mudanças onde a marca não se sustenta na tela."
+        },
+        {
+          "q": "Recebemos os arquivos de design?",
+          "a": "Sim. Arquivos do Figma, componentes e tokens são entregues junto com o código, nas suas contas."
+        },
+        {
+          "q": "Vocês testam com usuários reais?",
+          "a": "Sim, com protótipos antes do desenvolvimento e com o produto no ar depois. Poucas sessões já revelam a maioria dos problemas que importam."
+        }
+      ]
+    }
+  },
+  "skedez": {
+    "description": "Como criamos e operamos o SkedEz, agendamento online para negócios de serviços: página de agendamento, lembretes, Google Calendar, equipes e assinaturas.",
+    "summary": "Agendamento online para negócios de serviços. Projetamos, desenvolvemos e operamos tudo, do banco de dados aos lembretes.",
+    "facts": [
+      {
+        "k": "Tipo",
+        "v": "Produto próprio"
+      },
+      {
+        "k": "Nosso papel",
+        "v": "Produto, design, engenharia, operação"
+      },
+      {
+        "k": "Plataformas",
+        "v": "App web e páginas de agendamento"
+      },
+      {
+        "k": "Status",
+        "v": "No ar em skedez.com"
+      }
+    ],
+    "problem": "Salões de beleza, fisioterapeutas, personal trainers e consultores perdem horas no vai e vem de mensagens para marcar horário e com clientes que esquecem o compromisso. Muitas ferramentas de agendamento cobram comissão por agendamento ou por cliente. Queríamos uma que não fizesse nenhuma das duas coisas e que o próprio negócio conseguisse configurar sozinho.",
+    "built": [
+      {
+        "title": "Uma página de agendamento por negócio",
+        "body": "Compartilhada como link na bio, no perfil do Google ou no site. O cliente escolhe um serviço e qualquer horário livre."
+      },
+      {
+        "title": "Lembretes que se enviam sozinhos",
+        "body": "E-mail 24 horas e 1 hora antes de cada agendamento em todos os planos, e WhatsApp nos planos pagos."
+      },
+      {
+        "title": "Google Calendar",
+        "body": "Nos planos pagos, os agendamentos caem no Google Calendar, com link do Google Meet quando o atendimento é online."
+      },
+      {
+        "title": "Equipes",
+        "body": "Até 20 pessoas, cada uma com seus próprios serviços e horários de trabalho."
+      },
+      {
+        "title": "Clientes",
+        "body": "Lista de clientes com importação via CSV, exportação a qualquer momento e um painel de agendamentos, cancelamentos e clientes."
+      },
+      {
+        "title": "Seis idiomas",
+        "body": "Páginas de agendamento em inglês, português, espanhol, francês, alemão e italiano."
+      },
+      {
+        "title": "Planos e cobrança",
+        "body": "Planos Free, Pro e Teams, com 15 dias de teste nos planos pagos e sem comissão sobre os agendamentos."
+      },
+      {
+        "title": "Privacidade de fábrica",
+        "body": "Exportação de dados e exclusão da conta direto nas configurações, sem precisar abrir chamado."
+      }
+    ],
+    "notes": [
+      {
+        "title": "Cobrança é dinheiro, e é testada como tal",
+        "body": "Checkout, mudanças de plano e pagamentos recusados são cobertos por testes end-to-end, então o dinheiro nunca depende de uma conferência manual."
+      },
+      {
+        "title": "Um só código para o app",
+        "body": "Um único código multiplataforma atende o app web e já está pronto para iOS e Android, então cada funcionalidade é construída uma vez só."
+      },
+      {
+        "title": "Self-service desde o primeiro minuto",
+        "body": "O negócio cria a própria página de agendamento, cadastra os serviços e compartilha o link sozinho. O plano gratuito não pede cartão."
+      }
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": "€ 0",
+        "note": "1 pessoa, 1 serviço, 10 agendamentos por mês"
+      },
+      {
+        "plan": "Pro",
+        "price": "€ 9,90/mês",
+        "note": "1 pessoa, serviços e agendamentos ilimitados, WhatsApp, Google Calendar"
+      },
+      {
+        "plan": "Teams",
+        "price": "€ 14,90/mês",
+        "note": "Até 20 pessoas, cada uma com seus horários, e tudo do Pro"
+      }
+    ]
+  },
+  "contactForm": {
+    "formTitle": "Formulário de projeto",
+    "honeypot": "Site",
+    "name": "Seu nome",
+    "email": "E-mail",
+    "kind": "O que você está criando?",
+    "kinds": {
+      "ai": "Recurso de IA",
+      "saas": "Plataforma SaaS",
+      "apps": "App web ou mobile",
+      "design": "Design de produto",
+      "unsure": "Ainda não sei"
+    },
+    "budget": "Orçamento",
+    "optional": "(opcional)",
+    "chooseRange": "Escolha uma faixa",
+    "budgets": {
+      "under": "Menos de {amount}",
+      "range": "{from}–{to}",
+      "over": "Mais de {amount}",
+      "unsure": "Ainda não sei"
+    },
+    "message": "Conte mais",
+    "placeholder": "O que você está criando, em que pé está hoje e para quando precisa.",
+    "errors": {
+      "name": "Informe seu nome.",
+      "email": "Informe um e-mail em que possamos responder, como nome@empresa.com.br.",
+      "message": "Uma ou duas frases sobre o que você está criando já bastam.",
+      "summary": "Alguns campos precisam de atenção antes de enviarmos."
+    },
+    "failed": "Algo deu errado ao enviar o formulário. Sua mensagem já está pronta para ser enviada por e-mail.",
+    "limited": "Foram várias mensagens em pouco tempo, então o formulário está pausado por enquanto. Sua mensagem já está pronta para ser enviada por e-mail.",
+    "unconfigured": "O formulário não consegue enviar mensagens agora, mas sua mensagem já está pronta para ser enviada por e-mail.",
+    "openMail": "Abrir no seu app de e-mail",
+    "orWrite": "Ou escreva direto para {email}.",
+    "privacy": "Usamos esses dados apenas para responder a você. Veja nossa <link>política de privacidade</link>.",
+    "send": "Enviar",
+    "sending": "Enviando…",
+    "sentTitle": "Recebido. Vaga preenchida.",
+    "sentBody": "Sua mensagem chegou. Uma pessoa de verdade responde em até 48 horas, no endereço que você informou.",
+    "mail": {
+      "subject": "Novo projeto: {name}",
+      "name": "Nome",
+      "email": "E-mail",
+      "building": "Projeto",
+      "budget": "Orçamento",
+      "notSpecified": "Não informado",
+      "shortened": "[Mensagem encurtada; cole o restante aqui.]"
+    },
+    "progress": {
+      "yourProject": "Seu projeto",
+      "sent": "Enviado · vaga preenchida",
+      "ready": "Pronto para enviar",
+      "answered": "{count} de 5 respondidos",
+      "start": "Comece por onde quiser",
+      "hint": "Nome, e-mail e algumas linhas: é tudo de que precisamos."
+    }
+  },
+  "visuals": {
+    "architecture": {
+      "clients": [
+        {
+          "k": "App",
+          "v": "Web e mobile"
+        },
+        {
+          "k": "Páginas de agendamento",
+          "v": "Seis idiomas"
+        },
+        {
+          "k": "Site",
+          "v": "Institucional e cadastro"
+        }
+      ],
+      "api": "API",
+      "oneApi": "Uma só API",
+      "data": "Dados",
+      "database": "Banco de dados gerenciado",
+      "databaseNote": "com backup e monitoramento",
+      "services": [
+        {
+          "k": "Pagamentos",
+          "v": "Assinaturas e períodos de teste"
+        },
+        {
+          "k": "Agenda",
+          "v": "Google Calendar e Meet"
+        },
+        {
+          "k": "Mensagens",
+          "v": "E-mail e WhatsApp"
+        },
+        {
+          "k": "Arquivos",
+          "v": "Importações e exportações"
+        }
+      ]
+    },
+    "booking": {
+      "steps": [
+        {
+          "title": "Escolha o serviço",
+          "body": "O cliente abre o link de agendamento na bio, no perfil do Google ou no site e escolhe o que precisa."
+        },
+        {
+          "title": "Escolha o horário",
+          "body": "Só aparecem horários realmente livres, calculados a partir do expediente de cada pessoa e dos agendamentos existentes."
+        },
+        {
+          "title": "Agendado",
+          "body": "O agendamento é confirmado na hora. Nos planos pagos, ele cai no Google Calendar, com link do Google Meet se o atendimento for online."
+        },
+        {
+          "title": "Lembrete enviado",
+          "body": "E-mail 24 horas e 1 hora antes, e WhatsApp nos planos pagos, para ninguém precisar ficar cobrando."
+        }
+      ],
+      "business": "Espaço Aurora",
+      "initials": "EA",
+      "sample": "Negócio de exemplo",
+      "choose": "Escolha o serviço",
+      "services": [
+        {
+          "name": "Corte e escova",
+          "time": "1 h"
+        },
+        {
+          "name": "Morena iluminada",
+          "time": "2 h 30 min"
+        },
+        {
+          "name": "Corte masculino",
+          "time": "30 min"
+        },
+        {
+          "name": "Retoque de raiz",
+          "time": "1 h 30 min"
+        }
+      ],
+      "continue": "Continuar",
+      "day": "Terça-feira",
+      "book": "Agendar {time}",
+      "booked": "Agendado",
+      "bookedLine": "{service} · Ter {time}",
+      "calendar": "Adicionado ao Google Calendar",
+      "reminders": [
+        {
+          "channel": "E-mail",
+          "when": "Seg 9:30",
+          "text": "Lembrete: Corte e escova amanhã às 9:30."
+        },
+        {
+          "channel": "WhatsApp",
+          "when": "Ter 8:30",
+          "text": "Esperamos você daqui a uma hora no Espaço Aurora."
+        }
+      ],
+      "poweredBy": "Agendamento via SkedEz"
+    },
+    "dataFlow": {
+      "you": "Você",
+      "youBody": "Nome, e-mail, mensagem",
+      "team": "Nosso time",
+      "teamBody": "Usados para responder",
+      "not": "Fora deste site",
+      "items": [
+        "Cookies",
+        "Analytics",
+        "Pixels de anúncio",
+        "Rastreadores"
+      ]
+    },
+    "deviceDuo": {
+      "desktopAlt": "Página inicial do SkedEz em um navegador de desktop",
+      "phoneAlt": "SkedEz no celular",
+      "live": "No ar · skedez.com"
+    },
+    "stages": {
+      "scope": "Escopo · v1",
+      "sharedDoc": "Doc compartilhado",
+      "scopeItems": [
+        "Usuários e suas tarefas",
+        "O que é estar pronto",
+        "Riscos, priorizados",
+        "Plano e estimativa"
+      ],
+      "prototype": "Protótipo",
+      "clickable": "Navegável",
+      "releases": "Releases",
+      "staging": "staging",
+      "releaseItems": [
+        "Login e equipes",
+        "Página de agendamento",
+        "Lembretes",
+        "Cobrança"
+      ],
+      "week": "Semana {n}",
+      "monitoring": "Monitoramento",
+      "checks": "Todas as verificações ok",
+      "monitoringNote": "Tempo de resposta, erros e backups, com alertas quando algo sai do normal."
+    },
+    "week": {
+      "days": [
+        "Seg",
+        "Ter",
+        "Qua",
+        "Qui",
+        "Sex"
+      ],
+      "plan": "Plano",
+      "planLong": "Planejar a semana",
+      "update": "Status",
+      "ship": "Entrega",
+      "release": "Release + demo"
+    },
+    "ai": {
+      "stages": [
+        {
+          "k": "Tarefa",
+          "v": "Resumir este chamado de suporte"
+        },
+        {
+          "k": "Contexto",
+          "v": "3 documentos recuperados"
+        },
+        {
+          "k": "Roteamento",
+          "v": "modelo rápido · modelo preciso"
+        },
+        {
+          "k": "Guardrails",
+          "v": "dados pessoais mascarados"
+        },
+        {
+          "k": "Resposta",
+          "v": "com fontes"
+        }
+      ],
+      "models": [
+        "modelo rápido",
+        "modelo preciso"
+      ],
+      "eval": "Suíte de avaliação · a cada mudança",
+      "pass": "Acima do mínimo · liberar",
+      "running": "Rodando",
+      "caption": "Ilustração · como um recurso é verificado antes de ir ao ar"
+    },
+    "saas": {
+      "layers": [
+        {
+          "k": "Clientes",
+          "items": [
+            "Time A",
+            "Time B",
+            "Time C"
+          ]
+        },
+        {
+          "k": "Seu produto",
+          "items": [
+            "App web",
+            "Admin",
+            "Dashboards"
+          ]
+        },
+        {
+          "k": "API",
+          "items": [
+            "REST",
+            "Webhooks",
+            "Auth"
+          ]
+        },
+        {
+          "k": "Serviços",
+          "items": [
+            "Cobrança",
+            "E-mail",
+            "Agenda",
+            "Arquivos"
+          ]
+        },
+        {
+          "k": "Dados",
+          "items": [
+            "PostgreSQL",
+            "Backups",
+            "Monitoramento"
+          ]
+        }
+      ],
+      "note": "Cada linha de dados é marcada com o time a que pertence. Uma requisição do <b>{team}</b> só enxerga os dados do {team}.",
+      "caption": "Ilustração · uma requisição atravessando a plataforma"
+    },
+    "apps": {
+      "desktopAlt": "SkedEz em um navegador de desktop",
+      "phoneAlt": "SkedEz no celular",
+      "shared": "Compartilhado pelos dois",
+      "items": [
+        "Tipos",
+        "Cliente de API",
+        "Validação",
+        "Tokens de design"
+      ],
+      "caption": "SkedEz · um só código, web e mobile"
+    },
+    "design": {
+      "screen": "Tela de agendamento",
+      "modes": [
+        "Fluxo",
+        "Wireframe",
+        "Final"
+      ],
+      "flow": [
+        "Escolha o serviço",
+        "Escolha o horário",
+        "Confirme e receba lembretes"
+      ],
+      "book": "Agendar · Ter 9:30",
+      "caption": "Ilustração · a mesma tela em três etapas"
+    }
+  },
+  "pages": {
+    "work": {
+      "title": "Projetos e cases",
+      "description": "Projetos selecionados da StationByte: o SkedEz, nossa plataforma de agendamento em produção, e projetos de clientes que apresentamos numa conversa.",
+      "ogAlt": "SkedEz em um navegador de desktop ao lado da frase Produtos que criamos e operamos",
+      "eyebrow": "Projetos selecionados",
+      "heading": [
+        "Produtos que criamos",
+        "e operamos."
+      ],
+      "lede": "Mostramos o que podemos abrir por completo: nosso próprio produto, no ar em produção. Quanto aos projetos de clientes, apresentamos numa conversa os mais próximos do seu.",
+      "nextStep": [
+        "Quer ver projetos",
+        "parecidos com o seu?"
+      ]
+    },
+    "skedez": {
+      "title": "Case SkedEz: agendamento online",
+      "ogAlt": "A página inicial do SkedEz ao lado da frase A agenda que roda sozinha",
+      "articleHeadline": "SkedEz: a agenda que roda sozinha",
+      "eyebrow": "Case · Produto próprio",
+      "heading": [
+        "SkedEz: a agenda",
+        "que roda sozinha."
+      ],
+      "disclaimerBold": "O SkedEz é um produto nosso, não um projeto de cliente.",
+      "disclaimer": "Mostramos o SkedEz porque é o único produto que podemos abrir por completo: as decisões e o app no ar.",
+      "problemEyebrow": "O problema",
+      "problemTitle": [
+        "Tempo perdido com",
+        "mensagens e faltas."
+      ],
+      "flowEyebrow": "Do lado do cliente",
+      "flowTitle": [
+        "Um agendamento",
+        "em quatro passos."
+      ],
+      "builtEyebrow": "O que construímos",
+      "builtTitle": [
+        "Tudo para um negócio",
+        "receber agendamentos."
+      ],
+      "howEyebrow": "Como é feito",
+      "howTitle": [
+        "Decisões que",
+        "mantêm tudo no ar."
+      ],
+      "stackEyebrow": "Stack",
+      "stackTitle": "As tecnologias por trás",
+      "stackNote": "Como um agendamento vai da tela do cliente até o lembrete. O destaque acompanha um deles do começo ao fim.",
+      "liveEyebrow": "No ar hoje",
+      "liveTitle": [
+        "Três planos,",
+        "zero comissão."
+      ],
+      "liveNote": "Preços conforme publicados em skedez.com. Os planos pagos começam com 15 dias de teste (cartão obrigatório); o plano gratuito não pede cartão.",
+      "seeLive": "Ver no ar em skedez.com",
+      "nextStep": [
+        "Criando algo",
+        "parecido?"
+      ]
+    },
+    "services": {
+      "title": "Serviços: IA, SaaS, apps e design de produto",
+      "description": "Engenharia de produtos com IA, plataformas SaaS, apps web e mobile e design de produto: o que a StationByte faz, o que você recebe e como trabalhamos.",
+      "ogAlt": "Quatro renders de peças de vidro, um para cada serviço da StationByte",
+      "eyebrow": "Serviços",
+      "heading": [
+        "O que projetamos,",
+        "criamos e operamos."
+      ],
+      "lede": "Quatro serviços, entregues por engenheiros seniores. A maioria dos projetos usa mais de um: um recurso de IA precisa de um produto em volta, e um produto precisa de um design que se sustente no código.",
+      "agreementsEyebrow": "Em todo projeto",
+      "agreementsTitle": "Tudo seu desde o primeiro dia.",
+      "fullProcess": "Ver o processo completo"
+    },
+    "service": {
+      "eyebrow": "Serviço {n} · {title}",
+      "ogAlt": "{alt}, ao lado da frase {headline}",
+      "whatYouGet": "O que você recebe",
+      "howItWorks": "Como funciona",
+      "approachEyebrow": "Abordagem",
+      "approachTitle": "Como fazemos",
+      "questionsEyebrow": "Perguntas",
+      "questionsTitle": "O que os clientes perguntam",
+      "others": "Outros serviços"
+    },
+    "process": {
+      "title": "Como trabalhamos: processo de desenvolvimento",
+      "description": "Como trabalhamos: descoberta, design, desenvolvimento e operação, entregas semanais, três formatos de trabalho e código e contas seus desde o início.",
+      "ogAlt": "Pilhas de peças de cerâmica crescendo até formar uma grade completa, ao lado da frase Da ideia ao produto no ar",
+      "eyebrow": "Como trabalhamos",
+      "heading": [
+        "Da ideia",
+        "ao produto no ar."
+      ],
+      "lede": "Você recebe um link funcionando logo no início, não um relatório de status. Cada etapa termina com algo que você pode usar, e você pode parar depois de qualquer uma delas levando tudo o que fizemos.",
+      "waysLink": "Formatos de trabalho",
+      "stage": "Etapa {n}",
+      "happens": "O que acontece",
+      "youGet": "O que você recebe",
+      "weNeed": "O que precisamos de você",
+      "weekEyebrow": "Toda semana",
+      "weekTitle": [
+        "Um ritmo para",
+        "você se planejar."
+      ],
+      "weekNote": "Os mesmos três momentos toda semana, para você sempre saber o que está acontecendo sem precisar perguntar.",
+      "figAlt": "Quatro pilhas de peças de cerâmica off-white crescendo de uma peça até uma grade completa, com uma peça azul no centro",
+      "figCaption": "Fig. 03 · Etapa por etapa, o byte se completa",
+      "waysEyebrow": "Formatos de trabalho",
+      "waysTitle": [
+        "Três formatos,",
+        "um só time."
+      ],
+      "waysNote": "Um sprint de descoberta costuma ser o primeiro passo. Toda proposta é feita por escrito, com escopo, prazo e preço combinados antes de o trabalho começar.",
+      "fits": "Faz sentido quando",
+      "how": "Como funciona",
+      "agreementsEyebrow": "Acordos de trabalho",
+      "agreementsTitle": [
+        "Tudo seu desde",
+        "o primeiro dia."
+      ],
+      "nextStep": [
+        "Comece com um",
+        "sprint de descoberta."
+      ]
+    },
+    "studio": {
+      "title": "Sobre o estúdio",
+      "description": "A StationByte é uma software house enxuta fundada por Pablo Italo, engenheiro sênior de IA e full-stack. Quem fala com você é quem escreve o seu código.",
+      "ogAlt": "Peças de cerâmica sob a luz da manhã, uma delas azul, ao lado da frase Time enxuto. Só gente sênior.",
+      "eyebrow": "Estúdio",
+      "heading": [
+        "Time enxuto.",
+        "Só gente sênior."
+      ],
+      "lede": "A StationByte LLC é uma software house. Projetamos, desenvolvemos e operamos recursos de IA, plataformas SaaS e apps web e mobile para founders e times em crescimento, e mantemos um produto próprio, o <link>SkedEz</link>.",
+      "videoAlt": "Peças de cerâmica off-white empilhadas em grade sob a luz da manhã que entra pela janela, com uma peça azul na pilha mais alta",
+      "figCaption": "Fig. 02 · Luz da manhã, uma peça azul",
+      "howEyebrow": "Como trabalhamos",
+      "howTitle": [
+        "Três promessas",
+        "que cumprimos."
+      ],
+      "fullProcess": "O processo completo",
+      "founderEyebrow": "Fundador",
+      "portraitAlt": "Retrato de Pablo Italo",
+      "trackRecord": "A trajetória do Pablo",
+      "projectsNote": "Projetos que Pablo liderou, desenvolveu ou dos quais participou, conforme listados em pabloitalo.com.",
+      "companyEyebrow": "A empresa",
+      "companyTitle": [
+        "A versão",
+        "resumida."
+      ],
+      "benchAlt": "Uma bancada de carvalho claro com um notebook fechado, uma pilha de peças off-white, uma peça azul, um caderno e uma xícara",
+      "legalName": "Razão social",
+      "whatWeDo": "O que fazemos",
+      "ourProduct": "Nosso produto",
+      "ourProductValue": "<link>SkedEz</link>, agendamento online para negócios de serviços",
+      "contact": "Contato",
+      "languages": "Idiomas"
+    },
+    "contact": {
+      "title": "Contato e orçamento de projeto",
+      "description": "Conte para a StationByte o que você está criando. Use o formulário ou escreva para contact@stationbyte.com; respondemos em até 48 horas, no seu idioma.",
+      "ogAlt": "Peças de cerâmica com a peça azul no último espaço, ao lado da frase Conte o que você está criando",
+      "eyebrow": "Começar um projeto",
+      "heading": [
+        "Conte o que",
+        "você está criando."
+      ],
+      "lede": "Algumas linhas bastam para começar, no idioma que você preferir. Respondemos em até 48 horas, e quem responde é um engenheiro, não um vendedor.",
+      "videoAlt": "Oito peças de cerâmica off-white em grade sobre linho, com uma peça azul se encaixando no único espaço vazio",
+      "ratherEmail": "Prefere e-mail?",
+      "emailTip": "Conte o que você está criando, em que pé está hoje e para quando precisa.",
+      "whatNext": "O que acontece depois",
+      "steps": [
+        {
+          "title": "Respondemos",
+          "body": "Em até 48 horas, no seu idioma, com perguntas ou um horário para conversar."
+        },
+        {
+          "title": "Conversamos",
+          "body": "Uma conversa sobre o que você está criando, em que pé está e o que significa estar pronto."
+        },
+        {
+          "title": "Você recebe uma proposta",
+          "body": "Por escrito: escopo, prazo e preço. Normalmente, começando por um sprint de descoberta."
+        }
+      ],
+      "notReady": "Ainda não é hora de conversar? Veja <process>como trabalhamos</process> ou <product>um produto que criamos</product>."
+    },
+    "privacy": {
+      "title": "Política de privacidade",
+      "description": "Como a StationByte LLC coleta, usa e protege dados pessoais no site stationbyte.com e quando você entra em contato conosco por formulário ou e-mail.",
+      "ogAlt": "O símbolo de peças da StationByte ao lado da frase Seus dados, só o mínimo",
+      "current": "Privacidade",
+      "eyebrow": "Política de privacidade · Atualizada em {date}",
+      "heading": [
+        "Seus dados,",
+        "só o mínimo."
+      ],
+      "lede": "Coletamos apenas o que precisamos para responder a você e manter este site no ar. Sem cookies, sem analytics, sem rastreamento.",
+      "onThisPage": "Nesta página",
+      "translationNote": "Esta tradução é oferecida por conveniência; em caso de divergência, prevalece a versão em inglês.",
+      "sections": {
+        "who": {
+          "title": "Quem somos",
+          "p1": "Este site é operado pela StationByte LLC (“StationByte”, “nós”). Somos a controladora dos dados pessoais descritos aqui. Para qualquer questão sobre esta política ou sobre seus dados, escreva para <mail>contact@stationbyte.com</mail>."
+        },
+        "collect": {
+          "title": "O que coletamos",
+          "p1": "<b>Quando você entra em contato.</b> Se você usar o <form>formulário de projeto</form> ou nos enviar um e-mail, recebemos seu nome, seu endereço de e-mail, o que você está criando, uma faixa de orçamento (se você escolher uma), sua mensagem e qualquer outra informação que decida incluir.",
+          "p2": "<b>Quando você visita o site.</b> Como a maioria dos sites, nosso servidor registra dados técnicos padrão de cada requisição: endereço IP, tipo de navegador e de dispositivo, a página solicitada e o horário. Não usamos esses dados para identificar você.",
+          "p3": "<b>Cookies e rastreamento.</b> Este site não define cookies e não usa ferramentas de analytics, publicidade ou rastreamento. Fontes, imagens e vídeos são servidos pelo nosso próprio servidor. Se você escolher um idioma ou fechar a barra de sugestão de idioma, seu navegador guarda essa escolha no próprio armazenamento; ela nunca é enviada para nós."
+        },
+        "use": {
+          "title": "Por que usamos esses dados e com qual base legal",
+          "i1": "<b>Para responder e preparar uma proposta</b> que você solicitou: procedimentos preliminares a um possível contrato, a seu pedido (GDPR, o Regulamento Geral de Proteção de Dados da UE, art. 6(1)(b)).",
+          "i2": "<b>Para executar um projeto</b>, caso trabalhemos juntos: execução do nosso contrato (art. 6(1)(b)).",
+          "i3": "<b>Para manter o site seguro e funcionando</b>, por meio dos logs do servidor: nosso legítimo interesse em proteger o site e seus visitantes (art. 6(1)(f))."
+        },
+        "never": {
+          "title": "O que nunca fazemos",
+          "p1": "Não vendemos seus dados, não os compartilhamos para fins publicitários, não incluímos você em newsletters e não os usamos para treinar modelos de IA."
+        },
+        "share": {
+          "title": "Quem mais tem acesso",
+          "p1": "Apenas os fornecedores de que precisamos para manter o site e responder a você: nosso provedor de hospedagem, que armazena os logs do servidor; o chat do nosso time (Slack), que recebe os envios do formulário de projeto; e nosso provedor de e-mail, que armazena as mensagens que você nos envia. Eles tratam os dados conforme nossas instruções e não podem usá-los para fins próprios.",
+          "p2": "Seus dados podem ser tratados fora do país onde você mora. Quando a lei exigir, adotamos as salvaguardas que ela prevê, como cláusulas contratuais padrão."
+        },
+        "keep": {
+          "title": "Por quanto tempo guardamos",
+          "i1": "Contatos que não resultam em projeto: excluídos em até 12 meses após a nossa última mensagem.",
+          "i2": "Correspondência com clientes: pelo tempo que o trabalho e eventuais obrigações legais de guarda de registros exigirem.",
+          "i3": "Logs do servidor: apenas pelo tempo necessário para manter o site seguro; depois, são excluídos."
+        },
+        "rights": {
+          "title": "Seus direitos",
+          "p1": "Você pode pedir acesso, correção, exclusão ou exportação dos seus dados, pedir que limitemos a forma como os usamos ou se opor ao uso que fazemos deles. Escreva para <mail>contact@stationbyte.com</mail> e responderemos em até um mês. Talvez seja preciso confirmar sua identidade antes de atendermos ao pedido.",
+          "p2": "Se você estiver na UE, no Reino Unido ou em outro país com lei de proteção de dados, também pode apresentar uma reclamação à autoridade de proteção de dados local. Gostaríamos de ter a chance de resolver a questão antes."
+        },
+        "security": {
+          "title": "Segurança",
+          "p1": "O site é servido apenas via HTTPS, e o acesso às mensagens e aos servidores é restrito às pessoas que precisam dele."
+        },
+        "children": {
+          "title": "Crianças",
+          "p1": "Este site é voltado a empresas. Ele não se destina a crianças, e não coletamos dados delas intencionalmente."
+        },
+        "changes": {
+          "title": "Alterações",
+          "p1": "Se mudarmos a forma como tratamos dados, atualizaremos esta página e a data no topo."
+        }
+      }
+    },
+    "notFound": {
+      "title": "Página não encontrada",
+      "eyebrow": "Erro 404",
+      "heading": "Esta vaga está vazia.",
+      "body": "A página que você procurou não está aqui. Ela pode ter mudado de lugar quando reconstruímos o site.",
+      "back": "Voltar para a página inicial"
+    }
+  },
+  "schema": {
+    "knowsAbout": [
+      "Engenharia de produtos com IA",
+      "Grandes modelos de linguagem (LLMs)",
+      "Desenvolvimento de SaaS",
+      "Desenvolvimento web",
+      "Desenvolvimento de aplicativos mobile",
+      "Design de produto"
+    ],
+    "skedezCategory": "Software de agendamento online",
+    "areaServed": "Mundo todo",
+    "whatYouGet": "{title}: o que você recebe"
+  },
+  "llms": {
+    "about": "A StationByte LLC é uma software house enxuta fundada por Pablo Italo. Ela projeta, desenvolve e opera recursos de IA, plataformas SaaS e apps web e mobile para founders e times em crescimento, e mantém um produto próprio, o SkedEz (agendamento online para negócios de serviços). Contato: contact@stationbyte.com. Responde em até 48 horas, em qualquer um dos idiomas deste site.",
+    "pages": "Páginas",
+    "homeLink": "Início",
+    "home": "o que o estúdio faz, projetos selecionados, serviços, processo, estúdio e contato.",
+    "work": "o SkedEz, produto próprio do estúdio, e como ver projetos parecidos com o seu.",
+    "skedez": "o problema, o que foi construído, como foi desenvolvido, stack e planos atuais.",
+    "services": "os quatro serviços e o que cada um entrega.",
+    "process": "descoberta, design, desenvolvimento e operação; o ritmo semanal; formatos de trabalho; acordos de trabalho.",
+    "studio": "como o estúdio trabalha e quem faz parte dele.",
+    "contact": "o formulário de projeto e o endereço de e-mail.",
+    "optional": "Opcional",
+    "fullText": "Texto completo para modelos de linguagem",
+    "sitemap": "Mapa do site",
+    "languages": "Outros idiomas",
+    "languagesNote": "O mesmo site em outros idiomas:",
+    "whatYouGet": "O que você recebe:",
+    "approach": "Como é feito:",
+    "questions": "Perguntas que os clientes fazem:",
+    "tools": "Ferramentas: {list}.",
+    "youGet": "Você recebe: {list}.",
+    "needed": "O que precisamos de você: {text}",
+    "everyWeek": "Toda semana:",
+    "ways": "Formatos de trabalho:",
+    "fitsWhen": "Faz sentido quando:",
+    "howItWorks": "Como funciona:",
+    "agreements": "Acordos de trabalho:",
+    "workHeading": "Projetos: case do SkedEz",
+    "skedezIntro": "URL: {url}. No ar em {live}. O SkedEz é um produto próprio do estúdio, não um projeto de cliente.",
+    "built": "O que foi construído:",
+    "notes": "Notas de engenharia:",
+    "plans": "Planos (conforme publicados em skedez.com):",
+    "clientWork": "Para projetos de clientes, o estúdio apresenta os trabalhos mais próximos em uma conversa com o potencial cliente.",
+    "projects": "Projetos que Pablo liderou, desenvolveu ou dos quais participou (de pabloitalo.com):",
+    "stack": "Ferramentas que o estúdio usa nas entregas: {list}.",
+    "contactLine": "Use o formulário em {url} ou escreva para {email}."
+  }
+}
