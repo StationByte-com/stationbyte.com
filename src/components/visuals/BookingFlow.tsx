@@ -2,26 +2,17 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import { useMessages } from "next-intl";
 import { useTicker } from "./useTicker";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-const STEPS = [
-  { title: "Choose a service", body: "Clients open the booking link from a bio, a Google profile or a website, and pick what they need." },
-  { title: "Pick a free time", body: "Only real free slots show, worked out from each person's hours and existing bookings." },
-  { title: "Booked", body: "The booking is confirmed straight away. On paid plans it lands in Google Calendar, with a Google Meet link if the service is online." },
-  { title: "Reminded", body: "Email 24 hours and 1 hour before, and WhatsApp on paid plans, so nobody has to chase." },
-];
-
-const SERVICES = [
-  { name: "Cut and blow-dry", time: "1 hr" },
-  { name: "Balayage", time: "2 hr 30 min" },
-  { name: "Men's cut", time: "30 min" },
-  { name: "Colour refresh", time: "1 hr 30 min" },
-];
+// The sample salon is written per language (messages visuals.booking), so each market sees services it recognises.
 const TIMES = ["9:00", "9:30", "10:00", "11:30", "14:00", "15:30"];
 
 function Screen({ step }: { step: number }) {
+  const t = useMessages().visuals.booking;
+  const first = t.services[0].name;
   return (
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
@@ -33,35 +24,35 @@ function Screen({ step }: { step: number }) {
         className="flex h-full flex-col gap-3 p-4 text-ink"
       >
         <div className="flex items-center gap-2.5 pb-1">
-          <span className="grid size-8 place-items-center rounded-lg bg-ink text-[11px] font-semibold text-white">SL</span>
+          <span className="grid size-8 place-items-center rounded-lg bg-ink text-[11px] font-semibold text-white">{t.initials}</span>
           <span className="flex flex-col leading-tight">
-            <b className="text-[13px] font-semibold">Studio Lumière</b>
-            <span className="text-[11px] text-steel">Sample business</span>
+            <b className="text-[13px] font-semibold">{t.business}</b>
+            <span className="text-[11px] text-steel">{t.sample}</span>
           </span>
         </div>
         {step === 0 && (
           <>
-            <p className="text-[12px] font-medium text-steel">Choose a service</p>
-            {SERVICES.map((s, i) => (
+            <p className="text-[12px] font-medium text-steel">{t.choose}</p>
+            {t.services.map((s, i) => (
               <span key={s.name} className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-[12px] ${i === 0 ? "bg-ink text-white" : "border border-line"}`}>
                 {s.name}
                 <span className={i === 0 ? "text-white/70" : "text-steel"}>{s.time}</span>
               </span>
             ))}
-            <span className="mt-auto rounded-full bg-ink py-2.5 text-center text-[12px] font-medium text-white">Continue</span>
+            <span className="mt-auto rounded-full bg-ink py-2.5 text-center text-[12px] font-medium text-white">{t.continue}</span>
           </>
         )}
         {step === 1 && (
           <>
-            <p className="text-[12px] font-medium text-steel">Tuesday · Cut and blow-dry</p>
+            <p className="text-[12px] font-medium text-steel">{t.day} · {first}</p>
             <div className="grid grid-cols-3 gap-2">
-              {TIMES.map((t, i) => (
-                <span key={t} className={`rounded-lg py-2 text-center text-[12px] ${i === 1 ? "bg-signal text-white" : i === 3 ? "text-fog line-through" : "border border-line"}`}>
-                  {t}
+              {TIMES.map((time, i) => (
+                <span key={time} className={`rounded-lg py-2 text-center text-[12px] ${i === 1 ? "bg-signal text-white" : i === 3 ? "text-fog line-through" : "border border-line"}`}>
+                  {time}
                 </span>
               ))}
             </div>
-            <span className="mt-auto rounded-full bg-ink py-2.5 text-center text-[12px] font-medium text-white">Book 9:30</span>
+            <span className="mt-auto rounded-full bg-ink py-2.5 text-center text-[12px] font-medium text-white">{t.book.replace("{time}", "9:30")}</span>
           </>
         )}
         {step === 2 && (
@@ -74,26 +65,23 @@ function Screen({ step }: { step: number }) {
             >
               ✓
             </motion.span>
-            <b className="text-[15px] font-semibold">Booked</b>
-            <span className="text-[12px] text-steel">Cut and blow-dry · Tue 9:30</span>
-            <span className="rounded-lg bg-paper px-3 py-1.5 text-[11px] text-steel">Added to Google Calendar</span>
+            <b className="text-[15px] font-semibold">{t.booked}</b>
+            <span className="text-[12px] text-steel">{t.bookedLine.replace("{service}", first).replace("{time}", "9:30")}</span>
+            <span className="rounded-lg bg-paper px-3 py-1.5 text-[11px] text-steel">{t.calendar}</span>
           </div>
         )}
         {step === 3 && (
           <div className="flex flex-1 flex-col gap-2.5 pt-2">
-            {[
-              { when: "Mon 9:30", ch: "Email", text: "Reminder: Cut and blow-dry tomorrow at 9:30." },
-              { when: "Tue 8:30", ch: "WhatsApp", text: "See you in an hour at Studio Lumière." },
-            ].map((n, i) => (
+            {t.reminders.map((n, i) => (
               <motion.div
-                key={n.ch}
+                key={n.channel}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + i * 0.5, duration: 0.45, ease }}
                 className="flex flex-col gap-1 rounded-xl border border-line bg-paper p-3"
               >
                 <span className="flex justify-between text-[10px] font-medium uppercase tracking-wider text-steel">
-                  {n.ch}
+                  {n.channel}
                   <span>{n.when}</span>
                 </span>
                 <span className="text-[12px] leading-snug">{n.text}</span>
@@ -101,7 +89,7 @@ function Screen({ step }: { step: number }) {
             ))}
           </div>
         )}
-        <span className="pt-1 text-center text-[10px] text-steel">Booking page by SkedEz</span>
+        <span className="pt-1 text-center text-[10px] text-steel">{t.poweredBy}</span>
       </motion.div>
     </AnimatePresence>
   );
@@ -109,6 +97,7 @@ function Screen({ step }: { step: number }) {
 
 /** A booking from the client's side, in four steps; auto-advances on screen, and each step can be picked. */
 export default function BookingFlow() {
+  const STEPS = useMessages().visuals.booking.steps;
   const { ref, tick } = useTicker(2800, 0);
   const [picked, setPicked] = useState<number | null>(null);
   const step = picked ?? tick % STEPS.length;

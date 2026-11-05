@@ -3,11 +3,16 @@
 import { useId, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import LoopVideo from "@/components/motion/LoopVideo";
-import Link from "next/link";
-import { services } from "@/content/site";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Eyebrow from "@/components/motion/Eyebrow";
 
-export default function Services() {
+export type ServiceCard = { slug: string; loop: string; tags: readonly string[]; title: string; body: string };
+
+/** Homepage accordion. Titles and bodies come from the page (server), the rest of its copy from messages `home.services`. */
+export default function Services({ services }: { services: ServiceCard[] }) {
+  const t = useTranslations("home.services");
+  const [l1, l2] = t.raw("title") as string[];
   const [open, setOpen] = useState(0);
   const id = useId();
 
@@ -15,13 +20,13 @@ export default function Services() {
     <section id="services" className="scroll-mt-[72px]">
       <div className="shell flex flex-wrap gap-12 pb-28 pt-32 md:pb-32 md:pt-36">
         <div className="flex min-w-0 flex-[1_1_340px] flex-col items-start gap-5">
-          <div data-reveal><Eyebrow className="text-steel">Services</Eyebrow></div>
+          <div data-reveal><Eyebrow className="text-steel">{t("eyebrow")}</Eyebrow></div>
           <h2 className="display text-[clamp(42px,5vw,72px)]">
-            <span className="line-mask"><span>Four things,</span></span>
-            <span className="line-mask" style={{ "--reveal-delay": "90ms" } as React.CSSProperties}><span>done properly.</span></span>
+            <span className="line-mask"><span>{l1}</span></span>{" "}
+            <span className="line-mask" style={{ "--reveal-delay": "90ms" } as React.CSSProperties}><span>{l2}</span></span>
           </h2>
           <Link data-reveal href="/services" className="group/all mt-2 inline-flex items-center gap-2 border-b border-ink py-1 font-medium transition-colors hover:border-signal hover:text-signal-deep">
-            All services
+            {t("all")}
             <span aria-hidden="true" className="transition-transform duration-500 ease-station group-hover/all:translate-x-1">→</span>
           </Link>
         </div>
@@ -69,9 +74,9 @@ export default function Services() {
                       <div className="flex flex-col gap-5">
                         <p className="max-w-[620px] text-steel">{s.body}</p>
                         <ul className="flex flex-wrap gap-2">
-                          {s.tags.map((t) => (
-                            <li key={t} className="eyebrow rounded-md border border-line px-2.5 py-1.5 text-ink">
-                              {t}
+                          {s.tags.map((tag) => (
+                            <li key={tag} className="eyebrow rounded-md border border-line px-2.5 py-1.5 text-ink">
+                              {tag}
                             </li>
                           ))}
                         </ul>
@@ -79,7 +84,7 @@ export default function Services() {
                           href={`/services/${s.slug}`}
                           className="group/more inline-flex items-center gap-2 self-start border-b border-ink py-1 font-medium transition-colors hover:border-signal hover:text-signal-deep"
                         >
-                          {s.title} in detail
+                          {t("detail", { title: s.title })}
                           <span aria-hidden="true" className="transition-transform duration-500 ease-station group-hover/more:translate-x-1">→</span>
                         </Link>
                       </div>

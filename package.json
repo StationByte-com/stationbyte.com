@@ -12,18 +12,22 @@
     "film:encode": "scripts/hero-film/encode.sh",
     "og:build": "node scripts/og/build.mjs",
     "loops:render": "scripts/hero-film/render-loops.sh",
-    "loops:encode": "scripts/hero-film/encode-loops.sh"
+    "loops:encode": "scripts/hero-film/encode-loops.sh",
+    "i18n:check": "node scripts/i18n-check.mjs",
+    "i18n:smoke": "node scripts/i18n-smoke.mjs"
   },
   "dependencies": {
     "geist": "^1.9.1",
     "lenis": "^1.3.27",
     "motion": "^14.9.1",
     "next": "^16.4.5",
+    "next-intl": "^4.14.9",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@formatjs/icu-messageformat-parser": "^3.5.22",
     "@tailwindcss/postcss": "^4.3.4",
     "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",

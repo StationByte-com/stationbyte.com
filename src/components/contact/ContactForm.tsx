@@ -1,9 +1,10 @@
 "use client";
 
 import { startTransition, useActionState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { AnimatePresence, motion } from "motion/react";
-import { sendProject } from "@/app/contact/actions";
+import { useLocale, useTranslations } from "next-intl";
+import { sendProject } from "@/app/[locale]/contact/actions";
 import { budgets, kinds, type ContactState } from "@/content/contact";
 import { site } from "@/content/site";
 
@@ -23,7 +24,9 @@ const read = (form: HTMLFormElement): Progress["fields"] => {
   return { name: !!v("name"), email: EMAIL.test(v("email")), kind: !!v("kind"), budget: !!v("budget"), message: v("message").length >= 10 };
 };
 
-export default function ContactForm({ onProgress }: { onProgress?: (p: Progress) => void }) {
+export default function ContactForm({ onProgress, budgetLabels }: { onProgress?: (p: Progress) => void; budgetLabels: Record<string, string> }) {
+  const t = useTranslations("contactForm");
+  const locale = useLocale();
   const [state, action, pending] = useActionState<ContactState, FormData>(sendProject, { status: "idle" });
   const form = useRef<HTMLFormElement>(null);
   const status = useRef<HTMLDivElement>(null);
@@ -80,9 +83,9 @@ export default function ContactForm({ onProgress }: { onProgress?: (p: Progress)
             />
           ))}
         </span>
-        <h2 className="text-[clamp(32px,3.4vw,48px)] font-semibold leading-none tracking-[-0.04em]">Got it. Slot filled.</h2>
+        <h2 className="text-[clamp(32px,3.4vw,48px)] font-semibold leading-none tracking-[-0.04em]">{t("sentTitle")}</h2>
         <p className="max-w-[480px] text-fog">
-          Your message is with us. We reply {site.replyTime}, from a real person, to the address you gave.
+          {t("sentBody")}
         </p>
       </motion.div>
     );
@@ -91,19 +94,20 @@ export default function ContactForm({ onProgress }: { onProgress?: (p: Progress)
   return (
     <form ref={form} action={action} onSubmit={onSubmit} noValidate onChange={(e) => onProgress?.({ fields: read(e.currentTarget), sent: false })} className="flex flex-col gap-7" aria-labelledby="project-form-title">
       <h2 id="project-form-title" className="sr-only">
-        Project form
+        {t("formTitle")}
       </h2>
+      <input type="hidden" name="locale" value={locale} />
       {/* Honeypot: invisible to people, tempting to bots. */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
         <label>
-          Website
+          {t("honeypot")}
           <input type="text" name="website" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
 
       <div className="grid gap-7 sm:grid-cols-2">
         <div className={group}>
-          <label htmlFor="cf-name" className={labelText}>Your name</label>
+          <label htmlFor="cf-name" className={labelText}>{t("name")}</label>
           <input
             id="cf-name"
             name="name"
@@ -117,7 +121,7 @@ export default function ContactForm({ onProgress }: { onProgress?: (p: Progress)
           {err.name && <p id="name-error" className="text-[14px] text-alert">{err.name}</p>}
         </div>
         <div className={group}>
-          <label htmlFor="cf-email" className={labelText}>Email</label>
+          <label htmlFor="cf-email" className={labelText}>{t("email")}</label>
           <input
             id="cf-email"
             name="email"
@@ -135,14 +139,14 @@ export default function ContactForm({ onProgress }: { onProgress?: (p: Progress)
       </div>
 
       <fieldset className="flex flex-col gap-3">
-        <legend className={`${labelText} mb-3`}>What are you building?</legend>
+        <legend className={`${labelText} mb-3`}>{t("kind")}</legend>
         <div className="flex flex-wrap gap-2.5">
           {kinds.map((k) => (
             <label key={k} className="group relative cursor-pointer">
               <input type="radio" name="kind" value={k} defaultChecked={v.kind === k} className="peer sr-only" />
               <span className="flex min-h-11 items-center gap-2.5 rounded-full border border-line bg-white px-4.5 py-2.5 text-[15px] transition-[background-color,border-color,color] duration-300 group-hover:border-ink peer-checked:border-ink peer-checked:bg-ink peer-checked:text-paper peer-focus-visible:outline-2 peer-focus-visible:outline-offset-3 peer-focus-visible:outline-signal">
                 <span aria-hidden="true" className="size-2 rounded-[2px] bg-current opacity-40" />
-                {k}
+                {t(`kinds.${k}`)}
               </span>
             </label>
           ))}
@@ -151,14 +155,14 @@ export default function ContactForm({ onProgress }: { onProgress?: (p: Progress)
 
       <div className={group}>
         <label htmlFor="cf-budget" className={labelText}>
-          Budget <span className="font-normal text-steel">(optional)</span>
+          {t("budget")} <span className="font-normal text-steel">{t("optional")}</span>
         </label>
         <span className="relative">
           <select id="cf-budget" name="budget" defaultValue="" className={`${field} appearance-none pr-12`}>
-            <option value="">Choose a range</option>
+            <option value="">{t("chooseRange")}</option>
             {budgets.map((b) => (
-              <option key={b} value={b}>
-                {b}
+              <option key={b.id} value={b.id}>
+                {budgetLabels[b.id]}
               </option>
             ))}
           </select>
@@ -169,14 +173,14 @@ export default function ContactForm({ onProgress }: { onProgress?: (p: Progress)
       </div>
 
       <div className={group}>
-        <label htmlFor="cf-message" className={labelText}>Tell us about it</label>
+        <label htmlFor="cf-message" className={labelText}>{t("message")}</label>
         <textarea
           id="cf-message"
           name="message"
           rows={6}
           required
           defaultValue={v.message}
-          placeholder="What you're building, where it stands today, and when you need it."
+          placeholder={t("placeholder")}
           aria-invalid={!!err.message}
           aria-describedby={err.message ? "message-error" : undefined}
           className={`${field} resize-y`}
@@ -195,39 +199,37 @@ export default function ContactForm({ onProgress }: { onProgress?: (p: Progress)
             >
               <div className="flex flex-col gap-4 rounded-2xl border border-line bg-white p-6">
                 <p>
-                  {state.status === "failed"
-                    ? "Something went wrong sending the form. Your message is ready to send by email instead."
-                    : state.status === "limited"
-                      ? "That's a few messages in a short time, so the form is paused for now. Your message is ready to send by email."
-                      : "The form can't send messages right now, but your message is ready to send by email."}
+                  {t(state.status as "failed" | "limited" | "unconfigured")}
                 </p>
                 <a href={state.mailto} className="self-start rounded-full bg-signal px-5.5 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-signal-deep">
-                  Open it in your email app
+                  {t("openMail")}
                 </a>
-                <p className="text-[14px] text-steel">Or write to {site.email} directly.</p>
+                <p className="text-[14px] text-steel">{t("orWrite", { email: site.email })}</p>
               </div>
             </motion.div>
           )}
           {state.status === "error" && (
-            <p className="text-[15px] text-alert">A couple of fields need a look before we can send this.</p>
+            <p className="text-[15px] text-alert">{t("errors.summary")}</p>
           )}
         </AnimatePresence>
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-5 border-t border-line pt-7">
         <p className="max-w-[420px] text-[14px] text-steel">
-          We use these details only to reply to you. See our{" "}
-          <Link href="/privacy" className="text-ink underline decoration-line underline-offset-4 hover:decoration-signal">
-            privacy policy
-          </Link>
-          .
+          {t.rich("privacy", {
+            link: (chunks) => (
+              <Link href="/privacy" className="text-ink underline decoration-line underline-offset-4 hover:decoration-signal">
+                {chunks}
+              </Link>
+            ),
+          })}
         </p>
         <button
           type="submit"
           disabled={pending}
           className="group inline-flex min-h-14 items-center gap-3 rounded-full bg-ink px-7 py-4 font-medium text-paper transition-[background-color,opacity] duration-300 hover:bg-signal disabled:opacity-70"
         >
-          {pending ? "Sending…" : "Send"}
+          {pending ? t("sending") : t("send")}
           <span aria-hidden="true" className={`transition-transform duration-500 ease-station ${pending ? "translate-x-1" : "group-hover:translate-x-1"}`}>
             →
           </span>

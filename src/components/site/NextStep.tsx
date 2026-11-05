@@ -1,9 +1,12 @@
+import { useTranslations } from "next-intl";
 import Cta from "@/components/motion/Cta";
 import Eyebrow from "@/components/motion/Eyebrow";
 import { site } from "@/content/site";
 
 /** Closing band on inner pages: one next step, plus the address for people who'd rather just email. */
-export default function NextStep({ title = ["Tell us what", "you're building."] }: { title?: [string, string] }) {
+export default function NextStep({ title }: { title?: readonly string[] }) {
+  const t = useTranslations("common");
+  const [a, b] = title ?? (t.raw("nextStepTitle") as string[]);
   return (
     <section className="relative isolate overflow-hidden bg-ink text-paper">
       {/* The open slot, drawn large and faint behind the copy; one tile slides into it and back. */}
@@ -29,17 +32,17 @@ export default function NextStep({ title = ["Tell us what", "you're building."] 
       </svg>
       <div className="shell flex flex-col gap-8 py-28 md:py-32">
         <div data-reveal>
-          <Eyebrow className="text-signal-ink">Next step</Eyebrow>
+          <Eyebrow className="text-signal-ink">{t("nextStepEyebrow")}</Eyebrow>
         </div>
         <h2 className="display max-w-[820px] text-[clamp(40px,5vw,72px)]">
-          <span className="line-mask"><span>{title[0]}</span></span>
-          <span className="line-mask" style={{ "--reveal-delay": "90ms" } as React.CSSProperties}><span>{title[1]}</span></span>
+          <span className="line-mask"><span>{a}</span></span>{" "}
+          <span className="line-mask" style={{ "--reveal-delay": "90ms" } as React.CSSProperties}><span>{b}</span></span>
         </h2>
         <p data-reveal className="max-w-[520px] text-fog">
-          A few lines are enough to start. We reply {site.replyTime}, with questions or a time to talk.
+          {t("nextStepBody")}
         </p>
         <div data-reveal className="flex flex-wrap items-center gap-6">
-          <Cta href="/contact" variant="light">Start a project</Cta>
+          <Cta href="/contact" variant="light">{t("startProject")}</Cta>
           <a href={`mailto:${site.email}`} className="border-b border-edge py-2 text-paper transition-colors hover:border-signal-ink hover:text-signal-ink">
             {site.email}
           </a>

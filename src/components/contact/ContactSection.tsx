@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import ContactForm, { type Progress } from "./ContactForm";
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -10,10 +11,11 @@ const FIELD_TILES: (keyof Progress["fields"])[] = ["name", "email", "kind", "bud
 const TILE_FOR = [0, 1, 2, 3, 5];
 
 function SlotProgress({ progress }: { progress: Progress }) {
+  const t = useTranslations("contactForm.progress");
   const { fields, sent } = progress;
   const ready = fields.name && fields.email && fields.message;
   const count = FIELD_TILES.filter((f) => fields[f]).length;
-  const label = sent ? "Sent · slot filled" : ready ? "Ready to send" : count ? `${count} of 5 answered` : "Start anywhere";
+  const label = sent ? t("sent") : ready ? t("ready") : count ? t("answered", { count: String(count) }) : t("start");
 
   return (
     <div className="relative overflow-hidden rounded-[22px] bg-ink p-7 text-paper">
@@ -47,11 +49,11 @@ function SlotProgress({ progress }: { progress: Progress }) {
           })}
         </div>
         <div className="flex flex-col gap-2">
-          <p className="eyebrow text-fog">Your project</p>
+          <p className="eyebrow text-fog">{t("yourProject")}</p>
           <p className="text-[20px] font-semibold leading-tight tracking-[-0.03em]" aria-live="polite">
             {label}
           </p>
-          <p className="text-[14px] text-fog">Name, email and a few lines are all we need.</p>
+          <p className="text-[14px] text-fog">{t("hint")}</p>
         </div>
       </div>
     </div>
@@ -59,7 +61,7 @@ function SlotProgress({ progress }: { progress: Progress }) {
 }
 
 /** The project form and its live progress tile, sharing state. `aside` is the rest of the sidebar. */
-export default function ContactSection({ aside }: { aside: React.ReactNode }) {
+export default function ContactSection({ aside, budgetLabels }: { aside: React.ReactNode; budgetLabels: Record<string, string> }) {
   const [progress, setProgress] = useState<Progress>({ fields: { name: false, email: false, kind: false, budget: false, message: false }, sent: false });
 
   return (
@@ -69,7 +71,7 @@ export default function ContactSection({ aside }: { aside: React.ReactNode }) {
         <div className="lg:hidden">
           <SlotProgress progress={progress} />
         </div>
-        <ContactForm onProgress={setProgress} />
+        <ContactForm onProgress={setProgress} budgetLabels={budgetLabels} />
       </div>
       <aside className="flex min-w-0 flex-col gap-12 lg:sticky lg:top-28 lg:self-start">
         <div data-reveal className="hidden lg:block">

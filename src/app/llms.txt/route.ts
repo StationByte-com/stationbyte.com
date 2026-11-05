@@ -2,6 +2,6 @@ import { llmsIndex } from "@/content/llms";
 
 export const dynamic = "force-static";
 
-export function GET() {
-  return new Response(llmsIndex(), { headers: { "Content-Type": "text/markdown; charset=utf-8" } });
+export async function GET() {
+  return new Response(await llmsIndex("en"), { headers: { "Content-Type": "text/markdown; charset=utf-8" } });
 }

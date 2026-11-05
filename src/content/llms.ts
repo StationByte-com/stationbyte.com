@@ -1,88 +1,105 @@
-import { agreements, engagements, founder, principles, process, rhythm, site, stack } from "./site";
-import { services } from "./services";
+import { founder, services, site, stack } from "./site";
+import { tagLabel } from "./services";
 import { skedez } from "./work";
-import { nextSteps } from "./contact";
+import { absoluteUrl } from "./seo";
+import { getCopy } from "@/i18n/copy";
+import { defaultLocale, localeInfo, localePath, locales, type Locale } from "@/i18n/locales";
 
 /**
  * Markdown for language models (llmstxt.org): a short index at /llms.txt and the full site text at
- * /llms-full.txt. Built from the same content modules as the pages, so the two never drift apart.
+ * /llms-full.txt, in English, plus the same pair under each language prefix (/es/llms.txt, /ja/llms-full.txt…).
+ * Built from the same messages as the pages, so they never drift apart.
  */
-const u = (path: string) => `${site.url}${path}`;
+const fill = (template: string, values: Record<string, string>) => template.replace(/\{(\w+)\}/g, (_, k: string) => values[k] ?? "");
+const llmsUrl = (locale: Locale, file: "llms.txt" | "llms-full.txt") => `${site.url}${locale === defaultLocale ? "" : `/${locale}`}/${file}`;
 
-const header = [
-  `# ${site.name}`,
-  "",
-  `> ${site.description}`,
-  "",
-  `${site.legalName} is a small software studio founded by ${founder.name}. It designs, builds and runs AI features, SaaS platforms, and web and mobile apps for founders and growing teams, and runs its own product, SkedEz (online booking for service businesses). Contact: ${site.email}. It replies ${site.replyTime}.`,
-];
+async function header(locale: Locale) {
+  const copy = await getCopy(locale);
+  return { copy, lines: [`# ${site.name}`, "", `> ${copy.meta.description}`, "", copy.llms.about] };
+}
 
-export function llmsIndex() {
+function languages(locale: Locale, file: "llms.txt" | "llms-full.txt", heading: string) {
   return [
-    ...header,
+    `## ${heading}`,
+    ...locales.filter((l) => l !== locale).map((l) => `- [${localeInfo[l].name}](${llmsUrl(l, file)}): ${site.url}${localePath(l, "/") === "/" ? "/" : localePath(l, "/")}`),
+  ];
+}
+
+export async function llmsIndex(locale: Locale) {
+  const { copy, lines } = await header(locale);
+  const l = copy.llms;
+  const u = (path: string) => absoluteUrl(locale, path);
+  return [
+    ...lines,
     "",
-    "## Pages",
-    `- [Home](${u("/")}): what the studio does, selected work, services, process, studio and contact.`,
-    `- [Work](${u("/work")}): SkedEz, the studio's own product, and how to see work close to yours.`,
-    `- [SkedEz case study](${u("/work/skedez")}): problem, what was built, how it is engineered, stack and live plans.`,
-    `- [Services](${u("/services")}): the four services and what each delivers.`,
-    ...services.map((s) => `- [${s.title}](${u(`/services/${s.slug}`)}): ${s.description}`),
-    `- [Process](${u("/process")}): discover, design, build, operate; the weekly rhythm; ways to engage; working agreements.`,
-    `- [Studio](${u("/studio")}): how the studio works and who it is.`,
-    `- [Start a project](${u("/contact")}): the project form and email address.`,
+    `## ${l.pages}`,
+    `- [${l.homeLink}](${u("/")}): ${l.home}`,
+    `- [${copy.pages.work.title}](${u("/work")}): ${l.work}`,
+    `- [${copy.pages.skedez.title}](${u("/work/skedez")}): ${l.skedez}`,
+    `- [${copy.pages.services.title}](${u("/services")}): ${l.services}`,
+    ...services.map((s) => `- [${copy.services[s.slug].title}](${u(`/services/${s.slug}`)}): ${copy.services[s.slug].description}`),
+    `- [${copy.pages.process.title}](${u("/process")}): ${l.process}`,
+    `- [${copy.pages.studio.title}](${u("/studio")}): ${l.studio}`,
+    `- [${copy.pages.contact.title}](${u("/contact")}): ${l.contact}`,
     "",
-    "## Optional",
-    `- [Full text for language models](${u("/llms-full.txt")})`,
-    `- [Privacy policy](${u("/privacy")})`,
-    `- [Sitemap](${u("/sitemap.xml")})`,
+    ...languages(locale, "llms.txt", l.languages),
+    "",
+    `## ${l.optional}`,
+    `- [${l.fullText}](${llmsUrl(locale, "llms-full.txt")})`,
+    `- [${copy.pages.privacy.title}](${u("/privacy")})`,
+    `- [${l.sitemap}](${site.url}/sitemap.xml)`,
     "",
   ].join("\n");
 }
 
-export function llmsFull() {
-  const lines: string[] = [...header, ""];
+export async function llmsFull(locale: Locale) {
+  const { copy, lines: start } = await header(locale);
+  const l = copy.llms;
+  const u = (path: string) => absoluteUrl(locale, path);
+  const lines: string[] = [...start, ""];
   const h = (t: string) => lines.push("", t, "");
 
-  h("## Services");
+  h(`## ${copy.pages.services.title}`);
   for (const s of services) {
-    lines.push(`### ${s.title}`, "", `URL: ${u(`/services/${s.slug}`)}`, "", s.problem, "", "What you get:");
-    s.deliverables.forEach((d) => lines.push(`- ${d.title}: ${d.body}`));
-    lines.push("", "How it is approached:");
-    s.approach.forEach((a, i) => lines.push(`${i + 1}. ${a.title}: ${a.body}`));
-    lines.push("", "Questions buyers ask:");
-    s.questions.forEach((q) => lines.push(`- ${q.q} ${q.a}`));
-    lines.push("", `Tools: ${s.tags.join(", ")}.`, "");
+    const c = copy.services[s.slug];
+    lines.push(`### ${c.title}`, "", `URL: ${u(`/services/${s.slug}`)}`, "", c.problem, "", l.whatYouGet);
+    c.deliverables.forEach((d) => lines.push(`- ${d.title}: ${d.body}`));
+    lines.push("", l.approach);
+    c.approach.forEach((a, i) => lines.push(`${i + 1}. ${a.title}: ${a.body}`));
+    lines.push("", l.questions);
+    c.questions.forEach((q) => lines.push(`- ${q.q} ${q.a}`));
+    lines.push("", fill(l.tools, { list: s.tags.map((tag) => tagLabel(tag, copy)).join(", ") }), "");
   }
 
-  h("## Process");
-  process.forEach((p, i) => {
-    lines.push(`### ${i + 1}. ${p.title}`, "", p.happens, "", `You get: ${p.get.join("; ")}.`, `Needed from you: ${p.need}`, "");
+  h(`## ${copy.pages.process.title}`);
+  copy.process.stages.forEach((p, i) => {
+    lines.push(`### ${i + 1}. ${p.title}`, "", p.happens, "", fill(l.youGet, { list: p.get.join("; ") }), fill(l.needed, { text: p.need }), "");
   });
-  lines.push("Every week:");
-  rhythm.forEach((r) => lines.push(`- ${r.when}: ${r.what}`));
-  lines.push("", "Ways to work together:");
-  engagements.forEach((e) => lines.push(`- ${e.name}. Fits when: ${e.fit} How it works: ${e.shape}`));
-  lines.push("", "Working agreements:");
-  agreements.forEach((a) => lines.push(`- ${a.title}: ${a.body}`));
+  lines.push(l.everyWeek);
+  copy.process.rhythm.forEach((r) => lines.push(`- ${r.when}: ${r.what}`));
+  lines.push("", l.ways);
+  copy.process.engagements.forEach((e) => lines.push(`- ${e.name}. ${l.fitsWhen} ${e.fit} ${l.howItWorks} ${e.shape}`));
+  lines.push("", l.agreements);
+  copy.process.agreements.forEach((a) => lines.push(`- ${a.title}: ${a.body}`));
 
-  h("## Work: SkedEz case study");
-  lines.push(`URL: ${u("/work/skedez")}. Live at ${skedez.url}. SkedEz is the studio's own product, not client work.`, "", skedez.problem, "", "What was built:");
-  skedez.built.forEach((b) => lines.push(`- ${b.title}: ${b.body}`));
-  lines.push("", "Engineering notes:");
-  skedez.notes.forEach((n) => lines.push(`- ${n.title}: ${n.body}`));
-  lines.push("", "Plans (as published on skedez.com):");
-  skedez.pricing.forEach((p) => lines.push(`- ${p.plan}, ${p.price}: ${p.note}`));
-  lines.push("", "For client work, the studio walks prospective clients through the closest projects on a call.");
+  h(`## ${l.workHeading}`);
+  lines.push(fill(l.skedezIntro, { url: `<${u("/work/skedez")}>`, live: `<${skedez.url}>` }), "", copy.skedez.problem, "", l.built);
+  copy.skedez.built.forEach((b) => lines.push(`- ${b.title}: ${b.body}`));
+  lines.push("", l.notes);
+  copy.skedez.notes.forEach((n) => lines.push(`- ${n.title}: ${n.body}`));
+  lines.push("", l.plans);
+  copy.skedez.pricing.forEach((p) => lines.push(`- ${p.plan}, ${p.price}: ${p.note}`));
+  lines.push("", l.clientWork);
 
-  h("## Studio");
-  principles.forEach((p) => lines.push(`- ${p}`));
-  lines.push("", `${founder.name}, ${founder.role}. ${founder.bio}`, "", "Projects Pablo led, built or worked on (from pabloitalo.com):");
-  founder.projects.forEach((p) => lines.push(`- ${p.name}: ${p.note}`));
-  lines.push("", `Tools the studio ships with: ${stack.join(", ")}.`);
+  h(`## ${copy.pages.studio.title}`);
+  copy.studio.principles.forEach((p) => lines.push(`- ${p}`));
+  lines.push("", `${founder.name}, ${copy.founder.role}. ${copy.founder.bio}`, "", l.projects);
+  founder.projects.forEach((name, i) => lines.push(`- ${name}: ${copy.founder.projects[i]}`));
+  lines.push("", fill(l.stack, { list: stack.join(", ") }));
 
-  h("## Start a project");
-  lines.push(`Use the form at ${u("/contact")} or email ${site.email}.`);
-  nextSteps.forEach((s, i) => lines.push(`${i + 1}. ${s.title}: ${s.body}`));
-  lines.push("");
+  h(`## ${copy.pages.contact.title}`);
+  lines.push(fill(l.contactLine, { url: `<${u("/contact")}>`, email: `<${site.email}>` }));
+  copy.pages.contact.steps.forEach((s, i) => lines.push(`${i + 1}. ${s.title}: ${s.body}`));
+  lines.push("", ...languages(locale, "llms-full.txt", l.languages), "");
   return lines.join("\n");
 }

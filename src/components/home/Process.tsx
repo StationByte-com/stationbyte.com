@@ -3,13 +3,15 @@
 import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 import { useRef, useState } from "react";
 import { motion, useMotionValueEvent, useScroll, useSpring } from "motion/react";
-import Link from "next/link";
-import { process } from "@/content/site";
+import { Link } from "@/i18n/navigation";
+import { useMessages } from "next-intl";
 import Eyebrow from "@/components/motion/Eyebrow";
 
 /** Scroll-filled stage line. On /process the page hero carries the heading, so `intro` is off there. */
 export default function Process({ intro = true }: { intro?: boolean }) {
   const Heading = intro ? "h3" : "h2";
+  const { process: copy, home, common } = useMessages();
+  const process = copy.stages;
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotionSafe();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 85%", "end 55%"] });
@@ -27,15 +29,15 @@ export default function Process({ intro = true }: { intro?: boolean }) {
         {intro && (
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div className="flex flex-col gap-5">
-            <div data-reveal><Eyebrow className="text-steel">Process</Eyebrow></div>
+            <div data-reveal><Eyebrow className="text-steel">{home.process.eyebrow}</Eyebrow></div>
             <h2 className="display text-[clamp(42px,5vw,72px)]">
-              <span className="line-mask"><span>From idea to running.</span></span>
+              <span className="line-mask"><span>{home.process.title}</span></span>
             </h2>
           </div>
           <p data-reveal className="max-w-[420px] text-steel">
-            You get a working link early, not a status report. Every stage ends with something you can use.{" "}
+            {home.process.lede}{" "}
             <Link href="/process" className="text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-signal">
-              How we work
+              {common.howWeWork}
             </Link>
           </p>
         </div>

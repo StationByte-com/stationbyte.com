@@ -2,7 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const LATIN = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const KANA = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモラリルレロ";
+const HANGUL = "가나다라마바사아자차카타파하거너더러머버서어저처";
+const isKana = (ch: string) => /[\u3040-\u30ff\u3400-\u9fff]/.test(ch);
+const isHangul = (ch: string) => /[\uac00-\ud7af]/.test(ch);
+// Code points, after upper-casing: "ß" becomes "SS", and kana are one cell each.
+const chars = (w: string) => Array.from(w.toUpperCase());
+/** While a cell flips it shows glyphs from the script it will land on, so Japanese flips through kana, not A–Z. */
+const shuffleFor = (ch: string) => (isKana(ch) ? KANA : isHangul(ch) ? HANGUL : LATIN);
 
 type SplitFlapProps = {
   words: string[];
@@ -13,8 +21,10 @@ type SplitFlapProps = {
 
 /** A departure-board line that flips through `words`, one character cell at a time. */
 export default function SplitFlap({ words, hold = 2600, className }: SplitFlapProps) {
-  const size = Math.max(...words.map((w) => w.length));
-  const pad = (w: string) => w.toUpperCase().padEnd(size, " ").split("");
+  const size = Math.max(...words.map((w) => chars(w).length));
+  const pad = (w: string) => [...chars(w), ...Array(size - chars(w).length).fill(" ")];
+  // Full-width scripts need wider cells.
+  const wide = words.some((w) => Array.from(w).some((ch) => isKana(ch) || isHangul(ch)));
   const [cells, setCells] = useState(() => pad(words[0]));
   const [flips, setFlips] = useState(() => Array(size).fill(0));
   const root = useRef<HTMLSpanElement>(null);
@@ -40,7 +50,8 @@ export default function SplitFlap({ words, hold = 2600, className }: SplitFlapPr
         const steps = target === " " ? 1 : 3 + Math.floor(Math.random() * 3);
         for (let s = 0; s < steps; s++) {
           const last = s === steps - 1;
-          const ch = last ? target : GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
+          const glyphs = shuffleFor(target);
+          const ch = last ? target : glyphs[Math.floor(Math.random() * glyphs.length)];
           timers.push(setTimeout(() => setCell(i, ch), i * 38 + s * 70));
         }
       });
@@ -66,7 +77,7 @@ export default function SplitFlap({ words, hold = 2600, className }: SplitFlapPr
         {cells.map((ch, i) => (
           <span
             key={i}
-            className={`relative grid h-[1.55em] w-[1.12em] place-items-center overflow-hidden rounded-[5px] ${
+            className={`relative grid h-[1.55em] ${wide ? "w-[1.7em]" : "w-[1.12em]"} place-items-center overflow-hidden rounded-[5px] ${
               i === 0 ? "bg-signal text-white" : "bg-ink text-paper"
             }`}
           >

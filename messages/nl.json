@@ -1,0 +1,1328 @@
+{
+  "meta": {
+    "title": "StationByte · Softwareontwikkeling voor AI, SaaS en apps",
+    "description": "StationByte is een softwarestudio. We ontwerpen, bouwen en beheren AI-functies, SaaS-platforms en web- en mobiele apps, van eerste prototype tot productie.",
+    "ogAlt": "StationByte: acht glazen tegels in een raster, de middelste licht blauw op"
+  },
+  "common": {
+    "startProject": "Start een project",
+    "howWeWork": "Zo werken we",
+    "seeOurWork": "Bekijk ons werk",
+    "home": "Home",
+    "breadcrumb": "Kruimelpad",
+    "skipToContent": "Direct naar de inhoud",
+    "copy": "Kopiëren",
+    "copyAddress": "Adres kopiëren",
+    "copied": "Gekopieerd ✓",
+    "emailCopied": "E-mailadres gekopieerd",
+    "toolsLabel": "Tools waarmee we bouwen",
+    "playStrip": "Toolsbalk afspelen",
+    "pauseStrip": "Toolsbalk pauzeren",
+    "nextStepEyebrow": "Volgende stap",
+    "nextStepTitle": [
+      "Vertel ons",
+      "wat je bouwt."
+    ],
+    "nextStepBody": "Een paar regels is genoeg om te beginnen. Binnen 48 uur hoor je van ons, met vragen of een voorstel voor een gesprek.",
+    "readCaseStudy": "Lees de case",
+    "visitSkedez": "Naar skedez.com",
+    "aboutStudio": "Over de studio",
+    "tags": {
+      "agents": "Agents",
+      "evals": "Evaluaties",
+      "prototyping": "Prototyping",
+      "designSystems": "Designsystemen"
+    }
+  },
+  "nav": {
+    "work": "Werk",
+    "services": "Diensten",
+    "process": "Werkwijze",
+    "studio": "Studio",
+    "contact": "Contact",
+    "privacy": "Privacy"
+  },
+  "header": {
+    "homeLabel": "StationByte homepage",
+    "main": "Hoofdmenu",
+    "mobile": "Mobiel menu",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten"
+  },
+  "footer": {
+    "label": "Voettekst",
+    "studio": "Studio",
+    "services": "Diensten",
+    "products": "Producten",
+    "contact": "Contact",
+    "language": "Taal",
+    "tagline": "8 tegels · 1 open plek"
+  },
+  "language": {
+    "label": "Taal",
+    "change": "Taal: {name}. Taal wijzigen",
+    "suggestLabel": "Taalsuggestie",
+    "suggestText": "Deze pagina is ook beschikbaar in het Nederlands.",
+    "suggestGo": "Lees in het Nederlands",
+    "suggestStay": "In het {language} blijven"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Softwarestudio · AI · SaaS · Web · Mobiel",
+      "title": [
+        "We bouwen software",
+        "die live gaat."
+      ],
+      "nowBuilding": "Nu in de maak",
+      "words": [
+        "AI-producten",
+        "SaaS-platforms",
+        "Mobiele apps",
+        "Interne tools",
+        "Dashboards"
+      ],
+      "lede": "StationByte is een softwarestudio. We ontwerpen, bouwen en beheren AI-functies, SaaS-platforms en web- en mobiele apps voor founders en groeiende teams, van eerste prototype tot productie.",
+      "figure": "Fig. 01 · Acht tegels, één open plek",
+      "filmAlt": "Acht tegels van glas en grafiet in een raster op een spiegelende vloer, de middelste tegel licht blauw op, één plek is open"
+    },
+    "work": {
+      "eyebrow": "Geselecteerd werk",
+      "title": [
+        "Producten die we",
+        "bouwen en beheren."
+      ],
+      "lede": "Ons eigen product draait in productie. Dat bepaalt hoe we voor klanten bouwen.",
+      "cardLabel": "Lees de SkedEz-case",
+      "desktopAlt": "Homepage van SkedEz met de tekst “Clients book you 24/7. You just show up.”",
+      "mobileAlt": "SkedEz op een telefoon met de tekst “Clients book you 24/7. You just show up.”",
+      "cursor": "Case",
+      "productEyebrow": "Eigen product · Live",
+      "productBody": "Online afspraken boeken voor dienstverleners. Klanten boeken elk vrij moment, herinneringen gaan vanzelf de deur uit en bij betaalde abonnementen komt elke afspraak in Google Calendar.",
+      "facts": [
+        {
+          "k": "Abonnement",
+          "v": "Gratis, zonder creditcard"
+        },
+        {
+          "k": "Prijs",
+          "v": "Geen commissie"
+        },
+        {
+          "k": "Talen",
+          "v": "Klanten boeken in 6 talen"
+        }
+      ],
+      "clientEyebrow": "Klantwerk",
+      "clientTitle": "Werk zoals het jouwe, in een call.",
+      "clientBody": "De eerdere projecten van Pablo staan op de Studio-pagina. Vertel wat je bouwt, dan lopen we de projecten met je door die er het dichtst bij liggen.",
+      "clientCta": "Vraag naar vergelijkbaar werk"
+    },
+    "puzzle": {
+      "title": [
+        "De open plek",
+        "is voor jou."
+      ],
+      "start": "Tik op een tegel naast de lege plek",
+      "solved": "Weer op z’n plek",
+      "moves": "{count, plural, one {# zet} other {# zetten}}",
+      "group": "Schuifpuzzel",
+      "tile": "{core, select, yes {Blauwe tegel} other {Tegel}}, rij {row}, kolom {col}{movable, select, yes {, kan schuiven} other {}}",
+      "footer": "Volgende op het bord"
+    },
+    "services": {
+      "eyebrow": "Diensten",
+      "title": [
+        "Vier dingen,",
+        "goed gedaan."
+      ],
+      "all": "Alle diensten",
+      "detail": "Meer over {title}"
+    },
+    "process": {
+      "eyebrow": "Werkwijze",
+      "title": "Van idee tot live.",
+      "lede": "Je krijgt al vroeg een werkende link, geen statusrapport. Elke fase eindigt met iets wat je kunt gebruiken."
+    },
+    "studio": {
+      "eyebrow": "Studio",
+      "title": [
+        "Kleine studio.",
+        "Senior vakwerk."
+      ],
+      "lede": "StationByte LLC is een softwarestudio, opgericht door <link>Pablo Italo</link>, senior AI- en full-stack engineer en hands-on CTO. De mensen met wie je praat, schrijven ook je code.",
+      "imageAlt": "Gebroken witte keramische tegels in een raster gestapeld in ochtendlicht, één blauwe tegel op de hoogste stapel"
+    },
+    "contact": {
+      "eyebrow": "Start een project",
+      "title": [
+        "Vertel ons",
+        "wat je bouwt."
+      ],
+      "body": "We reageren binnen 48 uur, in jouw taal. Vertel wat je bouwt, waar het nu staat en wanneer je het nodig hebt, of <link>gebruik het projectformulier</link>."
+    }
+  },
+  "studio": {
+    "principles": [
+      "Je werkt met engineers, niet met accountmanagers.",
+      "Elke week kleine releases die je kunt nalopen.",
+      "Na de lancering blijven we erbij."
+    ],
+    "principleNotes": [
+      "Geen tussenlaag tussen jou en het werk. Vragen gaan naar degene die ze kan beantwoorden.",
+      "Wijzigingen gaan in kleine stukken live die je kunt nalopen, dus niets groots komt als verrassing.",
+      "De lancering is het begin van het leven van een product, dus we plannen ook wat daarna komt."
+    ]
+  },
+  "process": {
+    "stages": [
+      {
+        "title": "Verkennen",
+        "body": "We brengen het probleem, de gebruikers en de randvoorwaarden in kaart, en spreken af wanneer het af is.",
+        "happens": "Gesprekken met jou en, waar het kan, met de mensen die het product gaan gebruiken. We kijken naar wat er nu al is, naar de data en naar de systemen waarmee het moet samenwerken.",
+        "get": [
+          "Een uitgeschreven scope met succescriteria",
+          "De risico’s, en hoe we ze verkleinen",
+          "Een planning en een inschatting"
+        ],
+        "need": "Tijd met degene die beslist, toegang tot bestaande systemen en data, en een paar echte gebruikers om mee te praten."
+      },
+      {
+        "title": "Ontwerpen",
+        "body": "Flows en schermen waar je doorheen kunt klikken voordat we productiecode schrijven.",
+        "happens": "Eerst user flows, dan een klikbaar prototype van de belangrijkste taken, getest met mensen die het gaan gebruiken. Daarna volgen het visuele ontwerp en het componentensysteem.",
+        "get": [
+          "Een prototype waar je doorheen kunt tikken",
+          "Schermen voor elke status, op telefoon en desktop",
+          "Een design system in Figma en in code"
+        ],
+        "need": "Snelle feedback op het prototype, het liefst binnen een of twee dagen na elke review."
+      },
+      {
+        "title": "Bouwen",
+        "body": "Elke week een release naar een staginglink. Je ziet de voortgang in het product zelf.",
+        "happens": "Kleine, gereviewde wijzigingen, elke week live gezet op een stagingomgeving die je altijd kunt openen, met een korte demo van wat er veranderd is.",
+        "get": [
+          "Elke week werkende software",
+          "Een changelog in gewone taal",
+          "Tests op de paden die ertoe doen"
+        ],
+        "need": "Iemand die nog dezelfde week ja of nee kan zeggen op vragen over de scope."
+      },
+      {
+        "title": "Beheren",
+        "body": "Lancering, monitoring en doorontwikkeling. Na de livegang blijven we erbij.",
+        "happens": "Lancering met monitoring en alerts op orde, daarna fixes en de volgende ronde verbeteringen op basis van hoe mensen het echt gebruiken.",
+        "get": [
+          "Een lanceringschecklist, samen met jou doorlopen",
+          "Monitoring, alerts en back-ups",
+          "Documentatie en opgenomen walkthroughs voor je team"
+        ],
+        "need": "Een beeld van wat er hierna beter moet, op basis van je gebruikers en je cijfers."
+      }
+    ],
+    "rhythm": [
+      {
+        "when": "Begin van de week",
+        "what": "We spreken de doelen voor de week af en wat ze in de weg staat."
+      },
+      {
+        "when": "Tijdens de week",
+        "what": "Korte schriftelijke updates in een gedeeld kanaal; vragen beantwoorden we dezelfde werkdag."
+      },
+      {
+        "when": "Eind van de week",
+        "what": "Een release naar staging en een korte demo van wat er veranderd is."
+      }
+    ],
+    "engagements": [
+      {
+        "name": "Discoverysprint",
+        "fit": "Je hebt een idee of een probleem, en je wilt een plan waar je op kunt bouwen.",
+        "shape": "Vaste scope, vaste prijs. Je krijgt een uitgeschreven plan, een klikbaar prototype en een inschatting voor de bouw."
+      },
+      {
+        "name": "Productontwikkeling",
+        "fit": "Je weet wat je wilt bouwen en zoekt senior mensen om het te ontwerpen, te bouwen en te lanceren.",
+        "shape": "Opgedeeld in mijlpalen die elk eindigen met werkende software. Prijs per mijlpaal."
+      },
+      {
+        "name": "Doorlopende ondersteuning",
+        "fit": "Je product is live en heeft doorlopend verbeteringen, nieuwe features of AI-werk nodig.",
+        "shape": "Een maandelijkse afspraak met een vaste hoeveelheid capaciteit, die we elke maand samen evalueren."
+      }
+    ],
+    "agreements": [
+      {
+        "title": "Jouw accounts",
+        "body": "Code, cloud, app stores en diensten van derden staan vanaf dag één in accounts die van jou zijn."
+      },
+      {
+        "title": "Jouw code en ontwerpen",
+        "body": "Zodra de facturen betaald zijn, is alles wat we voor je maken van jou: broncode, Figma-bestanden, documentatie."
+      },
+      {
+        "title": "Nette overdracht",
+        "body": "Documentatie, runbooks en opgenomen walkthroughs, of je eigen team het nu overneemt of wij erbij blijven."
+      }
+    ]
+  },
+  "founder": {
+    "role": "Oprichter · AI- en full-stack engineer",
+    "jobTitle": "Oprichter, AI- en full-stack engineer",
+    "bio": "Pablo is senior AI- en full-stack engineer, hands-on tech lead en CTO. Hij richtte StationByte op om producten te bouwen zoals hij zijn eigen producten bouwt: senior mensen aan het werk, elke week een release, en betrokken blijven na de lancering.",
+    "stats": [
+      "projecten en productieplatforms",
+      "gebruikers in totaal",
+      "merken die ElevateAB gebruiken, een van die platforms"
+    ],
+    "projects": [
+      "Een gecontroleerde AI-assistent met model routing, contentfilters en toegang via meerdere kanalen",
+      "Architectuur en ontwikkeling voor een jong platform voor klimaat- en energieanalyse",
+      "Een SaaS voor elektronisch ondertekenen met focus op compliance, van eerste versie tot productie",
+      "Een platform voor Shopify-experimenten, gebruikt door meer dan 1.200 merken"
+    ]
+  },
+  "services": {
+    "ai-product-engineering": {
+      "title": "AI-productontwikkeling",
+      "body": "LLM-functies, agents, retrieval en automatiseringen, ontworpen rond echte taken van gebruikers, met kosten, latency en evaluatie gemeten vanaf de eerste release.",
+      "metaTitle": "AI-ontwikkeling: LLM-functies en agents",
+      "description": "LLM-functies, agents, retrieval en automatiseringen, ingebouwd in je product, met evaluatie, kosten en latency gemeten vanaf de eerste release.",
+      "headline": [
+        "AI-functies waar je",
+        "klanten op vertrouwen."
+      ],
+      "imageAlt": "Tegels van glas en grafiet in een raster rond een fel blauw oplichtende kerntegel",
+      "diagram": [
+        "Wanneer een functie",
+        "live mag."
+      ],
+      "problem": "De meeste AI-functies blijven steken tussen een goede demo en iets waar klanten op vertrouwen. Wat dat gat dicht, is zelden het model. Het zijn een evaluatieset, budgetten voor kosten en latency, rechten, fallbacks en monitoring.",
+      "deliverables": [
+        {
+          "title": "LLM-functies in je product",
+          "body": "Assistenten, zoeken, tekstvoorstellen, extractie en classificatie, ingebouwd in de schermen die mensen al gebruiken."
+        },
+        {
+          "title": "Agents en automatiseringen",
+          "body": "Workflows die je API’s en tools aanroepen, met een goedkeuringsstap waar een fout duur zou zijn."
+        },
+        {
+          "title": "Retrieval op je eigen data",
+          "body": "Antwoorden gebaseerd op je documenten en database, met bronvermelding en met respect voor toegangsregels."
+        },
+        {
+          "title": "Evaluatiesuites",
+          "body": "Echte voorbeelden, bij elke wijziging automatisch gescoord, zodat je kwaliteit meet vóór een release en niet erna."
+        },
+        {
+          "title": "Budgetten voor kosten en latency",
+          "body": "Model routing, caching en limieten per taak, met uitgaven en responstijd bijgehouden in productie."
+        },
+        {
+          "title": "Guardrails",
+          "body": "Contentfilters, zorgvuldige omgang met persoonsgegevens en auditlogs, vanaf het begin in het ontwerp meegenomen."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Begin bij een taak",
+          "body": "We kiezen één taak die een gebruiker nu al uitvoert en bepalen hoe een goed resultaat eruitziet, voordat we een model kiezen."
+        },
+        {
+          "title": "Eerst de evaluatieset",
+          "body": "Voorbeelden uit echt gebruik worden de testsuite waar elke wijziging aan een prompt of model doorheen moet."
+        },
+        {
+          "title": "Live voor een kleine groep",
+          "body": "De functie gaat live achter een feature flag, met feedback en output gelogd vanaf dag één."
+        },
+        {
+          "title": "Meten, dan uitbreiden",
+          "body": "Kwaliteit, kosten per taak en latency bepalen wanneer de functie voor iedereen beschikbaar komt."
+        }
+      ],
+      "proof": {
+        "label": "Uit het werk van onze oprichter",
+        "body": "Onze oprichter, Pablo Italo, bouwde voor Iluy.ai een gecontroleerde AI-assistent met model routing, contentfilters en toegang via meerdere kanalen.",
+        "cta": "Over de studio"
+      },
+      "questions": [
+        {
+          "q": "Welk model moeten we gebruiken?",
+          "a": "Meestal meer dan één. We kiezen per taak op basis van gemeten kwaliteit, kosten en latency, en houden die keuze uitwisselbaar. Een beter of goedkoper model is dan een configuratiewijziging, geen herbouw."
+        },
+        {
+          "q": "Wordt onze data gebruikt om modellen te trainen?",
+          "a": "We bouwen op de zakelijke API’s van de aanbieders, die standaard niet op jouw data trainen. Mag data je eigen infrastructuur niet verlaten, dan ontwerpen we voor self-hosted modellen."
+        },
+        {
+          "q": "Hoe weten we dat het werkt?",
+          "a": "Met een evaluatieset op basis van echte voorbeelden, gescoord bij elke wijziging, plus monitoring en review van live output zodra het draait."
+        }
+      ]
+    },
+    "saas-platforms": {
+      "title": "SaaS-platforms",
+      "body": "Multi-tenant apps, dashboards, facturatie, API’s en de cloudinfrastructuur eronder, gebouwd om te groeien zonder herbouw.",
+      "metaTitle": "SaaS-platform laten ontwikkelen",
+      "description": "Multi-tenant SaaS-apps met accounts, teams, facturatie, API’s en beheertools, op cloudinfrastructuur die meegroeit zonder dat je opnieuw hoeft te bouwen.",
+      "headline": [
+        "SaaS die groeit",
+        "zonder herbouw."
+      ],
+      "imageAlt": "Drie lagen tegels van glas en grafiet boven elkaar, met een blauw oplichtende tegel in de middelste laag",
+      "diagram": [
+        "Eén request,",
+        "elke laag."
+      ],
+      "problem": "Een SaaS-product is de functie die klanten zien, plus veel wat ze niet zien: accounts, teams, rollen, facturatie, e-mails, beheertools, back-ups. Staat die basis vroeg goed, dan kan het product groeien zonder dat je opnieuw moet beginnen.",
+      "deliverables": [
+        {
+          "title": "Accounts, teams en rollen",
+          "body": "Multi-tenant datamodel, inloggen met e-mail of Google, uitnodigingen en rechten."
+        },
+        {
+          "title": "Abonnementen en facturatie",
+          "body": "Prijsplannen, proefperiodes, upgrades, mislukte betalingen en facturen via Stripe, end-to-end getest."
+        },
+        {
+          "title": "API’s en integraties",
+          "body": "Publieke API’s, webhooks en koppelingen met de tools die je klanten gebruiken, van agenda’s tot WhatsApp."
+        },
+        {
+          "title": "Dashboards en beheer",
+          "body": "Rapportages voor je klanten en interne tools voor support, zodat je team geen developer nodig heeft om een gebruiker te helpen."
+        },
+        {
+          "title": "Infrastructuur",
+          "body": "Containers, CI/CD, staging, back-ups en monitoring op AWS of bij de provider die je al gebruikt."
+        },
+        {
+          "title": "Basisbeveiliging, geregeld",
+          "body": "Toegang op basis van least privilege, secrets management, audit trails, en data-export en -verwijdering voor je gebruikers."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Eerst het datamodel",
+          "body": "Tenancy, rechten en facturatie bepalen al het andere, dus die ontwerpen we vóór het eerste scherm."
+        },
+        {
+          "title": "Eén deploybare app",
+          "body": "Een goed gestructureerde monoliet gaat sneller live en is makkelijker te beheren. Services splitsen we pas af als de belasting of de teams erom vragen."
+        },
+        {
+          "title": "Staging vanaf week één",
+          "body": "Elke wijziging draait in een productieachtige omgeving die je zelf kunt openen en uitproberen."
+        },
+        {
+          "title": "Observability vóór de lancering",
+          "body": "Errors, logs en de belangrijkste metrics zijn gekoppeld voordat de eerste echte klanten binnenkomen."
+        }
+      ],
+      "proof": {
+        "label": "Case",
+        "body": "SkedEz, ons eigen boekingsplatform: multi-tenant accounts en teams, Stripe-abonnementen, integraties met Google Calendar en WhatsApp, in productie.",
+        "cta": "Lees de SkedEz-case"
+      },
+      "questions": [
+        {
+          "q": "Hoe voorkomen jullie dat we later alles opnieuw moeten bouwen?",
+          "a": "Door tenancy, rechten en facturatie meteen goed neer te zetten, de codebase modulair te houden en complexiteit zoals queues of losse services pas toe te voegen als daar aantoonbaar behoefte aan is."
+        },
+        {
+          "q": "Welke cloud gebruiken jullie?",
+          "a": "AWS of de provider die je al gebruikt. Alles draait in containers, dus het product zit niet vast aan één host."
+        },
+        {
+          "q": "Wat komt er eigenlijk kijken bij facturatie?",
+          "a": "Prijsplannen, proefperiodes, up- en downgrades, mislukte betalingen en nieuwe pogingen, facturen en btw, plus de webhooks die je database gelijk houden met Stripe. Die paden testen we end-to-end."
+        }
+      ]
+    },
+    "web-and-mobile-apps": {
+      "title": "Web- en mobiele apps",
+      "body": "Snelle websites, webapps en apps voor iOS en Android, met één gedeelde codebase waar dat zinvol is en native waar dat beter werkt.",
+      "metaTitle": "App laten maken: web, iOS en Android",
+      "description": "App laten maken? Websites, webapps en apps voor iOS en Android, met één gedeelde codebase waar dat helpt en native ontwikkeling waar het ertoe doet.",
+      "headline": [
+        "Op het web en",
+        "in elke broekzak."
+      ],
+      "imageAlt": "Een brede plaat van matglas en een hoge glazen plaat, elk met tegels, met in elk één blauwe tegel",
+      "diagram": [
+        "Twee schermen,",
+        "één kern."
+      ],
+      "problem": "Je wilt je product op het web en op telefoons, zonder het drie keer te bouwen en te onderhouden, en zonder een app die aanvoelt als een website in een app-jasje.",
+      "deliverables": [
+        {
+          "title": "Websites en webapps",
+          "body": "Snel, toegankelijk en goed vindbaar in zoekmachines, gebouwd met Next.js en React."
+        },
+        {
+          "title": "iOS en Android uit één codebase",
+          "body": "React Native met Expo, zodat de meeste features tegelijk op beide platforms live gaan."
+        },
+        {
+          "title": "Native waar het ertoe doet",
+          "body": "Native modules voor camera, sensoren, widgets of alles waar performance kritisch is."
+        },
+        {
+          "title": "Inloggen, betalingen, notificaties",
+          "body": "Inloggen met Google en Apple, in-app-aankopen en abonnementen, pushnotificaties."
+        },
+        {
+          "title": "Publicatie in de stores",
+          "body": "Builds en store-vermeldingen voor App Store en Google Play, en over-the-air-updates voor fixes tussen releases door."
+        },
+        {
+          "title": "Performance en toegankelijkheid",
+          "body": "Snel bij de eerste keer laden, soepel scrollen, labels voor schermlezers en tikvlakken waar een duim op past."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Deel wat helpt",
+          "body": "Bedrijfslogica, design system en de meeste schermen zijn gedeeld; de conventies van elk platform respecteren we."
+        },
+        {
+          "title": "Native als het moet",
+          "body": "Gaat een gedeelde aanpak ten koste van de ervaring, dan schrijven we dat deel native."
+        },
+        {
+          "title": "Vroeg een release-pipeline",
+          "body": "Builds, testtoestellen en updatekanalen staan in de eerste weken klaar, niet in de laatste."
+        },
+        {
+          "title": "Testen op echte toestellen",
+          "body": "Elke release wordt gecontroleerd op echte telefoons, niet alleen in simulators."
+        }
+      ],
+      "proof": {
+        "label": "Case",
+        "body": "De app van SkedEz is één cross-platform codebase, eerst gebouwd voor het web en klaar voor de app stores, naast een marketingsite in Next.js.",
+        "cta": "Lees de SkedEz-case"
+      },
+      "questions": [
+        {
+          "q": "Native of cross-platform?",
+          "a": "Cross-platform voor de meeste producten, omdat één codebase sneller te bouwen en goedkoper te onderhouden is. Native voor apps die leunen op functies van het toestel of elk laatste beetje performance nodig hebben. Vaak is het een mix."
+        },
+        {
+          "q": "Regelen jullie de publicatie in de app stores?",
+          "a": "Ja: builds, signing, store-vermeldingen en het indienen voor review, ingericht onder je eigen developeraccounts."
+        },
+        {
+          "q": "Kunnen de website en de app code delen?",
+          "a": "Ja. Types, API-clients, validatie en designtokens worden gedeeld, dus een wijziging komt overal tegelijk door."
+        }
+      ]
+    },
+    "product-design": {
+      "title": "Productdesign",
+      "body": "Onderzoek, flows, interfaceontwerp en design systems, gemaakt door de mensen die ze ook bouwen, zodat er niets verloren gaat bij de overdracht.",
+      "metaTitle": "Productdesign: UX, UI en design systems",
+      "description": "Onderzoek, user flows, interfaceontwerp en design systems, door de mensen die het ook bouwen, zodat er niets verloren gaat bij de overdracht naar code.",
+      "headline": [
+        "Ontworpen door wie",
+        "het ook bouwt."
+      ],
+      "imageAlt": "Tegels van glas, matglas en grafiet die op verschillende hoogtes uit elkaar zweven, één licht blauw op",
+      "diagram": [
+        "Van flow tot",
+        "afgewerkt scherm."
+      ],
+      "problem": "Ontwerpen die in een bestand kloppen en in code breken, betaal je twee keer. Als dezelfde mensen het product ontwerpen en bouwen, verdwijnt de overdracht, en daarmee het meeste wat daarin verloren gaat.",
+      "deliverables": [
+        {
+          "title": "Onderzoek",
+          "body": "Interviews en analyses van hoe mensen nu werken, vertaald naar een korte lijst problemen die het oplossen waard zijn."
+        },
+        {
+          "title": "Flows en wireframes",
+          "body": "Het pad door elke taak, afgestemd voordat iemand over kleuren begint."
+        },
+        {
+          "title": "Klikbare prototypes",
+          "body": "Iets waar je doorheen kunt tikken en dat je aan gebruikers voorlegt voordat er code geschreven wordt."
+        },
+        {
+          "title": "Interfaceontwerp",
+          "body": "Elk scherm en elke status, ook lege, laad- en foutstatussen, op telefoon- en desktopformaat."
+        },
+        {
+          "title": "Design systems",
+          "body": "Tokens, componenten en richtlijnen, synchroon gehouden in Figma en in code."
+        },
+        {
+          "title": "Branding voor producten",
+          "body": "Logo’s, kleur, typografie en motion die werken binnen een interface, zoals op deze site."
+        }
+      ],
+      "approach": [
+        {
+          "title": "Breng de taak in kaart",
+          "body": "Wie het gebruikt, wat ze gedaan willen krijgen en waar het nu misgaat."
+        },
+        {
+          "title": "Prototype vóór code",
+          "body": "Flows worden doorgeklikt en getest zolang wijzigingen nog goedkoop zijn."
+        },
+        {
+          "title": "Details afmaken in de browser",
+          "body": "Witruimte, animatie en responsive gedrag stellen we af in het echte product."
+        },
+        {
+          "title": "Eén systeem",
+          "body": "Designtokens sturen zowel Figma als de codebase aan, zodat die niet uit elkaar groeien."
+        }
+      ],
+      "proof": {
+        "label": "Ons eigen werk",
+        "body": "Het merk StationByte, deze website en het motionsysteem zijn in eigen huis ontworpen en gebouwd, van het logoraster tot de glazen film in de hero.",
+        "cta": "Bekijk ons werk"
+      },
+      "questions": [
+        {
+          "q": "Kunnen jullie werken met ons bestaande merk?",
+          "a": "Ja. We bouwen wat je hebt uit tot een design system voor je product, en stellen alleen wijzigingen voor waar het merk op een scherm niet overeind blijft."
+        },
+        {
+          "q": "Krijgen we de designbestanden?",
+          "a": "Ja. Figma-bestanden, componenten en tokens dragen we samen met de code over, in jouw accounts."
+        },
+        {
+          "q": "Testen jullie met echte gebruikers?",
+          "a": "Ja, met prototypes vóór de bouw en met het live product daarna. Een handvol sessies brengt de meeste problemen boven die ertoe doen."
+        }
+      ]
+    }
+  },
+  "skedez": {
+    "description": "Hoe StationByte SkedEz ontwierp, bouwde en beheert: online boeken voor dienstverleners, met herinneringen, Google Calendar, teams en abonnementen.",
+    "summary": "Online afspraken boeken voor dienstverleners. We hebben het ontworpen en gebouwd, en we beheren het zelf, van de database tot de herinneringen.",
+    "facts": [
+      {
+        "k": "Type",
+        "v": "Eigen product"
+      },
+      {
+        "k": "Onze rol",
+        "v": "Product, ontwerp, ontwikkeling, beheer"
+      },
+      {
+        "k": "Platforms",
+        "v": "Webapp en boekingspagina’s"
+      },
+      {
+        "k": "Status",
+        "v": "Live op skedez.com"
+      }
+    ],
+    "problem": "Kapsalons, fysiotherapeuten, personal trainers en consultants verliezen uren aan heen-en-weerberichten over tijden, en aan klanten die hun afspraak vergeten. Veel boekingstools rekenen commissie per boeking of kosten per klant. Wij wilden er een die geen van beide doet, en die een ondernemer helemaal zelf kan inrichten.",
+    "built": [
+      {
+        "title": "Een boekingspagina per bedrijf",
+        "body": "Te delen als link in je bio, je Google-bedrijfsprofiel of op je website. Klanten kiezen een dienst en elk vrij moment."
+      },
+      {
+        "title": "Herinneringen die zichzelf versturen",
+        "body": "Een e-mail 24 uur en 1 uur voor elke afspraak bij alle abonnementen, en WhatsApp bij betaalde abonnementen."
+      },
+      {
+        "title": "Google Calendar",
+        "body": "Bij betaalde abonnementen komen afspraken in Google Calendar, met een Google Meet-link als de dienst online is."
+      },
+      {
+        "title": "Teams",
+        "body": "Tot 20 mensen, elk met eigen diensten en werktijden."
+      },
+      {
+        "title": "Klanten",
+        "body": "Een klantenlijst met CSV-import, export wanneer je wilt, en een dashboard met afspraken, annuleringen en klanten."
+      },
+      {
+        "title": "Zes talen",
+        "body": "Boekingspagina’s in het Engels, Portugees, Spaans, Frans, Duits en Italiaans."
+      },
+      {
+        "title": "Abonnementen en facturatie",
+        "body": "Free, Pro en Teams, met 15 dagen proefperiode op betaalde abonnementen en geen commissie op boekingen."
+      },
+      {
+        "title": "Privacy ingebouwd",
+        "body": "Data exporteren en je account verwijderen doe je zelf in de instellingen, zonder supportticket."
+      }
+    ],
+    "notes": [
+      {
+        "title": "Facturatie getest alsof het om geld gaat, want dat doet het",
+        "body": "Checkout, abonnementswijzigingen en mislukte betalingen zijn gedekt door end-to-end-tests, dus geld hangt nooit af van een handmatige controle."
+      },
+      {
+        "title": "Eén codebase voor de app",
+        "body": "Eén cross-platform codebase draait als webapp en is klaar voor iOS en Android, dus een feature bouwen we maar één keer."
+      },
+      {
+        "title": "Selfservice vanaf de eerste minuut",
+        "body": "Een ondernemer maakt zelf een boekingspagina, voegt diensten toe en deelt de link. Voor het gratis abonnement is geen creditcard nodig."
+      }
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": "€ 0",
+        "note": "1 persoon, 1 dienst, 10 boekingen per maand"
+      },
+      {
+        "plan": "Pro",
+        "price": "€ 9,90/mnd",
+        "note": "1 persoon, onbeperkt diensten en boekingen, WhatsApp, Google Calendar"
+      },
+      {
+        "plan": "Teams",
+        "price": "€ 14,90/mnd",
+        "note": "Tot 20 mensen, elk met eigen werktijden, alles uit Pro"
+      }
+    ]
+  },
+  "contactForm": {
+    "formTitle": "Projectformulier",
+    "honeypot": "Website",
+    "name": "Je naam",
+    "email": "E-mail",
+    "kind": "Wat bouw je?",
+    "kinds": {
+      "ai": "AI-functie",
+      "saas": "SaaS-platform",
+      "apps": "Web- of mobiele app",
+      "design": "Productdesign",
+      "unsure": "Weet ik nog niet"
+    },
+    "budget": "Budget",
+    "optional": "(optioneel)",
+    "chooseRange": "Kies een bandbreedte",
+    "budgets": {
+      "under": "Minder dan {amount}",
+      "range": "{from}–{to}",
+      "over": "Meer dan {amount}",
+      "unsure": "Weet ik nog niet"
+    },
+    "message": "Vertel ons meer",
+    "placeholder": "Wat je bouwt, waar het nu staat en wanneer je het nodig hebt.",
+    "errors": {
+      "name": "Vul je naam in.",
+      "email": "Vul een e-mailadres in waarop we kunnen reageren, zoals naam@bedrijf.nl.",
+      "message": "Een zin of twee over wat je bouwt is genoeg.",
+      "summary": "Een paar velden hebben nog aandacht nodig voordat we dit kunnen versturen."
+    },
+    "failed": "Er ging iets mis bij het versturen van het formulier. Je bericht staat klaar, zodat je het ook per e-mail kunt versturen.",
+    "limited": "Dat zijn veel berichten in korte tijd, dus het formulier is even gepauzeerd. Je bericht staat klaar om per e-mail te versturen.",
+    "unconfigured": "Het formulier kan op dit moment geen berichten versturen, maar je bericht staat klaar om per e-mail te versturen.",
+    "openMail": "Open het in je e-mailapp",
+    "orWrite": "Of mail direct naar {email}.",
+    "privacy": "We gebruiken deze gegevens alleen om je te antwoorden. Lees ons <link>privacybeleid</link>.",
+    "send": "Versturen",
+    "sending": "Versturen…",
+    "sentTitle": "Ontvangen. Plek gevuld.",
+    "sentBody": "Je bericht is bij ons. Binnen 48 uur krijg je antwoord van een echt mens, op het adres dat je hebt opgegeven.",
+    "mail": {
+      "subject": "Nieuw project: {name}",
+      "name": "Naam",
+      "email": "E-mail",
+      "building": "Project",
+      "budget": "Budget",
+      "notSpecified": "Niet opgegeven",
+      "shortened": "[Bericht ingekort; plak de rest hier.]"
+    },
+    "progress": {
+      "yourProject": "Jouw project",
+      "sent": "Verstuurd · plek gevuld",
+      "ready": "Klaar om te versturen",
+      "answered": "{count} van 5 ingevuld",
+      "start": "Begin waar je wilt",
+      "hint": "Naam, e-mail en een paar regels: meer hebben we niet nodig."
+    }
+  },
+  "visuals": {
+    "architecture": {
+      "clients": [
+        {
+          "k": "App",
+          "v": "Web en mobiel"
+        },
+        {
+          "k": "Boekingspagina’s",
+          "v": "Zes talen"
+        },
+        {
+          "k": "Website",
+          "v": "Marketing en aanmelden"
+        }
+      ],
+      "api": "API",
+      "oneApi": "Eén API",
+      "data": "Data",
+      "database": "Beheerde database",
+      "databaseNote": "met back-ups en monitoring",
+      "services": [
+        {
+          "k": "Betalingen",
+          "v": "Abonnementen en proefperiodes"
+        },
+        {
+          "k": "Agenda",
+          "v": "Google Calendar en Meet"
+        },
+        {
+          "k": "Berichten",
+          "v": "E-mail en WhatsApp"
+        },
+        {
+          "k": "Bestanden",
+          "v": "Import en export"
+        }
+      ]
+    },
+    "booking": {
+      "steps": [
+        {
+          "title": "Kies een dienst",
+          "body": "Klanten openen de boekingslink vanuit een bio, een Google-bedrijfsprofiel of een website, en kiezen wat ze nodig hebben."
+        },
+        {
+          "title": "Kies een vrij moment",
+          "body": "Alleen echt vrije tijden worden getoond, berekend op basis van ieders werktijden en bestaande afspraken."
+        },
+        {
+          "title": "Geboekt",
+          "body": "De afspraak is direct bevestigd. Bij betaalde abonnementen komt hij in Google Calendar, met een Google Meet-link als de dienst online is."
+        },
+        {
+          "title": "Herinnerd",
+          "body": "Een e-mail 24 uur en 1 uur van tevoren, en WhatsApp bij betaalde abonnementen, zodat niemand erachteraan hoeft."
+        }
+      ],
+      "business": "Salon Jordaan",
+      "initials": "SJ",
+      "sample": "Voorbeeldbedrijf",
+      "choose": "Kies een dienst",
+      "services": [
+        {
+          "name": "Knippen en föhnen",
+          "time": "1 uur"
+        },
+        {
+          "name": "Balayage",
+          "time": "2 uur 30 min"
+        },
+        {
+          "name": "Heren knippen",
+          "time": "30 min"
+        },
+        {
+          "name": "Uitgroei kleuren",
+          "time": "1 uur 30 min"
+        }
+      ],
+      "continue": "Verder",
+      "day": "Dinsdag",
+      "book": "Boek {time}",
+      "booked": "Geboekt",
+      "bookedLine": "{service} · di {time}",
+      "calendar": "Toegevoegd aan Google Calendar",
+      "reminders": [
+        {
+          "channel": "E-mail",
+          "when": "Ma 9:30",
+          "text": "Herinnering: Knippen en föhnen, morgen om 9:30."
+        },
+        {
+          "channel": "WhatsApp",
+          "when": "Di 8:30",
+          "text": "Tot over een uur bij Salon Jordaan."
+        }
+      ],
+      "poweredBy": "Boekingspagina via SkedEz"
+    },
+    "dataFlow": {
+      "you": "Jij",
+      "youBody": "Naam, e-mail, bericht",
+      "team": "Ons team",
+      "teamBody": "Gebruikt om te antwoorden",
+      "not": "Niet op deze site",
+      "items": [
+        "Cookies",
+        "Analytics",
+        "Advertentiepixels",
+        "Trackers"
+      ]
+    },
+    "deviceDuo": {
+      "desktopAlt": "Homepage van SkedEz in een desktopbrowser",
+      "phoneAlt": "SkedEz op een telefoon",
+      "live": "Live · skedez.com"
+    },
+    "stages": {
+      "scope": "Scope · v1",
+      "sharedDoc": "Gedeeld document",
+      "scopeItems": [
+        "Gebruikers en hun taken",
+        "Wanneer het af is",
+        "Risico’s, op volgorde",
+        "Planning en inschatting"
+      ],
+      "prototype": "Prototype",
+      "clickable": "Klikbaar",
+      "releases": "Releases",
+      "staging": "staging",
+      "releaseItems": [
+        "Inloggen en teams",
+        "Boekingspagina",
+        "Herinneringen",
+        "Facturatie"
+      ],
+      "week": "Week {n}",
+      "monitoring": "Monitoring",
+      "checks": "Alle checks geslaagd",
+      "monitoringNote": "Responstijd, errors en back-ups, met alerts als er iets afwijkt."
+    },
+    "week": {
+      "days": [
+        "Ma",
+        "Di",
+        "Wo",
+        "Do",
+        "Vr"
+      ],
+      "plan": "Plannen",
+      "planLong": "Week plannen",
+      "update": "Update",
+      "ship": "Live",
+      "release": "Release + demo"
+    },
+    "ai": {
+      "stages": [
+        {
+          "k": "Taak",
+          "v": "Vat dit supportticket samen"
+        },
+        {
+          "k": "Context",
+          "v": "3 documenten opgehaald"
+        },
+        {
+          "k": "Routing",
+          "v": "snel model · nauwkeurig model"
+        },
+        {
+          "k": "Guardrails",
+          "v": "persoonsgegevens gemaskeerd"
+        },
+        {
+          "k": "Antwoord",
+          "v": "met bronnen"
+        }
+      ],
+      "models": [
+        "snel model",
+        "nauwkeurig model"
+      ],
+      "eval": "Evaluatiesuite · elke wijziging",
+      "pass": "Boven de drempel · live",
+      "running": "Bezig",
+      "caption": "Illustratie · zo wordt een functie gecontroleerd voordat hij live gaat"
+    },
+    "saas": {
+      "layers": [
+        {
+          "k": "Klanten",
+          "items": [
+            "Team A",
+            "Team B",
+            "Team C"
+          ]
+        },
+        {
+          "k": "Jouw product",
+          "items": [
+            "Webapp",
+            "Beheer",
+            "Dashboards"
+          ]
+        },
+        {
+          "k": "API",
+          "items": [
+            "REST",
+            "Webhooks",
+            "Auth"
+          ]
+        },
+        {
+          "k": "Diensten",
+          "items": [
+            "Facturatie",
+            "E-mail",
+            "Agenda",
+            "Bestanden"
+          ]
+        },
+        {
+          "k": "Data",
+          "items": [
+            "PostgreSQL",
+            "Back-ups",
+            "Monitoring"
+          ]
+        }
+      ],
+      "note": "Elke rij data hoort bij een team. Een request van <b>{team}</b> ziet nooit iets anders dan de data van {team}.",
+      "caption": "Illustratie · één request door het platform"
+    },
+    "apps": {
+      "desktopAlt": "SkedEz in een desktopbrowser",
+      "phoneAlt": "SkedEz op een telefoon",
+      "shared": "Gedeeld door beide",
+      "items": [
+        "Types",
+        "API-client",
+        "Validatie",
+        "Designtokens"
+      ],
+      "caption": "SkedEz · één codebase, web en mobiel"
+    },
+    "design": {
+      "screen": "Boekingsscherm",
+      "modes": [
+        "Flow",
+        "Wireframe",
+        "Eindontwerp"
+      ],
+      "flow": [
+        "Kies een dienst",
+        "Kies een tijd",
+        "Bevestig en ontvang herinneringen"
+      ],
+      "book": "Boek · di 9:30",
+      "caption": "Illustratie · hetzelfde scherm in drie fases"
+    }
+  },
+  "pages": {
+    "work": {
+      "title": "Ons werk",
+      "description": "Geselecteerd werk van StationByte: SkedEz, ons eigen boekingsplatform in productie, en klantprojecten die we in een call met je doorlopen.",
+      "ogAlt": "SkedEz in een desktopbrowser naast de woorden Producten die we bouwen en beheren",
+      "eyebrow": "Geselecteerd werk",
+      "heading": [
+        "Producten die we",
+        "bouwen en beheren."
+      ],
+      "lede": "We laten zien wat we volledig kunnen openleggen: ons eigen product, live in productie. Klantwerk lopen we in een call met je door, met de projecten die het dichtst bij het jouwe liggen.",
+      "nextStep": [
+        "Werk zien dat op",
+        "het jouwe lijkt?"
+      ]
+    },
+    "skedez": {
+      "title": "Case SkedEz: online boekingssysteem",
+      "ogAlt": "De homepage van SkedEz naast de woorden Afspraken die zichzelf regelen",
+      "articleHeadline": "SkedEz: afspraken die zichzelf regelen",
+      "eyebrow": "Case · Eigen product",
+      "heading": [
+        "SkedEz: afspraken",
+        "die zichzelf regelen."
+      ],
+      "disclaimerBold": "SkedEz is ons eigen product, geen klantwerk.",
+      "disclaimer": "We laten het zien omdat het het enige product is dat we volledig kunnen openleggen: de beslissingen en de live app.",
+      "problemEyebrow": "Het probleem",
+      "problemTitle": [
+        "Tijd kwijt aan",
+        "berichten en no-shows."
+      ],
+      "flowEyebrow": "Vanuit de klant gezien",
+      "flowTitle": [
+        "Een afspraak in",
+        "vier stappen."
+      ],
+      "builtEyebrow": "Wat we bouwden",
+      "builtTitle": [
+        "Klein bedrijf,",
+        "volledig boekbaar."
+      ],
+      "howEyebrow": "Hoe het gebouwd is",
+      "howTitle": [
+        "Keuzes die het",
+        "draaiende houden."
+      ],
+      "stackEyebrow": "Stack",
+      "stackTitle": "Waar het op draait",
+      "stackNote": "Hoe een afspraak van het scherm van de klant naar een herinnering gaat. De markering volgt er één van begin tot eind.",
+      "liveEyebrow": "Nu live",
+      "liveTitle": [
+        "Drie abonnementen,",
+        "geen commissie."
+      ],
+      "liveNote": "Prijzen zoals gepubliceerd op skedez.com. Betaalde abonnementen beginnen met 15 dagen proefperiode (creditcard vereist); voor het gratis abonnement is geen creditcard nodig.",
+      "seeLive": "Bekijk het live op skedez.com",
+      "nextStep": [
+        "Bouw je iets",
+        "vergelijkbaars?"
+      ]
+    },
+    "services": {
+      "title": "Diensten: AI, SaaS, web en apps",
+      "description": "AI-productontwikkeling, SaaS-platforms, web- en mobiele apps en productdesign: wat StationByte bouwt, wat je krijgt en hoe we werken.",
+      "ogAlt": "Vier renders van glazen tegels, één per dienst van StationByte",
+      "eyebrow": "Diensten",
+      "heading": [
+        "Wat we ontwerpen,",
+        "bouwen en beheren."
+      ],
+      "lede": "Vier diensten, uitgevoerd door senior engineers. De meeste projecten combineren er meer dan één: een AI-functie heeft een product eromheen nodig, en een product een ontwerp dat in code overeind blijft.",
+      "agreementsEyebrow": "Bij elke opdracht",
+      "agreementsTitle": "Van jou vanaf dag één.",
+      "fullProcess": "Bekijk de hele werkwijze"
+    },
+    "service": {
+      "eyebrow": "Dienst {n} · {title}",
+      "ogAlt": "{alt}, naast de woorden {headline}",
+      "whatYouGet": "Wat je krijgt",
+      "howItWorks": "Zo werkt het",
+      "approachEyebrow": "Aanpak",
+      "approachTitle": "Hoe we het aanpakken",
+      "questionsEyebrow": "Vragen",
+      "questionsTitle": "Wat opdrachtgevers vragen",
+      "others": "Andere diensten"
+    },
+    "process": {
+      "title": "Werkwijze",
+      "description": "Zo werkt StationByte: verkennen, ontwerpen, bouwen, beheren. Wekelijks een release, drie samenwerkingsvormen, en code en accounts die meteen van jou zijn.",
+      "ogAlt": "Stapels keramische tegels die uitgroeien tot een volledig raster, naast de woorden Van idee tot live",
+      "eyebrow": "Zo werken we",
+      "heading": [
+        "Van idee",
+        "tot live."
+      ],
+      "lede": "Je krijgt al vroeg een werkende link, geen statusrapport. Elke fase eindigt met iets wat je kunt gebruiken, en na elke fase kun je stoppen, met alles wat we tot dan toe gemaakt hebben.",
+      "waysLink": "Zo kun je met ons werken",
+      "stage": "Fase {n}",
+      "happens": "Wat er gebeurt",
+      "youGet": "Wat je krijgt",
+      "weNeed": "Wat we van je nodig hebben",
+      "weekEyebrow": "Elke week",
+      "weekTitle": [
+        "Een ritme waar je",
+        "op kunt plannen."
+      ],
+      "weekNote": "Elke week dezelfde drie momenten, zodat je altijd weet wat er speelt zonder dat je hoeft te vragen.",
+      "figAlt": "Vier stapels gebroken witte keramische tegels, groeiend van één tegel tot een volledig raster met een blauwe tegel in het midden",
+      "figCaption": "Fig. 03 · Elke fase bouwt verder aan de byte",
+      "waysEyebrow": "Samenwerken",
+      "waysTitle": [
+        "Drie vormen,",
+        "één team."
+      ],
+      "waysNote": "Een discoverysprint is de gebruikelijke eerste stap. Elk voorstel staat op papier, met scope, planning en prijs afgesproken voordat het werk begint.",
+      "fits": "Past als",
+      "how": "Zo werkt het",
+      "agreementsEyebrow": "Afspraken",
+      "agreementsTitle": [
+        "Van jou vanaf",
+        "dag één."
+      ],
+      "nextStep": [
+        "Begin met een",
+        "discoverysprint."
+      ]
+    },
+    "studio": {
+      "title": "Over de studio",
+      "description": "StationByte is een kleine softwarestudio, opgericht door Pablo Italo, senior AI- en full-stack engineer. De mensen met wie je praat, schrijven ook je code.",
+      "ogAlt": "Keramische tegels in ochtendlicht, één blauw, naast de woorden Kleine studio. Senior vakwerk.",
+      "eyebrow": "Studio",
+      "heading": [
+        "Kleine studio.",
+        "Senior vakwerk."
+      ],
+      "lede": "StationByte LLC is een softwarestudio. We ontwerpen, bouwen en beheren AI-functies, SaaS-platforms en web- en mobiele apps voor founders en groeiende teams, en we hebben een eigen product: <link>SkedEz</link>.",
+      "videoAlt": "Gebroken witte keramische tegels in een raster gestapeld in ochtendlicht door het raam, één blauwe tegel op de hoogste stapel",
+      "figCaption": "Fig. 02 · Ochtendlicht, één blauw",
+      "howEyebrow": "Zo werken we",
+      "howTitle": [
+        "Drie beloftes",
+        "die we waarmaken."
+      ],
+      "fullProcess": "De hele werkwijze",
+      "founderEyebrow": "Oprichter",
+      "portraitAlt": "Portret van Pablo Italo",
+      "trackRecord": "Het trackrecord van Pablo",
+      "projectsNote": "Projecten die Pablo leidde, bouwde of waaraan hij meewerkte, zoals vermeld op pabloitalo.com.",
+      "companyEyebrow": "Het bedrijf",
+      "companyTitle": [
+        "De korte",
+        "versie."
+      ],
+      "benchAlt": "Een werkbank van licht eikenhout met een dichtgeklapte laptop, een stapel gebroken witte tegels, één blauwe tegel, een notitieboek en een kop",
+      "legalName": "Statutaire naam",
+      "whatWeDo": "Wat we doen",
+      "ourProduct": "Ons product",
+      "ourProductValue": "<link>SkedEz</link>, online afspraken boeken voor dienstverleners",
+      "contact": "Contact",
+      "languages": "Talen"
+    },
+    "contact": {
+      "title": "Start een project",
+      "description": "Vertel StationByte wat je bouwt. Gebruik het formulier of mail naar contact@stationbyte.com; we reageren binnen 48 uur, in jouw taal.",
+      "ogAlt": "Keramische tegels met de blauwe in de laatste open plek, naast de woorden Vertel ons wat je bouwt",
+      "eyebrow": "Start een project",
+      "heading": [
+        "Vertel ons",
+        "wat je bouwt."
+      ],
+      "lede": "Een paar regels is genoeg om te beginnen, in de taal die jij wilt. We reageren binnen 48 uur, en wie antwoordt is een engineer, geen verkoper.",
+      "videoAlt": "Acht gebroken witte keramische tegels in een raster op linnen, een blauwe tegel die in de enige open plek valt",
+      "ratherEmail": "Liever mailen?",
+      "emailTip": "Vertel wat je bouwt, waar het nu staat en wanneer je het nodig hebt.",
+      "whatNext": "Wat er nu gebeurt",
+      "steps": [
+        {
+          "title": "We reageren",
+          "body": "Binnen 48 uur, in jouw taal, met vragen of een voorstel voor een gesprek."
+        },
+        {
+          "title": "We spreken elkaar",
+          "body": "Een call over wat je bouwt, waar het staat en wanneer het af is."
+        },
+        {
+          "title": "Je krijgt een voorstel",
+          "body": "Op papier: scope, planning en prijs. Meestal eerst een discoverysprint."
+        }
+      ],
+      "notReady": "Nog niet klaar voor een gesprek? Bekijk <process>hoe we werken</process> of <product>een product dat we bouwden</product>."
+    },
+    "privacy": {
+      "title": "Privacyverklaring",
+      "description": "Hoe StationByte LLC persoonsgegevens verzamelt, gebruikt en beschermt op stationbyte.com en wanneer je contact met ons opneemt.",
+      "ogAlt": "Het tegelmerk van StationByte naast de woorden Zo min mogelijk van je data",
+      "current": "Privacy",
+      "eyebrow": "Privacyverklaring · Bijgewerkt {date}",
+      "heading": [
+        "Zo min mogelijk",
+        "van je data."
+      ],
+      "lede": "We verzamelen alleen wat we nodig hebben om je te antwoorden en deze site te laten draaien. Geen cookies, geen analytics, geen tracking.",
+      "onThisPage": "Op deze pagina",
+      "translationNote": "Dit is een vertaling voor het gemak; als deze afwijkt van de Engelse versie, geldt de Engelse versie.",
+      "sections": {
+        "who": {
+          "title": "Wie we zijn",
+          "p1": "Deze website wordt beheerd door StationByte LLC (“StationByte”, “wij”). Wij zijn de verwerkingsverantwoordelijke voor de persoonsgegevens die hier worden beschreven. Voor alles over deze verklaring of je gegevens kun je mailen naar <mail>contact@stationbyte.com</mail>."
+        },
+        "collect": {
+          "title": "Wat we verzamelen",
+          "p1": "<b>Als je contact met ons opneemt.</b> Als je het <form>projectformulier</form> gebruikt of ons mailt, ontvangen we je naam, je e-mailadres, wat je bouwt, een budgetindicatie als je die kiest, je bericht en alles wat je verder besluit mee te sturen.",
+          "p2": "<b>Als je de site bezoekt.</b> Zoals de meeste websites registreert onze server bij elk verzoek standaard technische gegevens: IP-adres, type browser en apparaat, de opgevraagde pagina en het tijdstip. We gebruiken die niet om je te identificeren.",
+          "p3": "<b>Cookies en tracking.</b> Deze site plaatst geen cookies en gebruikt geen analyse-, advertentie- of trackingtools. Lettertypen, afbeeldingen en video komen van onze eigen server. Als je een taal kiest of de balk met de taalsuggestie sluit, onthoudt je browser die keuze in zijn eigen opslag; die keuze wordt nooit naar ons verstuurd."
+        },
+        "use": {
+          "title": "Waarom we ze gebruiken en op welke grondslag",
+          "i1": "<b>Om je te antwoorden en een voorstel op te stellen</b> waar je om hebt gevraagd: maatregelen op jouw verzoek voorafgaand aan een mogelijke overeenkomst (AVG art. 6(1)(b)).",
+          "i2": "<b>Om een project uit te voeren</b> als we samenwerken: uitvoering van onze overeenkomst (art. 6(1)(b)).",
+          "i3": "<b>Om de site veilig en werkend te houden</b>, met behulp van serverlogs: ons gerechtvaardigd belang bij het beschermen van de site en haar bezoekers (art. 6(1)(f))."
+        },
+        "never": {
+          "title": "Wat we nooit doen",
+          "p1": "We verkopen je gegevens niet, delen ze niet voor advertenties, zetten je niet op een nieuwsbrief en gebruiken ze niet om AI-modellen te trainen."
+        },
+        "share": {
+          "title": "Wie er verder mee werkt",
+          "p1": "Alleen de leveranciers die we nodig hebben om de site te laten draaien en je te antwoorden: onze hostingprovider, die serverlogs opslaat; onze teamchat (Slack), die inzendingen van het projectformulier ontvangt; en onze e-mailprovider, die de berichten opslaat die je ons stuurt. Zij verwerken gegevens volgens onze instructies en mogen ze niet voor eigen doeleinden gebruiken.",
+          "p2": "Je gegevens kunnen worden verwerkt buiten het land waar je woont. Waar de wet dat vereist, gebruiken we de waarborgen die de wet biedt, zoals standaardcontractbepalingen."
+        },
+        "keep": {
+          "title": "Hoe lang we ze bewaren",
+          "i1": "Aanvragen die niet tot een project leiden: verwijderd binnen 12 maanden na ons laatste bericht.",
+          "i2": "Correspondentie met klanten: zo lang als het werk en eventuele wettelijke bewaarplichten vereisen.",
+          "i3": "Serverlogs: alleen zo lang als nodig is om de site veilig te houden, daarna verwijderd."
+        },
+        "rights": {
+          "title": "Je rechten",
+          "p1": "Je kunt ons vragen om je gegevens in te zien, te corrigeren, te verwijderen of over te dragen, of om het gebruik ervan te beperken. Ook kun je bezwaar maken tegen ons gebruik ervan. Mail naar <mail>contact@stationbyte.com</mail> en we reageren binnen een maand. Mogelijk moeten we eerst controleren of jij het echt bent voordat we iets doen.",
+          "p2": "Woon je in de EU, het Verenigd Koninkrijk of een ander land met wetgeving voor gegevensbescherming, dan kun je ook een klacht indienen bij de toezichthouder voor gegevensbescherming in je land. We stellen het op prijs als we het eerst zelf mogen oplossen."
+        },
+        "security": {
+          "title": "Beveiliging",
+          "p1": "De site wordt alleen via HTTPS aangeboden, en toegang tot berichten en servers is beperkt tot de mensen die die toegang nodig hebben."
+        },
+        "children": {
+          "title": "Kinderen",
+          "p1": "Deze site is bedoeld voor bedrijven. Hij is niet gericht op kinderen, en we verzamelen niet bewust hun gegevens."
+        },
+        "changes": {
+          "title": "Wijzigingen",
+          "p1": "Als we veranderen hoe we met gegevens omgaan, passen we deze pagina en de datum bovenaan aan."
+        }
+      }
+    },
+    "notFound": {
+      "title": "Pagina niet gevonden",
+      "eyebrow": "Fout 404",
+      "heading": "Deze plek is leeg.",
+      "body": "De pagina die je zoekt is er niet. Misschien is hij verhuisd toen we de site opnieuw bouwden.",
+      "back": "Terug naar de homepage"
+    }
+  },
+  "schema": {
+    "knowsAbout": [
+      "AI-productontwikkeling",
+      "Grote taalmodellen",
+      "SaaS-ontwikkeling",
+      "Webontwikkeling",
+      "App-ontwikkeling",
+      "Productdesign"
+    ],
+    "skedezCategory": "Online boekingssoftware",
+    "areaServed": "Wereldwijd",
+    "whatYouGet": "{title}: wat je krijgt"
+  },
+  "llms": {
+    "about": "StationByte LLC is een kleine softwarestudio, opgericht door Pablo Italo. De studio ontwerpt, bouwt en beheert AI-functies, SaaS-platforms en web- en mobiele apps voor founders en groeiende teams, en heeft een eigen product, SkedEz (online afspraken boeken voor dienstverleners). Contact: contact@stationbyte.com. De studio reageert binnen 48 uur, in elke taal van deze site.",
+    "pages": "Pagina’s",
+    "homeLink": "Home",
+    "home": "wat de studio doet, geselecteerd werk, diensten, werkwijze, studio en contact.",
+    "work": "SkedEz, het eigen product van de studio, en hoe je werk kunt zien dat op het jouwe lijkt.",
+    "skedez": "probleem, wat er gebouwd is, hoe het technisch in elkaar zit, stack en actuele abonnementen.",
+    "services": "de vier diensten en wat elk ervan oplevert.",
+    "process": "verkennen, ontwerpen, bouwen, beheren; het weekritme; samenwerkingsvormen; werkafspraken.",
+    "studio": "hoe de studio werkt en wie erachter zit.",
+    "contact": "het projectformulier en het e-mailadres.",
+    "optional": "Optioneel",
+    "fullText": "Volledige tekst voor taalmodellen",
+    "sitemap": "Sitemap",
+    "languages": "Andere talen",
+    "languagesNote": "Dezelfde site in andere talen:",
+    "whatYouGet": "Wat je krijgt:",
+    "approach": "Aanpak:",
+    "questions": "Vragen van opdrachtgevers:",
+    "tools": "Tools: {list}.",
+    "youGet": "Je krijgt: {list}.",
+    "needed": "Nodig van jou: {text}",
+    "everyWeek": "Elke week:",
+    "ways": "Samenwerkingsvormen:",
+    "fitsWhen": "Past als:",
+    "howItWorks": "Zo werkt het:",
+    "agreements": "Werkafspraken:",
+    "workHeading": "Werk: SkedEz-case",
+    "skedezIntro": "URL: {url}. Live op {live}. SkedEz is het eigen product van de studio, geen klantwerk.",
+    "built": "Wat er gebouwd is:",
+    "notes": "Technische notities:",
+    "plans": "Abonnementen (zoals gepubliceerd op skedez.com):",
+    "clientWork": "Voor klantwerk loopt de studio in een call met potentiële klanten de projecten door die het dichtst bij die van hen liggen.",
+    "projects": "Projecten die Pablo leidde, bouwde of waaraan hij meewerkte (volgens pabloitalo.com):",
+    "stack": "Tools waarmee de studio bouwt: {list}.",
+    "contactLine": "Gebruik het formulier op {url} of mail naar {email}."
+  }
+}

@@ -1,14 +1,16 @@
-import { site } from "./site";
+/** What the project form offers. Values are stable ids sent with the form; labels are in messages `contactForm`. */
+export const kinds = ["ai", "saas", "apps", "design", "unsure"] as const;
+export type Kind = (typeof kinds)[number];
 
-export const kinds = ["AI feature", "SaaS platform", "Web or mobile app", "Product design", "Not sure yet"];
-
-export const budgets = ["Under $15k", "$15k–$50k", "$50k–$150k", "Over $150k", "Not sure yet"];
-
-export const nextSteps = [
-  { title: "We reply", body: `${site.replyTime[0].toUpperCase()}${site.replyTime.slice(1)}, with questions or a time to talk.` },
-  { title: "We talk", body: "A call about what you're building, where it stands and what done looks like." },
-  { title: "You get a proposal", body: "In writing: scope, timeline and price. Usually a discovery sprint first." },
-];
+/** Budget ranges in US dollars, written out per language with Intl (e.g. "$15K", "15 mil $", "$1.5万"). */
+export const budgets = [
+  { id: "lt15", to: 15_000 },
+  { id: "15to50", from: 15_000, to: 50_000 },
+  { id: "50to150", from: 50_000, to: 150_000 },
+  { id: "gt150", from: 150_000 },
+  { id: "unsure" },
+] as const;
+export type BudgetId = (typeof budgets)[number]["id"];
 
 type Field = "name" | "email" | "kind" | "budget" | "message";
 

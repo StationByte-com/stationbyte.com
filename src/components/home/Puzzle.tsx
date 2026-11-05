@@ -3,6 +3,7 @@
 import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 import { useEffect, useRef, useState } from "react";
 import { motion} from "motion/react";
+import { useTranslations } from "next-intl";
 
 type Slot = [number, number];
 const START: Record<string, Slot> = {
@@ -15,6 +16,8 @@ const isNeighbour = (a: Slot, b: Slot) => Math.abs(a[0] - b[0]) + Math.abs(a[1] 
 /** "The open slot is yours": a playable 8-puzzle of ceramic tiles. Auto-plays until the visitor touches it. */
 export default function Puzzle({ headingLevel = 3 }: { headingLevel?: 2 | 3 }) {
   const Heading = headingLevel === 2 ? "h2" : "h3";
+  const t = useTranslations("home.puzzle");
+  const [l1, l2] = t.raw("title") as string[];
   const reduce = useReducedMotionSafe();
   const [tiles, setTiles] = useState(START);
   const [empty, setEmpty] = useState<Slot>([2, 2]);
@@ -26,7 +29,7 @@ export default function Puzzle({ headingLevel = 3 }: { headingLevel?: 2 | 3 }) {
   const slide = (id: string) => {
     const from = tiles[id];
     if (!isNeighbour(from, empty)) return false;
-    setTiles((t) => ({ ...t, [id]: empty }));
+    setTiles((prev) => ({ ...prev, [id]: empty }));
     setEmpty(from);
     last.current = id;
     return true;
@@ -62,16 +65,16 @@ export default function Puzzle({ headingLevel = 3 }: { headingLevel?: 2 | 3 }) {
     >
       <div className="flex items-start justify-between gap-4">
         <Heading className="text-[clamp(26px,2.4vw,32px)] font-semibold leading-[1.05] tracking-[-0.035em]">
-          The open slot
+          {l1}
           <br />
-          is yours.
+          {l2}
         </Heading>
         <p className="eyebrow text-right text-steel" aria-live="polite">
-          {moves === 0 ? "Tap a tile next to the gap" : solved ? "Back in place" : `${moves} move${moves === 1 ? "" : "s"}`}
+          {moves === 0 ? t("start") : solved ? t("solved") : t("moves", { count: moves })}
         </p>
       </div>
 
-      <div role="group" aria-label="Sliding tile puzzle" className="relative mx-auto aspect-square w-full max-w-[340px]">
+      <div role="group" aria-label={t("group")} className="relative mx-auto aspect-square w-full max-w-[340px]">
         {Object.entries(tiles).map(([id, [r, c]]) => {
           const movable = isNeighbour([r, c], empty);
           const core = id === "core";
@@ -79,7 +82,7 @@ export default function Puzzle({ headingLevel = 3 }: { headingLevel?: 2 | 3 }) {
             <motion.button
               key={id}
               type="button"
-              aria-label={`${core ? "Blue tile" : "Tile"}, row ${r + 1}, column ${c + 1}${movable ? ", can slide" : ""}`}
+              aria-label={t("tile", { core: core ? "yes" : "no", row: String(r + 1), col: String(c + 1), movable: movable ? "yes" : "no" })}
               disabled={!movable}
               onClick={() => {
                 touched.current = true;
@@ -105,7 +108,7 @@ export default function Puzzle({ headingLevel = 3 }: { headingLevel?: 2 | 3 }) {
         />
       </div>
 
-      <p className="eyebrow text-steel">Next on the board</p>
+      <p className="eyebrow text-steel">{t("footer")}</p>
     </div>
   );
 }
