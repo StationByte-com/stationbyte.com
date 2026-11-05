@@ -1,0 +1,45 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "react",
+    "nextjs",
+    "jsx-a11y",
+    "typescript",
+    "import",
+    "unicorn",
+    "oxc"
+  ],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "nextjs/no-html-link-for-pages": "error",
+    "nextjs/no-img-element": "off",
+    "import/no-unassigned-import": "off",
+    "unicorn/no-array-reverse": "off",
+    "jsx-a11y/prefer-tag-over-role": "off",
+    "react/immutability": "off"
+  },
+  "ignorePatterns": [
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+    "scripts/**/*.py"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "scripts/**"
+      ],
+      "rules": {
+        "import/default": "off",
+        "import/no-named-as-default-member": "off"
+      }
+    }
+  ]
+}

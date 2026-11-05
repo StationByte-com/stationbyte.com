@@ -1,153 +1,285 @@
 @import "tailwindcss";
 
-:root {
-  --primary: #4361ee;
-  --primary-dark: #3a56d4;
-  --secondary: #7209b7;
-  --accent: #4cc9f0;
+/* StationByte brand tokens. Ink and paper for everything, signal blue for one thing per view. */
+@theme {
+  --color-ink: #0a0a0b;
+  --color-graphite: #161618;
+  --color-edge: #26262a;
+  --color-steel: #5e5e66;
+  --color-fog: #a1a1aa;
+  --color-line: #e2e2e0;
+  --color-paper: #f6f6f4;
+  --color-signal: #3046ff;
+  --color-signal-deep: #2438e6;
+  --color-signal-ink: #7c8cff;
+  --color-alert: #c4321f;
+
+  --font-sans: var(--font-geist-sans), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --ease-station: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-switch: cubic-bezier(0.7, 0, 0.2, 1);
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+@layer base {
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.55;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--color-signal);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 }
 
-@keyframes float-shape {
-  0% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-    opacity: 0.3;
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 4.5vw, 64px);
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .display {
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+}
+
+/* Lenis smooth scrolling */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+/* Scroll reveals. Content is visible without JavaScript; the `js` class is set before first paint. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s var(--ease-station),
+    transform 0.8s var(--ease-station);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.js [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Masked line reveal for headings */
+.line-mask {
+  display: block;
+  overflow: clip;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.js .line-mask > span {
+  display: block;
+  transform: translateY(105%);
+  transition: transform 1s var(--ease-station);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.js .is-in .line-mask > span,
+.js .line-mask.is-in > span {
+  transform: none;
+}
+
+/* Split-flap cells */
+@keyframes flap {
+  from {
+    transform: perspective(200px) rotateX(-80deg);
+    opacity: 0.2;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.flap-char {
+  display: block;
+  transform-origin: 50% 0;
+  animation: flap 0.18s var(--ease-switch) both;
+}
+
+/* Studio: window light drifting across the tiles */
+@keyframes window-light {
+  0%,
+  100% {
+    transform: translateX(-18%) rotate(-24deg);
+    opacity: 0.55;
   }
   50% {
-    transform: translate(20px, -15px) rotate(10deg) scale(1.1);
+    transform: translateX(18%) rotate(-24deg);
+    opacity: 0.85;
+  }
+}
+.window-light::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: repeating-linear-gradient(90deg, rgb(255 255 255 / 0) 0 9%, rgb(255 255 255 / 0.55) 11% 15%, rgb(255 255 255 / 0) 17% 24%);
+  filter: blur(18px);
+  animation: window-light 14s ease-in-out infinite;
+}
+
+/* Stack marquee */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+.marquee[data-paused="true"] .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .js [data-reveal],
+  .js .line-mask > span {
+    opacity: 1;
+    transform: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Tile glyphs: tiles pop in with a stagger on reveal; inside a .group, hover slides one tile into the open slot. */
+.glyph rect {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform 0.6s var(--ease-station),
+    opacity 0.6s var(--ease-station);
+  transition-delay: calc(var(--i, 0) * 45ms + var(--reveal-delay, 0ms));
+}
+.js [data-reveal]:not(.is-in) .glyph rect {
+  transform: scale(0.3);
+  opacity: 0;
+}
+.group:hover .glyph .glyph-mover {
+  transform: translate(var(--dx), var(--dy));
+  transition-delay: 0ms;
+}
+.glyph .glyph-slot {
+  animation: slot-breathe 2.4s ease-in-out infinite;
+}
+@keyframes slot-breathe {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* A dot travelling along a connector line (diagrams). Set --travel to the distance. */
+@keyframes travel-x {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(var(--travel, 100px));
+    opacity: 0;
+  }
+}
+@keyframes travel-y {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(var(--travel, 100px));
+    opacity: 0;
+  }
+}
+@keyframes ping {
+  from {
+    transform: scale(1);
     opacity: 0.6;
   }
-  100% {
-    transform: translate(-10px, 10px) rotate(-5deg) scale(0.9);
-    opacity: 0.4;
-  }
-}
-
-@keyframes float-content {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { 
-    opacity: 0; 
-    transform: translateY(20px); 
-  }
-  to { 
-    opacity: 1; 
-    transform: translateY(0); 
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
   to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
+    transform: scale(2.4);
     opacity: 0;
-    transform: translateX(30px);
   }
-  to {
+}
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal]:not(.is-in) .glyph rect {
+    transform: none;
     opacity: 1;
-    transform: translateX(0);
+  }
+  .group:hover .glyph .glyph-mover {
+    transform: none;
   }
 }
 
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
+/* Next-step band: the brand move, slow. */
+@keyframes slot-move {
+  0%,
+  35%,
   100% {
-    transform: translate(0px, 0px) scale(1);
+    transform: none;
+  }
+  50%,
+  85% {
+    transform: translateX(23px);
   }
 }
-
-@keyframes morphing {
-  0% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
-  25% {
-    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-  }
-  50% {
-    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-  }
-  75% {
-    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
-  }
-  100% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-shape {
-  animation: float-shape 12s ease-in-out infinite alternate;
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-.animate-morphing {
-  animation: morphing 15s linear infinite alternate;
-}
-
-.hero-gradient {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.text-gradient {
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.btn-gradient {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
-}
-
-/* Additional shadow utilities */
-.shadow-3xl {
-  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
-}
-
-html {
-  scroll-behavior: smooth;
+.slot-mover {
+  animation: slot-move 8s var(--ease-switch) infinite;
 }

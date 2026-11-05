@@ -1,0 +1,9 @@
+node_modules
+.next
+.git
+.render
+brand
+.claude
+.env*
+!.env.example
+*.tsbuildinfo
