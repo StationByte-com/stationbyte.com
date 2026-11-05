@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "oxlint --deny-warnings",
+    "typecheck": "next typegen && tsc --noEmit",
     "film:render": "/Applications/Blender.app/Contents/MacOS/Blender -b -P scripts/hero-film/scene.py -- --out .render/film/f --frames 1-192 --samples 40 --res 75",
     "film:encode": "scripts/hero-film/encode.sh",
     "og:build": "node scripts/og/build.mjs",
