@@ -1,29 +1,38 @@
 {
-  "name": "my-app",
+  "name": "stationbyte-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "oxlint --deny-warnings",
+    "film:render": "/Applications/Blender.app/Contents/MacOS/Blender -b -P scripts/hero-film/scene.py -- --out .render/film/f --frames 1-192 --samples 40 --res 75",
+    "film:encode": "scripts/hero-film/encode.sh",
+    "og:build": "node scripts/og/build.mjs",
+    "loops:render": "scripts/hero-film/render-loops.sh",
+    "loops:encode": "scripts/hero-film/encode-loops.sh"
   },
   "dependencies": {
-    "next": "^16.4.3",
+    "geist": "^1.9.1",
+    "lenis": "^1.3.27",
+    "motion": "^14.9.1",
+    "next": "^16.4.5",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.3.3",
-    "@types/node": "^24.19.2",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4.3.4",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.6.2",
-    "eslint": "^9",
-    "eslint-config-next": "^16.4.3",
+    "opentype.js": "^2.0.0",
+    "oxlint": "^1.91.0",
     "postcss": "^8.5.32",
-    "tailwindcss": "^4.3.3",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.4",
     "typescript": "^6.0.3"
   }
 }

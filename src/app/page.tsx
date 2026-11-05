@@ -1,25 +1,26 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Portfolio from '@/components/Portfolio';
-import Features from '@/components/Features';
-import Testimonials from '@/components/Testimonials';
-import About from '@/components/About';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import Hero from "@/components/home/Hero";
+import Work from "@/components/home/Work";
+import Services from "@/components/home/Services";
+import Process from "@/components/home/Process";
+import Studio from "@/components/home/Studio";
+import Contact from "@/components/home/Contact";
+import Marquee from "@/components/motion/Marquee";
+import { stack } from "@/content/site";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      <Hero />
-      <Services />
-      <Portfolio />
-      <Features />
-      <Testimonials />
-      <About />
-      <Contact />
-      <Footer />
+    <main id="main">
+        <Hero />
+        <div className="mt-20 md:mt-24">
+          <Marquee items={stack} label="Tools we build with" />
+        </div>
+        <div className="mt-28 md:mt-32">
+          <Work />
+        </div>
+        <Services />
+        <Process />
+        <Studio />
+        <Contact />
     </main>
   );
 }
