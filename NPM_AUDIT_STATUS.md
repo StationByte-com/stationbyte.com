@@ -65,3 +65,27 @@ Both builds were served side by side with `next start` and compared with Playwri
 - No browser console errors other than the expected 404 response. Next 16 also prefetches the 404 route's RSC payload (one extra 404 fetch).
 - `next dev` (Turbopack): `/` and the 404 page render with no error overlay. The `next/image` "missing sizes" warning for `/dashboard.jpg` also appears on `main`.
 - `Dockerfile.production` builds from a clean checkout (`npm ci` reports 0 vulnerabilities) and the container serves `/`, the 404 page and optimized images. The `EACCES` error writing `/app/.next/cache/images` when running as `user: node` also happens on `main` (the image cache folder is root-owned), so it is not caused by this upgrade.
+
+## Security update (2026-11-21)
+
+Package updates only, still no npm overrides, no `--force`, no `--legacy-peer-deps`.
+
+- GitHub advisories published 2026-11-19 (GHSA-f3mh-rxg3-f5g2, GHSA-7qx7-33qx-rqx2, GHSA-pc58-hwjq-p385, GHSA-rhh4-g77r-r9qj, GHSA-vvgp-ww4w-46vf) affect `next` <= 16.4.4. Minimum raised to `next@^16.4.6`.
+- Every other package moved to its newest patch/minor: next-intl 4.15.3, motion 14.14.0, geist 1.9.2, tailwindcss / @tailwindcss/postcss 4.3.5, postcss 8.5.33, oxlint 1.94.0, @formatjs/icu-messageformat-parser 3.5.23.
+- Removed unused dev dependencies `@eslint/eslintrc` (left over from ESLint, linting is oxlint) and `autoprefixer` (not in `postcss.config.mjs`; Tailwind 4 handles prefixes).
+- Node pinned to 26.13.1 (the 2026-11-10 security release) in `.nvmrc`, `Dockerfile.production` and CI (`node-version-file`). The floating `node:26-alpine` tag could resolve to an older cached image on the build host.
+- Runtime image runs `apk upgrade` and removes npm, npx, corepack and yarn. Trivy finds 30 known vulnerabilities (6 high) in the image built from `main`, which is what production ran before this change: npm's bundled undici, brace-expansion, glob, minimatch, ip-address and postcss-selector-parser, plus Alpine's OpenSSL and zlib. The new image reports 0.
+- Coolify (v4.7.6, latest; every published Coolify advisory is fixed in earlier versions) builds this app from `Dockerfile.production`, so these changes reach production on the next deploy from `main`. Coolify scans the image on that deploy.
+- TypeScript 7.0.2 is available but stays on 6.0.3: it is a major release with no security fix involved.
+
+Repo hardening in the same change:
+
+- `Dockerfile.production`: base image pinned by digest as well as tag. App files are root-owned so the server process (user `node`) cannot rewrite its own code; only `.next/cache` is writable, which also fixes the `EACCES` on the image-optimization cache noted above.
+- `package.json` `allowScripts` denies the install scripts of `@swc/core` and `@parcel/watcher` (pulled in by next-intl's extractor, unused here); install and build work without them.
+- CI: actions pinned to commit SHAs, `persist-credentials: false` on checkout (zizmor: no findings).
+- `.github/dependabot.yml`: weekly updates for npm, the Docker base image and GitHub Actions, with a 7-day cooldown on new releases.
+- Contact form rate limit keys on the last `X-Forwarded-For` entry (added by Traefik) instead of the first, which the client controls, and prunes expired entries instead of clearing the whole table.
+- `Content-Security-Policy` header with the directives that need no nonces: `base-uri`, `form-action`, `frame-ancestors`, `object-src`, `upgrade-insecure-requests`.
+- `gitleaks` over the full git history: no leaks.
+
+Verification: `npm audit` 0 vulnerabilities; lint, i18n:check, typecheck and build pass on Node 26.13.1; `docker build --pull` succeeds; Trivy finds 0 vulnerabilities and 0 secrets in the image; the container serves `/`, `/es`, `/contact` (200), optimized images and a missing page (404), the contact form submits through its server action, and pages show no CSP console errors.

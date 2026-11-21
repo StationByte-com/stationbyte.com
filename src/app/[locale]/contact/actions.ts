@@ -18,7 +18,10 @@ function limited(ip: string) {
   const hits = (recent.get(ip) ?? []).filter((t) => now - t < WINDOW);
   if (hits.length >= LIMIT) return true;
   recent.set(ip, [...hits, now]);
-  if (recent.size > 5000) recent.clear();
+  if (recent.size > 5000) {
+    for (const [key, times] of recent) if (times.every((t) => now - t >= WINDOW)) recent.delete(key);
+    if (recent.size > 5000) recent.clear();
+  }
   return false;
 }
 
@@ -88,7 +91,9 @@ export async function sendProject(_: ContactState, form: FormData): Promise<Cont
   const mailto = mailtoFor(subject, text, t("mail.shortened"));
 
   const h = await headers();
-  const ip = h.get("x-forwarded-for")?.split(",")[0].trim() || h.get("x-real-ip") || "unknown";
+  // The proxy in front (Coolify's Traefik) appends the address it saw, so the last X-Forwarded-For entry is the
+  // real client. Earlier entries come from the request itself and could be faked to dodge the limit.
+  const ip = h.get("x-forwarded-for")?.split(",").at(-1)?.trim() || h.get("x-real-ip") || "unknown";
   if (limited(ip)) return { status: "limited", mailto, values };
 
   const token = process.env.SLACK_BOT_TOKEN?.trim();

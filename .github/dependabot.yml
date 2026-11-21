@@ -1,0 +1,26 @@
+# Weekly update PRs for npm packages, the Node base image and the pinned GitHub Actions. Dependabot updates
+# versions only; it never adds npm overrides. The cooldown skips releases younger than a week, so a
+# compromised package version is usually pulled from the registry before it is ever proposed.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7

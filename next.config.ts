@@ -4,8 +4,11 @@ import createNextIntlPlugin from "next-intl/plugin";
 // Typed message keys come from the English source; every other language must match it (npm run i18n:check).
 const withNextIntl = createNextIntlPlugin({ experimental: { createMessagesDeclaration: "./messages/en.json" } });
 
-// Sent with every response. No CSP yet: Next's inline runtime scripts would need nonces, a separate change.
+// Sent with every response. The CSP covers what needs no nonces (framing, <base>, plugins, form targets, mixed
+// content); a script-src policy would need nonces for Next's inline runtime scripts, a separate change.
+const csp = ["base-uri 'self'", "form-action 'self'", "frame-ancestors 'none'", "object-src 'none'", "upgrade-insecure-requests"].join("; ");
 const securityHeaders = [
+  { key: "Content-Security-Policy", value: csp },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "X-Frame-Options", value: "DENY" },
